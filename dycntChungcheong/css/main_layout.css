@@ -57,7 +57,6 @@ main{position:relative;}
 @media all and (max-width:1000px){
 .visual{margin-right:50px;margin-left:50px;padding-top:110px;}
 .visual .visual_bg{width:300px;height:300px;}
-.visual .visual_list{}
 .visual .visual_list .slick-list{margin-right:-20px;margin-left:-20px;}
 .visual .visual_list .slick-slide{margin-right:20px;margin-left:20px;}
 .visual .visual_img{border-radius:35px;}
@@ -72,6 +71,8 @@ main{position:relative;}
 @media all and (max-width:640px){
 .visual{margin-right:0;margin-left:0;padding-top:71px;}
 .visual .visual_bg{top:-42px;left:-100px;width:267px;height:267px;}
+.visual .visual_list .slick-list{margin-right:0;margin-left:0;}
+.visual .visual_list .slick-slide{margin-right:0;margin-left:0;}
 .visual .visual_img{border-radius:0;}
 .visual .visual_img img{height:440px;}
 .visual .visual_cont{top:-45px;left:35px;}
