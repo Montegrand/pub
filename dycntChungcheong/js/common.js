@@ -151,7 +151,6 @@ function MobileSitemapActive($txt, e){
         $depth = $list.parentElement;
 
     $depthArr.forEach($depth=>{
-        console.log($depth);
         $depth.fromHei = $depth.offsetHeight;
     });
 
