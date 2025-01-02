@@ -136,51 +136,91 @@ function MobileSitemapActive($txt, e){
     let $wrap = $txt.nextElementSibling;
 
     if($wrap) e.preventDefault();
+    else return;
 
+    // 전체메뉴
+    let $depth1 = $txt.closest('.depth1'),
+        $depthListItems = $depth1.querySelectorAll('.depth, .depth_list, .depth_item'),
+        $depthArr = Array.from($depth1.querySelectorAll('.depth')).reverse(),
+        $listArr = $depth1.querySelectorAll('.depth_list'),
+        $itemArr = $depth1.querySelectorAll('.depth_item');
+
+    // event target
     let $item = $txt.parentElement,
         $list = $item.parentElement,
         $depth = $list.parentElement;
 
+    $depthArr.forEach($depth=>{
+        console.log($depth);
+        $depth.fromHei = $depth.offsetHeight;
+    });
+
+    $depthListItems.forEach($ele=>{
+        $ele.style.transition = 'none';
+    });
+
+    $itemArr.forEach($item=>{
+        $item.from = $item.classList.contains('active');
+    });
+
     if($item.classList.contains('active')){
         $item.classList.remove('active');
+        $item.to = false;
         $item.querySelectorAll('.depth_item').forEach(item=>{
+            if(!item.classList.contains('active')) return;
             item.classList.remove('active');
+            item.to = false;
         });
     }else{
-        for(let item of [...$list.children]){
-            if(item === $item) continue;
+        [...$list.children].forEach(item=>{
+            if(item === $item) return;
+            if(!item.classList.contains('active')) return;
             item.classList.remove('active');
+            item.to = false;
             item.querySelectorAll('.depth_item').forEach(ele=>{
+                if(!ele.classList.contains('active')) return;
                 ele.classList.remove('active');
+                ele.to = false;
             });
-        };
-        $item.classList.add('active');
-    };
-    HeiSort();
-    function HeiSort(){
-        $depth.removeAttribute('style');
-        $depth.closest('.depth1').querySelectorAll('.depth').forEach($depth=>{
-            $depth.removeAttribute('style');
         });
-        while($depth.classList.contains('depth')){
-            let hei = 0;
-
-            for(let $item of [...$wrap.querySelectorAll('.depth_item')]){
-                var itemStyle = window.getComputedStyle($item);
-                var txtStyle = window.getComputedStyle($item.firstElementChild);
-                if($item.parentElement.closest('.depth_item').classList.contains('active')){
-                    hei = hei + parseInt(itemStyle.marginTop) + parseInt(itemStyle.marginBottom);
-                    hei = hei + parseInt(txtStyle.height);
-                };
-            };
-            if($item.classList.contains('active')) $wrap.style.height = hei+'px';
-            else $wrap.removeAttribute('style');
-            $wrap = $depth;
-            $item = $depth.parentElement;
-            $list = $item.parentElement;
-            $depth = $list.parentElement;
-        };
+        $item.classList.add('active');
+        $item.to = true;
     };
+
+    $depthArr.forEach($depth=>{
+        $depth.style.height = 'auto';
+        if($depth.parentElement.to){
+            $depth.toHei = $depth.firstElementChild.offsetHeight;
+        }else{
+            $depth.toHei = 0;
+            $depth.style.height = 0;
+        };
+    });
+    $depthArr.forEach($depth=>{
+        $depth.style.height = $depth.fromHei+'px';
+    });
+    $itemArr.forEach($item=>{
+        if($item.from) $item.classList.add('active');
+        else $item.classList.remove('active');
+    });
+
+    setTimeout(()=>{
+        $depthListItems.forEach($ele=>{
+            $ele.removeAttribute('style');
+        });
+        $depthArr.forEach($depth=>{
+            $depth.style.height = $depth.fromHei+'px';
+        });
+        setTimeout(()=>{
+            $itemArr.forEach($item=>{
+                if($item.to) $item.classList.add('active');
+                else $item.classList.remove('active');
+            });
+            $depthArr.forEach($depth=>{
+                $depth.style.height = $depth.toHei + 'px';
+            });
+        });
+    });
 };
 
 function OuterHeight(ele, chk = false) {
