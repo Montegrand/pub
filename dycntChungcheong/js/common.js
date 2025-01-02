@@ -138,17 +138,13 @@ function MobileSitemapActive($txt, e){
     if($wrap) e.preventDefault();
     else return;
 
-    // 전체메뉴
     let $depth1 = $txt.closest('.depth1'),
         $depthListItems = $depth1.querySelectorAll('.depth, .depth_list, .depth_item'),
         $depthArr = Array.from($depth1.querySelectorAll('.depth')).reverse(),
-        $listArr = $depth1.querySelectorAll('.depth_list'),
         $itemArr = $depth1.querySelectorAll('.depth_item');
 
-    // event target
     let $item = $txt.parentElement,
-        $list = $item.parentElement,
-        $depth = $list.parentElement;
+        $list = $item.parentElement;
 
     $depthArr.forEach($depth=>{
         $depth.fromHei = $depth.offsetHeight;
