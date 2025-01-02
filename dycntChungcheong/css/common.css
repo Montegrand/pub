@@ -135,7 +135,7 @@
 }
 @media all and (max-width:640px){
 .sitemap{text-align:center}
-.sitemap .depth_list{padding:1px 0;}
+.sitemap .depth_list{padding:1px 0;transition:.25s ease-in-out;}
 .sitemap .depth_item{display:block;transition:.25s ease-in-out;}
 .sitemap.active .depth_item.active>.depth{visibility:visible;opacity:1}
 
