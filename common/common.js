@@ -1,5 +1,7 @@
 // addEventListener 확장
 (function(){
+
+    // add event element resize
     const resizeObsv = new ResizeObserver((entries)=>{
         entries.forEach((entry)=>{
             entry.target.dispatchEvent((new Event('eleResize')));
@@ -16,6 +18,32 @@
         };
         originalAddEventListener.call(this, type, listener, options);
     };
+
+    /** 
+     * set window mode
+     */
+    function SetWindowMode(){
+        const winWidth = window.innerWidth;
+        switch (true){
+            case winWidth < 641:
+                window.mode = 'mobile';
+                break;
+
+            case winWidth < 1001:
+                window.mode = 'tablet';
+                break;
+
+            case winWidth < 1301:
+                window.mode = 'pc'
+                break;
+
+            default :
+                window.mode = 'wide';
+        };
+    };
+    window.addEventListener('resize',updateWindowMode);
+
+    
 })();
 
 
