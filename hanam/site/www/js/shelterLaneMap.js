@@ -125,7 +125,7 @@ function addShelterItem(shelterData, checkedItem) {
 
     shelterBtn.forEach((ele,index)=>{
         ele.addEventListener('click',()=>{
-            marker.f.o.idle[index].object.o.click[0].Pf();
+            marker.f.o.idle[index].object.o.click[0].Rf();
         })
     })
 }
