@@ -134,7 +134,7 @@ function addShelterItem(shelterData, checkedItem) {
 function addMarker(data){
     var marker = new kakao.maps.LatLng(data.shelterCoordinate.y, data.shelterCoordinate.x);
     /** 마커이미지 */
-    var imgSrc = '/site/www/images/shelter/map_pin.png',
+    var imgSrc = './images/shelter/map_pin.png',
         imgSize = new kakao.maps.Size(34, 40);
     var imgOpt = {
         offset: new kakao.maps.Point(17, 20),
