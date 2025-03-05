@@ -29,18 +29,18 @@ body{overflow-x:hidden;font-family:'NotoKr', 'Malgun Gothic', '맑은 고딕', '
 
 /* 헤더 */
 #header{position:absolute;top:0;left:0;z-index:10;padding-top:4vh;padding-left:55px;text-align:center}
-#header .logo:before{display:block;position:absolute;top:0;left:13px;width:290px;height:288px;background:url('/site/www/images/bicycle/logo_bg.png') no-repeat}
-#header .logo_anchor{display:block;position:relative;width:157px;height:62px;margin:0 auto;background:url('/site/www/images/bicycle/logo.png') no-repeat;font-size:0;line-height:0;cursor:pointer}
+#header .logo:before{display:block;position:absolute;top:0;left:13px;width:290px;height:288px;background:url(../images/bicycle/logo_bg.png) no-repeat}
+#header .logo_anchor{display:block;position:relative;width:157px;height:62px;margin:0 auto;background:url(../images/bicycle/logo.png) no-repeat;font-size:0;line-height:0;cursor:pointer}
 #header .logo_text{display:inline-block;margin-top:10px;color:#fff;font-family:'DWImpactamin';font-size:22px;font-weight:normal;line-height:24px;letter-spacing:-0.02em}
 @media all and (max-width:1000px){
 #header{overflow:hidden;position:relative;top:0;left:0;height:70px;background-color:#b23945}
-#header .logo:before{top:auto;right:31px;bottom:-55px;left:auto;width:144px;height:196px;background:url('/site/www/images/bicycle/m_logo_bg.png') no-repeat}
+#header .logo:before{top:auto;right:31px;bottom:-55px;left:auto;width:144px;height:196px;background:url(../images/bicycle/m_logo_bg.png) no-repeat}
 #header .logo_anchor{position:absolute;top:15px;left:20px;z-index:10;width:91px;height:35px;background-size:cover}
 #header .logo_text{position:absolute;top:15px;left:120px;font-size:17px;line-height:19px}
 }
 
 /* 카테고리 목록 */
-.category{float:left;position:relative;width:285px;height:100vh;padding-top:calc(96px + 4vh);padding-bottom:100px;background:url('/site/www/images/bicycle/category_bg.png') #4a506b left bottom no-repeat;background:#b23945}
+.category{float:left;position:relative;width:285px;height:100vh;padding-top:calc(96px + 4vh);padding-bottom:100px;background:url(../images/bicycle/category_bg.png) #4a506b left bottom no-repeat;background:#b23945}
 .category .category_open,.category .category_close{display:none}
 .category:before{display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(0deg, #6e131c 0%, transparent 100%)}
 .category .category_content{overflow:hidden;position:relative;z-index:10;height:100%}
@@ -48,8 +48,8 @@ body{overflow-x:hidden;font-family:'NotoKr', 'Malgun Gothic', '맑은 고딕', '
 .category .category_item{display:inline-block;position:relative;width:50%;margin-bottom:0;border:none}
 .category .category_item:nth-last-child(n + 3){margin-bottom:1px}
 .category .category_item label{position:relative;width:100%;padding-left:29px;padding-left:44px;box-sizing:border-box;color:#222;font-size:14px;line-height:30px;letter-spacing:-0.02em;text-align:left}
-.category .category_item label:before{display:block;position:absolute;top:6px;left:0;width:20px;height:20px;background:url('/site/www/images/bicycle/category_sprite.png') no-repeat left 37.03% / 100% 505%}
-.category .category_item label:after{display:block;position:absolute;top:7px;left:26px;width:14px;height:17px;background-image:url(/site/www/images/shelter/category_pin.png);background-repeat:no-repeat}
+.category .category_item label:before{display:block;position:absolute;top:6px;left:0;width:20px;height:20px;background:url(../images/bicycle/category_sprite.png) no-repeat left 37.03% / 100% 505%}
+.category .category_item label:after{display:block;position:absolute;top:7px;left:26px;width:14px;height:17px;background-image:url(../images/shelter/category_pin.png);background-repeat:no-repeat}
 .category .category_item:nth-child(1) label:after{background-position:0 0}
 .category .category_item:nth-child(2) label:after{background-position:-15px 0}
 .category .category_item:nth-child(3) label:after{background-position:-30px 0}
@@ -70,7 +70,7 @@ body{overflow-x:hidden;font-family:'NotoKr', 'Malgun Gothic', '맑은 고딕', '
 /* 활성화 */
 @media all and (max-width:1000px){
 .category{float:none;position:static;width:auto;height:auto;padding:0}
-.category .category_open,.category .category_close{display:block;position:absolute;background:url('/site/www/images/bicycle/menu_sprite.png') no-repeat}
+.category .category_open,.category .category_close{display:block;position:absolute;background:url(../images/bicycle/menu_sprite.png) no-repeat}
 .category .category_open{top:26px;right:20px;z-index:11;width:22px;height:17px;background-size:100% 270.58%}
 .category .category_close{top:25px;right:22px;z-index:10;width:20px;height:19px;background-position:left 100%;background-size:110% 242.1%}
 .category .category_content{display:none;overflow:hidden;position:absolute;top:0;right:-294px;z-index:12;width:222px;height:100%;padding:70px 0 0;transition:right .25s linear}
@@ -90,7 +90,7 @@ body{overflow-x:hidden;font-family:'NotoKr', 'Malgun Gothic', '맑은 고딕', '
 /* 대피소 */
 .category .shelter{overflow:hidden;height:calc(100% - 278px);margin-top:20px;padding:0 33px 0 32px}/*transition-property:opacity,visibility;transition-duration:0.25s;transition-timing-function:ease-in-out;*/
 .category .shelter_inner{position:relative;height:calc(100% - 40px);border-radius:3px;background-color:#fff}
-.category .shelter_title{height:45px;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAABCAYAAAAW/mTzAAAAAXNSR0IArs4c6QAAAB5JREFUGFdj/PLly/+Pn/8z7Nu3j8HJyYmBn5eRAQCQ+Qnd0dQs0gAAAABJRU5ErkJggg==') repeat-x left 100%;color:#a02f3a;font-size:16px;font-weight:600;line-height:41px;letter-spacing:-0.035em;text-align:center}
+.category .shelter_title{height:45px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAABCAYAAAAW/mTzAAAAAXNSR0IArs4c6QAAAB5JREFUGFdj/PLly/+Pn/8z7Nu3j8HJyYmBn5eRAQCQ+Qnd0dQs0gAAAABJRU5ErkJggg==) repeat-x left 100%;color:#a02f3a;font-size:16px;font-weight:600;line-height:41px;letter-spacing:-0.035em;text-align:center}
 .category .shelter_list{overflow-y:scroll;height:calc(100% - 47px)}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{border-radius:0;background-color:#c5c9d6;-webkit-border-radius:0}
@@ -141,7 +141,7 @@ body{overflow-x:hidden;font-family:'NotoKr', 'Malgun Gothic', '맑은 고딕', '
 .map_control .switcher:checked + #switcher_label:after{right:0;border-color:#91949e}
 .map_control .zoom_box{position:absolute;top:140px;right:41px;z-index:10;padding-right:5px}
 .map_control .zoom_box button{display:block;position:relative;width:36px;height:36px;margin-bottom:9px;margin-left:auto;border-radius:50%;background-color:#fff;font-size:0;box-shadow:2px 2px 5px 0 rgba(0, 0, 0, 0.2)}
-.map_control .zoom_box button:before{display:block;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;background:url('/site/www/images/bicycle/mapzoom_sprite.png') no-repeat}
+.map_control .zoom_box button:before{display:block;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;background:url(../images/bicycle/mapzoom_sprite.png) no-repeat}
 .map_control .zoom_box button.zoom_in:before{width:12px;height:11px;background-position:left 0;background-size:150% 463.63%}
 .map_control .zoom_box button.zoom_out:before{width:12px;height:3px;background-position:left 43.75%;background-size:150% 1700%}
 .map_control .zoom_box button.location:before{left:1px;width:18px;height:17px;background-position:left 100%;background-size:100% 300%}
@@ -183,7 +183,7 @@ body{overflow-x:hidden;font-family:'NotoKr', 'Malgun Gothic', '맑은 고딕', '
 .overlay .overlay_btn_wrap .btn{width:80px;padding:5px;border-radius:5px;color:#363c5a}
 .overlay .overlay_btn_wrap .btn +.btn{margin-left:10px}
 .overlay .overlay_btn_wrap .btn:hover{border-color:#7a7d96;background-color:#7a7d96;color:#fff;box-shadow:none}
-.overlay .overlay_close{position:absolute;top:13px;right:15px;width:23px;height:23px;background:url('/site/www/images/bicycle/overlay_close.png') no-repeat center center;font-size:0}
+.overlay .overlay_close{position:absolute;top:13px;right:15px;width:23px;height:23px;background:url('../images/bicycle/overlay_close.png') no-repeat center center;font-size:0}
 @media all and (max-width:640px){
 .overlay{left:calc(50% - 52px);width:251px}
 .overlay .overlay_title{font-size:16px}
