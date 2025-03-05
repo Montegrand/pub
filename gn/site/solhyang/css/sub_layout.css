@@ -1,0 +1,154 @@
+/* (주)한신정보기술  김지혜 / 2016-11 */
+/* Layout */
+#container{padding:1px 0;}
+.sub_visual{position:absolute;top:0;left:0;width:100%;height:329px;background:url(../images/sub/sub_visual1.jpg) no-repeat 50% top;}
+.sub_visual.visual2{background-image:url(../images/sub/sub_visual2.jpg);}
+.sub_visual.visual3{background-image:url(../images/sub/sub_visual3.jpg);}
+.sub_visual.visual4{background-image:url(../images/sub/sub_visual4.jpg);}
+.sub_visual.visual5{background-image:url(../images/sub/sub_visual5.jpg);}
+.sub_visual .menu_title{height:169px;padding:160px 0 0 0;color:#fff;font-size:36px;font-weight:400;line-height:38px;text-align:center;}
+.sub_visual .menu_title i{display:block;width:65px;height:1px;margin:27px auto 0 auto;background-color:rgba(255,255,255,.7);}
+
+#container .wrap{position:relative;padding:185px 0 0 0;}
+/* 왼쪽 메뉴 */
+#side{float:left;width:210px;}
+.side_title{position:relative;height:85px;padding:55px 0 0 0;background:url(../images/sub/side_title_bg.jpg) no-repeat 50% top;border-bottom:4px solid #5d8019;color:#fff;font-size:28px;font-weight:400;line-height:30px;text-align:center;}
+.side_title span{display:block;margin:20px 0 0 0;color:rgba(255,255,255,.6);font-size:11px;font-weight:200;line-height:13px;}
+.sm_2th{border-bottom:1px solid #9c9c9c;}
+.sm_2th > li{margin:0;border-top:1px solid #e1e1e1;}
+.sm_2th > li:first-child{border-top:none;}
+.sm_2th > li > a{display:block;position:relative;padding:15px 15px 15px 32px;background:url(../images/sub/sub_sprite_image.png) #fff no-repeat 15px -86px;color:#464646;font-size:16px;line-height:18px;transition:all .3s;}
+.sm_2th > li > a > span{display:block;}
+.sm_2th > li.on > a,.sm_2th > li > a:hover{background-color:#108d6a;color:#fff;transition:all .3s;}
+.sm_2th > li.on > a > span,.sm_2th > li > a:hover > span{background:url(../images/sub/sub_sprite_image.png) no-repeat right -196px;}
+.sm_3th{padding:10px 20px;background-color:#f5f5f5;}
+.sm_3th li{padding:0 0 0 15px;background:url(../images/sub/sub_sprite_image.png) no-repeat -409px -99px;}
+.sm_3th li.on a,.sm_3th li a:hover{color:#007a8f;text-decoration:underline;}
+/* 컨텐츠 타이틀 */
+/* 컨텐츠 그룹 */
+.rowgroup{display:block;float:left;width:940px;margin:0 0 0 50px;padding:180px 0 30px 0;}
+/* 컨텐츠 타이틀 */
+#rowgroup .sub_head{width:100%;padding:0 0 1px;}
+.sub_head .title{float:left;position:relative;width:45%;margin:0 0 35px;padding:0 0 17px;color:#000;font-size:34px;line-height:36px;}
+.sub_head .title h2{color:#383838;font-size:27px;font-weight:500;line-height:29px;}
+.sub_head .title i{display:block;position:absolute;left:0;bottom:-3px;width:137px;height:3px;background:url(../images/sub/sub_sprite_image.png) no-repeat left -223px;}
+.cnt_location{display:inline-block;float:right;padding:0 0 9px 0;border-bottom:1px dashed #cdcdcd;line-height:19px;vertical-align:middle;text-align:left;}
+.cnt_location em{display:inline-block;margin:0;padding:0;color:#434343;font-size:14px;font-weight:500;line-height:19px;vertical-align:middle;}
+.cnt_location em.last{margin:0;padding:0;background:none;color:#007653;letter-spacing:-1px;}
+.cnt_location .home_icon{display:inline-block;width:14px;height:12px;background:url(../images/sub/sub_sprite_image.png) no-repeat -325px -50px;color:transparent;font-size:1px;line-height:1px;vertical-align:middle;}
+.cnt_location .arr{display:inline-block;width:6px;height:19px;margin:0 0 0 8px;background:url(../images/sub/sub_sprite_image.png) no-repeat left -200px;vertical-align:middle;}
+/* 컨텐츠 그룹 */
+#contents{padding:0 0 105px 0;font-family:'Malgun Gothic','맑은 고딕',Dotum,'돋움',AppleGothic,AppleSDGothicNeo;}
+/* #contents img{width:100%;height:auto;} */
+/* 만족도조사 및 담당자 정보 */
+.content_info{position:relative;min-height:66px;}
+@media print{.contents_info{display:none;}
+}
+.literary_work .column_left{width:705px;}
+.column_left .inner_line{padding:20px 30px;background:url(/common/images/sub/box1_pattern1.png) #fff repeat;border:1px solid #ddd;border-top:2px solid #5c5c5c;}
+.admin_info{position:relative;margin:0 0 20px;padding:0 0 20px 0;border-bottom:1px dashed #bebebe;}
+.admin_info .admin_icon{display:block;position:absolute;top:0;left:0;width:45px;height:45px;background:url(/site/www/images/sub/satisfaction_icon.png) #4d5360 no-repeat 50%;}
+.admin_info ul{margin:0;padding:0;}
+.admin_info ul li{float:left;margin:0 25px 0 0;color:#434343;}
+.admin_info ul li span{display:inline-block;margin:0 10px 0 0;padding:0 0 0 17px;background:url(/site/www/images/sub/sub_sprite_image.png) no-repeat -406px -309px;color:#2c61ad;font-size:14px;font-weight:500;line-height:16px;}
+.satisfaction_rank{margin:0;padding:30px 20px;background-color:#f5f5f5;border:1px solid #c7ced2;}
+.satisfaction_list{margin:10px 0 0;padding:0;}
+.satisfaction_list .input_radio{display:block;margin:0 0 15px;}
+.satisfaction_list .input_radio span{display:inline-block;margin:0 5% 0 0;}
+.satisfaction_list label{display:inline-block;margin:0 15px 0 0;color:#535252;}
+.satisfaction_list .opinion{display:block;}
+.opinion input[type="text"]{width:80%;height:33px;border:1px solid #e1e1e1;line-height:33px;}
+.opinion input[type="submit"]{width:15%;height:37px;margin:0;padding:0 2.5%;background-color:#4d5360;color:#fff;line-height:37px;}
+.kogl_mark{float:left;position:absolute;top:0;bottom:0;right:0;width:230px;margin:0 0 0 5px;}
+.kogl_mark .inner_line{position:absolute;top:36px;left:0;bottom:0;right:0;margin:0;border:1px solid #ddd;}
+.kogl_mark h3{position:absolute;top:0;left:0;right:0;padding:10px;background:url(/common/images/sub/box1_pattern1.png) #5c5c5c repeat;color:#fff;font-size:14px;font-weight:400;line-height:16px;text-align:center;}
+.kogl_mark .mark_area{position:absolute;top:50%;left:0;right:0;margin:-33px auto 0 auto;color:#777;font-size:13px;letter-spacing:-1px;line-height:15px;text-align:center;}
+.kogl_mark .mark_area.mark1{width:111px;}
+.kogl_mark .mark_area.mark2{width:136px;}
+.kogl_mark .mark_area.mark3{width:136px;}
+.kogl_mark .mark_area.mark4{width:185px;}
+.kogl_mark .mark_area i{display:block;height:41px;margin:0 auto 10px auto;background:url(/site/www/images/sub/sub_sprite_image.png) no-repeat;color:rgba(255,255,255,0);font-size:3px;line-height:1px;}
+.kogl_mark .mark_area.mark1 i{width:111px;background-position:left -306px;}
+.kogl_mark .mark_area.mark2 i{width:136px;background-position:-172px -306px;}
+.kogl_mark .mark_area.mark3 i{width:136px;background-position:left -357px;}
+.kogl_mark .mark_area.mark4 i{width:162px;background-position:-172px -357px;}
+.element_miss{}
+.element_miss .admin_info{margin:0;padding:0;border:none;}
+.element_miss .column_left{float:left;width:100%;}
+.element_miss .kogl_mark{float:right;position:static;height:66px;margin:0 0 15px;}
+.element_miss .kogl_mark .inner_line{position:static;border:none;}
+.element_miss .kogl_mark .mark_area{top:0;margin:0 0 0 auto;text-align:right;}
+.element_miss .kogl_mark .mark_area i{margin:0 0 10px auto;}
+.element_no .kogl_mark{height:66px;}
+.element_no .kogl_mark .inner_line{border:none;}
+.element_no .kogl_mark .mark_area{top:0;margin:0 0 0 auto;}
+.element_no .kogl_mark .mark_area{top:0;margin:0 0 0 auto;text-align:right;}
+.element_no .kogl_mark .mark_area i{margin:0 0 10px auto;}
+@media all and (max-width:1200px){
+.literary_work .column_left{width:calc(100% - 235px);}
+    .opinion input[type="text"]{width:calc(100% - 125px);}
+    .opinion input[type="submit"]{width:115px;padding:0;text-align:center;}
+}
+
+@media all and (max-width:1000px) {
+  .opinion input[type="text"]{width:calc(100% - 125px);}
+  .opinion input[type="submit"]{width:115px;padding:0;text-align:center;}
+}
+
+@media all and (max-width:717px){.literary_work .column_left{width:100%;float:none;}
+    .column_left .inner_line{padding:5%;}
+    .kogl_mark{float:none;position:relative;top:inherit;bottom:inherit;right:inherit;width:100%;margin:20px 0 0 auto;}
+    .kogl_mark h3{position:static;}
+    .kogl_mark .inner_line{position:relative;height:90px;top:inherit;}
+}
+
+
+
+
+@media all and (max-width:1200px) {
+.rowgroup{float:right; width:calc(100% - 240px); margin:0;}
+
+}
+
+@media all and (max-width:1000px) {
+#container{padding:0;}
+#container .wrap{width:auto; padding:0;}
+.sub_visual{position:relative; height:auto;}
+.sub_visual .menu_title i{display:none;}
+#container .sub_visual .wrap.menu_title{height:auto; padding:161px 3% 100px;}
+#container .sub_visual .sub_title{position:relative; min-height:68px; padding-bottom:24px; box-sizing:border-box; line-height:44px; letter-spacing:-0.03em;}
+#container .sub_visual .sub_title:before{display:block; position:absolute; bottom:0; left:calc(50% - 33px); width:65px; height:1px; background-color:rgba(255, 255, 255, 0.7); content:'';}
+
+#side{display:none;}
+.rowgroup{float:none; width:auto; padding:0 0 30px;}
+#contents{width:94%; margin:auto;}
+.cnt_location{display:block; position:relative; float:none; margin-bottom:34px; padding:15px 3% 13px; line-height:0; border-bottom:1px solid #d7d7d7; font-size:0;}
+.cnt_location em{position:relative; margin-right:11px; padding-right:20px; vertical-align:top; line-height:22px; color:#717171; font-size:15px; font-weight:400; letter-spacing:-0.03em;}
+.cnt_location em:first-child{padding-right:14px;}
+.cnt_location em:last-child{margin-right:0; padding-right:0;}
+.cnt_location em.last{color:#717171;}
+.cnt_location .arr{display:block; position:absolute; top:7px; right:0; width:5px; height:9px; margin:0; background-position:-1px -203px;}
+.cnt_location .home_icon{display:block; position:relative; width:16px; height:22px; background:none;}
+.cnt_location .home_icon:before{display:block; position:absolute; top:5px; left:1px; width:14px; height:12px; background-repeat:no-repeat; background-position:-325px -50px; background-image:url(../images/sub/sub_sprite_image.png); content:'';}
+.sub_head .title{float:none; width:auto; margin:0 0 29px; padding:0 3%;}
+.sub_head .title h2{line-height:36px; color:#383838; font-size:28px; font-weight:400;}
+
+.content_info{width:94%; margin:auto;}
+
+}
+
+@media all and (max-width:640px) {
+#container .sub_visual .wrap.menu_title{padding:123px 3% 63px;}
+#container .sub_visual .sub_title{min-height:49px; padding-bottom:18px; line-height:31px; font-size:25px;}
+#container .sub_visual .sub_title:before{left:calc(50% - 20px); width:40px;}
+.cnt_location{margin-bottom:24px; padding:10px 3% 8px;}
+.cnt_location em{margin-right:9px; padding-right:18px; font-size:14px;}
+.sub_head .title{margin:0 0 24px;}
+.sub_head .title h2{text-align:center; font-size:26px; letter-spacing:-0.01em;}
+
+
+}
+
+
+
+

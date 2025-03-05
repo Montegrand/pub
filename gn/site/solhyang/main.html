@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes" />
+	<meta name="keywords" content="@@{siteInfo.siteKwrd}" />
+	<meta name="description" content="@@{siteInfo.siteDc}" />
+	<!-- <link rel="stylesheet" type="text/css" href="/common/css/font.css" /> -->
+	<link rel="stylesheet" type="text/css" href="../public/css/font.css" />
+	<link rel="stylesheet" href="./css/main.css" />
+	<script src="../../common/js/jquery-1.12.4.HS-20200709.min.js"></script>
+	<script src="../../common/js/plugins.js"></script>
+	<script src="../public/js/common.js"></script>
+	<script src="./js/main.js"></script>
+	<title>@@{menuInfo.cntntsNm} - @@{siteInfo.siteNm}</title>
+</head>
+<body id="${siteInfo.tmplatId}" class="@@{siteInfo.siteId} page@@{key}">
+    <div id="wrapper">
+
+        <header id="header">
+            <div class="accessibility">
+                <a href="#contents">본문 바로가기</a>
+            </div>
+            <div class="gnb">
+                <div class="clearfix wrap">
+                    <div class="site_link right">
+                        <ul class="clearfix">
+                            <li class="link_item login"><a href="" class="link_anchor"><span>로그인</span></a></li>
+                            <!-- <li class="link_item logout"><a href="" class="link_anchor"><span>로그아웃</span></a></li> -->
+                            <li class="link_item www"><a href="" class="link_anchor"><span>강릉시청</span></a></li>
+                            <li class="link_item cult"><a href="" class="link_anchor"><span>문화관광</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  <!--//gnb-->
+            <div class="group">
+                <div class="logo">
+                    <div class="wrap">
+                        <a href="./index.do" class="logo_anchor">  <!-- logo_img src -->
+                            <img src="../public/images/common/logo_visual.png" alt="솔향강릉 PINE CITY Gangneung">
+                            <span class="logo_text">강릉솔향수목원</span>
+                        </a>
+                    </div>
+                </div>  <!--//logo-->
+                <script>
+                </script>
+                <div class="lnb">
+                    <div class="menu_show">
+                        <button type="button" class="menu_btn">주메뉴 열기</button>
+                    </div>
+                    <nav class="menu after eachdown multiple init">
+                        <h2 class="skip">주메뉴</h2>
+                        <div class="menu_header">
+                            <div class="site_link">
+                                <ul class="clearfix">
+                                    <li class="link_item login"><a href="" class="link_anchor"><span>로그인</span></a></li>
+                                    <!-- <li class="link_item logout"><a href="" class="link_anchor"><span>로그아웃</span></a></li> -->
+                                    <li class="link_item www"><a href="" class="link_anchor"><span>강릉시청</span></a></li>
+                                    <li class="link_item cult"><a href="" class="link_anchor"><span>문화관광</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wrap">
+                            <!--
+                                차수에 맞는 숫자와 조합하여 클래스를 넣어주세요 (예 : depth#, depth#_#)
+
+                                현재 페이지의 depth#_text 메뉴에 .spy 붙여주세요. (예 : 아래 메뉴명 4차메뉴_spy)
+                            -->
+                            <div class="depth depth1">
+                                <ul class="depth_list depth1_list cut">
+                                    <li class="depth_item depth1_item">
+                                        <a href="#n" target="_self" class="depth_text depth1_text"><span>1차메뉴</span></a>
+                                        <div class="depth depth2">
+                                            <ul class="depth_list depth2_list cut">
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                            </ul>
+                                        </div>  <!--//depth2-->
+                                    </li>
+                                    <li class="depth_item depth1_item">
+                                        <a href="#n" target="_self" class="depth_text depth1_text"><span>1차메뉴</span></a>
+                                        <div class="depth depth2">
+                                            <ul class="depth_list depth2_list cut">
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_blank" rel="noopener noreferrer" title="새창" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text spy"><span>4차메뉴_spy</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                            </ul>
+                                        </div>  <!--//depth2-->
+                                    </li>
+                                    <li class="depth_item depth1_item">
+                                        <a href="#n" target="_self" class="depth_text depth1_text"><span>1차메뉴</span></a>
+                                        <div class="depth depth2">
+                                            <ul class="depth_list depth2_list cut">
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                            </ul>
+                                        </div>  <!--//depth2-->
+                                    </li>
+                                    <li class="depth_item depth1_item">
+                                        <a href="#n" target="_self" class="depth_text depth1_text"><span>1차메뉴</span></a>
+                                        <div class="depth depth2">
+                                            <ul class="depth_list depth2_list cut">
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                            </ul>
+                                        </div>  <!--//depth2-->
+                                    </li>
+                                    <li class="depth_item depth1_item">
+                                        <a href="#n" target="_self" class="depth_text depth1_text"><span>1차메뉴</span></a>
+                                        <div class="depth depth2">
+                                            <ul class="depth_list depth2_list cut">
+                                                <li class="depth_item depth2_item">
+                                                    <a href="#n" target="_self" class="depth_text depth2_text"><span>2차메뉴</span></a>
+                                                    <div class="depth depth3">
+                                                        <ul class="depth_list depth3_list">
+                                                            <li class="depth_item depth3_item">
+                                                                <a href="#n" target="_self" class="depth_text depth3_text"><span>3차메뉴</span></a>
+                                                                <div class="depth depth4">
+                                                                    <ul class="depth_list depth4_list cut">
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_self" class="depth_text depth4_text"><span>4차메뉴</span></a>
+                                                                        </li>
+                                                                        <li class="depth_item depth4_item">
+                                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text"><span>4차메뉴_새창</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>  <!--//depth4-->
+                                                            </li>
+                                                        </ul>
+                                                    </div>  <!--//depth3-->
+                                                </li>
+                                            </ul>
+                                        </div>  <!--//depth2-->
+                                    </li>
+                                </ul>
+                            </div>  <!--//depth1-->
+                        </div>
+                        <div class="menu_hide">
+                            <button type="button" class="menu_btn">주메뉴 닫기</button>
+                        </div>
+                    </nav>
+                </div>  <!--//lnb-->
+                <div class="shortcut">
+                    <div class="wrap">
+                        <ul class="shortcut_list">
+                            <li class="shortcut_item search">
+                                <button type="button" class="search_btn">검색열기</button>
+                            </li>
+                            <li class="shortcut_item sitemap">
+                                <a href="./sitemap.do" class="sitemap_anchor">사이트맵</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  <!--//shortcut-->
+                <div class="search_box">
+                    <div class="wrap">
+                        <div class="search">
+                            <div class="search_con">
+                                <div class="title_box">
+                                    <h2 class="skip">통합검색</h2>
+                                </div>
+                                <form class="search_form" action="">
+                                    <fieldset>
+                                        <legend>통합검색</legend>
+                                        <div class="input_box">
+                                            <label for="total_search" class="skip">검색어를 입력하세요</label>
+                                            <input type="search" id="total_search" class="total_search" placeholder="검색어를 입력하세요">
+                                            <span class="submit_box">
+                                                <input type="submit" value="검색">
+                                            </span>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <div class="search_keyword">
+                                    <div class="keywrod_box">
+                                        <div class="keyword_title"><span>인기검색어</span></div>
+                                        <div class="keyword_list">
+                                            <div class="keyword_item title">
+                                                <span>인기검색어</span>
+                                            </div>
+                                            <div class="keyword_item">
+                                                <a href=""><span>인기검색어1</span></a>
+                                            </div>
+                                            <div class="keyword_item">
+                                                <a href=""><span>인기검색어2</span></a>
+                                            </div>
+                                            <div class="keyword_item">
+                                                <a href=""><span>인기검색어3</span></a>
+                                            </div>
+                                            <div class="keyword_item">
+                                                <a href=""><span>인기검색어4</span></a>
+                                            </div>
+                                            <div class="keyword_item">
+                                                <a href=""><span>인기검색어5</span></a>
+                                            </div>
+                                            <div class="keyword_item">
+                                                <a href=""><span>인기검색어5</span></a>
+                                            </div>
+                                            <div class="keyword_item">
+                                                <a href=""><span>인기검색어5</span></a>
+                                            </div>
+                                            <div class="keyword_item">
+                                                <a href=""><span>인기검색어5</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="search_close">검색닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  <!--//shortcut-->
+            </div>
+        </header>  <!--//header-->
+
+        <main id="container">
+
+            <div class="rowgroup">
+                <section class="visual scroll_animation">
+                    <h3 class="skip">비주얼</h3>
+                    <div class="visual_list">
+                        <div class="visual_item">
+                            <img src="./images/main/visual_img01.jpg" alt="강릉솔향수목원 비주얼 이미지1" />
+                        </div>
+                        <div class="visual_item">
+                            <img src="./images/main/visual_img02.jpg" alt="강릉솔향수목원 비주얼 이미지2" />
+                        </div>
+                    </div>
+                    <div class="visual_text">
+                        <p class="animation_item">자연과 하나되는곳!</p>
+                        <p class="animation_item">솔내음·꽃향기를 물소리에 실어 <br />마음속으로 전하는 휴식공간</p>
+                        <p class="animation_item">강릉솔향수목원에 오신것을 환영합니다.</p>
+                    </div>
+                    <div class="visual_control">
+                        <button type="button" class="visual_prev">이전</button>
+                        <span class="visual_count">
+                            <span class="visual_current"></span>
+                            <span class="visual_total"></span>
+                        </span>
+                        <button type="button" class="visual_next">다음</button>
+                        <button type="button" class="visual_auto">정지</button>
+                    </div>
+                </section>  <!--//visual-->
+            </div>  <!--//rowg-->
+
+            <div class="rowgroup2 scroll_animation">
+                <div class="wrap">
+                    <section class="quick animation_item">
+                        <h3 class="quick_title"><span>자주찾는 메뉴</span></h3>
+                        <ul class="quick_list">
+                            <li class="quick_item">
+                                <a href="" class="quick_anchor">
+                                    <span>체험프로그램 예약</span>
+                                </a>
+                            </li>
+                            <li class="quick_item">
+                                <a href="" class="quick_anchor">
+                                    <span>묻고 답하기</span>
+                                </a>
+                            </li>
+                            <li class="quick_item">
+                                <a href="" class="quick_anchor">
+                                    <span>숲해설 신청</span>
+                                </a>
+                            </li>
+                            <li class="quick_item">
+                                <a href="" class="quick_anchor">
+                                    <span>유아숲 신청</span>
+                                </a>
+                            </li>
+                            <li class="quick_item">
+                                <a href="" class="quick_anchor">
+                                    <span>주요시설</span>
+                                </a>
+                            </li>
+                            <li class="quick_item">
+                                <a href="" class="quick_anchor">
+                                    <span>관람코스</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>  <!--//quick-->
+                    <section class="info animation_item">
+                        <h3 class="info_title"><span>관람안내</span></h3>
+                        <ul class="info_list">
+                            <li class="info_item">
+                                <span class="info_sub">하절기(3월~10월)</span>
+                                <span class="info_time">09:00 ~ 18:00</span>
+                                <ul>
+                                    <li>입장 : 09:00 ~ 17:00</li>
+                                    <li>야간 : 20:00 ~ 23:00 (※입장마감 22:00)</li>
+                                </ul>
+                            </li>
+                            <li class="info_item">
+                                <span class="info_sub">동절기(11월~2월)</span>
+                                <span class="info_time">09:00 ~ 17:00</span>
+                                <ul>
+                                    <li>입장 : 09:00 ~ 16:00</li>
+                                    <li>야간 : 18:00 ~ 22:00 (※입장마감 21:00)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="info_caution_list">
+                            <li>입장료 및 주차료 무료</li>
+                            <li>매주 월요일 휴원 <br />(※월요일이 공휴일, 연휴일인 경우 그 다음날 휴원)</li>
+                            <li>애완동물, 자전거, 오토바이, 텐트(차광막)등의 출입 및 반입을 금지</li>
+                        </ul>
+                    </section>  <!--//info-->
+                </div>  <!--//wrap-->
+            </div>  <!--//rowg2-->
+
+            <div class="rowgroup3 scroll_animation">
+                <div class="wrap">
+                    <div class="notice">
+                        <div class="notice_title"><span class="animation_item">알려드립니다</span><span class="animation_item">수목원의 공지 및 안내사항</span></div>
+                        <div class="notice_content">
+                            <section class="board animation_item">
+                                <h3 class="board_title"><span>공지사항</span></h3>
+                                <ul class="board_list">
+                                    <li class="board_item">
+                                        <a href="" class="board_anchor">
+                                            <span class="board_date">
+                                                <span>2023.09</span>
+                                                <span>05</span>
+                                            </span>
+                                            <span class="board_text">
+                                                <span class="board_sub">추석 연휴 수목원 운영 안내</span>
+                                                <span>
+                                                    공지사항 내용 공지사항 내용 공지사항 내용
+                                                    공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="board_item">
+                                        <a href="" class="board_anchor">
+                                            <span class="board_date">
+                                                <span>2023.08</span>
+                                                <span>23</span>
+                                            </span>
+                                            <span class="board_text">
+                                                <span class="board_sub">9월 가드닝 수업 미운영 안내</span>
+                                                <span>
+                                                    공지사항 내용 공지사항 내용 공지사항 내용
+                                                    공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="" class="board_more">공지사항 더보기</a>
+                            </section>  <!--//board-->
+                            <section class="popup animation_item">
+                                <h3 class="skip">팝업</h3>
+                                <div class="popup_list">
+                                    <div class="popup_item">
+                                        <a href="" class="popup_anchor">
+                                            <img src="./images/main/popup_img01.jpg" alt="대체텍스트" />
+                                        </a>
+                                    </div>
+                                    <div class="popup_item">
+                                        <a href="" class="popup_anchor">
+                                            <img src="./images/main/popup_img01.jpg" alt="대체텍스트" />
+                                        </a>
+                                    </div>
+                                    <div class="popup_item">
+                                        <a href="" class="popup_anchor">
+                                            <img src="./images/main/popup_img01.jpg" alt="대체텍스트" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popup_control">
+                                    <span class="popup_count">
+                                        <span class="popup_current"></span>
+                                        <span class="popup_total"></span>
+                                    </span>
+                                    <button type="button" class="popup_prev">이전</button>
+                                    <button type="button" class="popup_auto">정지</button>
+                                    <button type="button" class="popup_next">다음</button>
+                                </div>
+                            </section>  <!--//popup-->
+                        </div>  <!--//notice_content-->
+                    </div>  <!--//notice-->
+                </div>  <!--//wrap-->
+            </div>  <!--//rowg3-->
+
+            <div class="rowgroup4 scroll_animation">
+                <div class="wrap">
+                    <section class="photo animation_item">
+                        <h3 class="photo_title"><span>수목원은 지금</span><span>사진으로 만나는 강릉 솔향 수목원</span></h3>
+                        <!--
+                            게시물 이미지의 src를 g.img image의 xlink:href 에 넣어주세요.
+                         -->
+                        <div class="photo_list">
+                            <div class="photo_item">
+                                <a href="" class="photo_anchor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 396">
+                                        <defs>
+                                            <clippath>
+                                                <path fill="none" d="M5,160c10-205,310-205,310,0v198c0,20.333-16,33.333-33.333,33.3l-0-0c-0,0-0,0-0,0v0c0,0-0,0-0,0h-241.5c-25-00-35-21-35-34z">
+                                                </path>
+                                            </clippath>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" style="stop-color: #0089c8;" />
+                                                <stop offset="100%" style="stop-color: #46ae46;" />
+                                            </linearGradient>
+                                        </defs>
+                                        <g class="img">
+                                            <image width="100%" height="100%" xlink:href="./images/main/photo_img01.jpg" preserveAspectRatio="xMidYMid slice"></image>
+                                        </g>
+                                        <g class="line">
+                                            <path fill="none" stroke-width="10" d="M5,160c10-205,310-205,310,0v198c0,20.333-16,33.333-33.333,33.3l-0-0c-0,0-0,0-0,0v0c0,0-0,0-0,0h-241.5c-25-00-35-21-35-34z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="photo_sub">늦여름 솔향수목원</span>
+                                    <span class="photo_date">2023-08-23</span>
+                                </a>
+                            </div>
+                            <div class="photo_item">
+                                <a href="" class="photo_anchor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 396">
+                                        <defs>
+                                            <clippath>
+                                                <path fill="none" d="M5,160c10-205,310-205,310,0v198c0,20.333-16,33.333-33.333,33.3l-0-0c-0,0-0,0-0,0v0c0,0-0,0-0,0h-241.5c-25-00-35-21-35-34z">
+                                                </path>
+                                            </clippath>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" style="stop-color: #0089c8;" />
+                                                <stop offset="100%" style="stop-color: #46ae46;" />
+                                            </linearGradient>
+                                        </defs>
+                                        <g class="img">
+                                            <image width="100%" height="100%" xlink:href="./images/main/photo_img02.jpg" preserveAspectRatio="xMidYMid slice"></image>
+                                        </g>
+                                        <g class="line">
+                                            <path fill="none" stroke-width="10" d="M5,160c10-205,310-205,310,0v198c0,20.333-16,33.333-33.333,33.3l-0-0c-0,0-0,0-0,0v0c0,0-0,0-0,0h-241.5c-25-00-35-21-35-34z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="photo_sub">여름 유아 숲놀이</span>
+                                    <span class="photo_date">2023-07-11</span>
+                                </a>
+                            </div>
+                            <div class="photo_item">
+                                <a href="" class="photo_anchor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 396">
+                                        <defs>
+                                            <clippath>
+                                                <path fill="none" d="M5,160c10-205,310-205,310,0v198c0,20.333-16,33.333-33.333,33.3l-0-0c-0,0-0,0-0,0v0c0,0-0,0-0,0h-241.5c-25-00-35-21-35-34z">
+                                                </path>
+                                            </clippath>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" style="stop-color: #0089c8;" />
+                                                <stop offset="100%" style="stop-color: #46ae46;" />
+                                            </linearGradient>
+                                        </defs>
+                                        <g class="img">
+                                            <image width="100%" height="100%" xlink:href="./images/main/photo_img03.jpg" preserveAspectRatio="xMidYMid slice"></image>
+                                        </g>
+                                        <g class="line">
+                                            <path fill="none" stroke-width="10" d="M5,160c10-205,310-205,310,0v198c0,20.333-16,33.333-33.333,33.3l-0-0c-0,0-0,0-0,0v0c0,0-0,0-0,0h-241.5c-25-00-35-21-35-34z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="photo_sub">솔향수목원 야간개장</span>
+                                    <span class="photo_date">2023-06-03</span>
+                                </a>
+                            </div>
+                            <div class="photo_item">
+                                <a href="" class="photo_anchor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 396">
+                                        <defs>
+                                            <clippath>
+                                                <path fill="none" d="M5,160c10-205,310-205,310,0v198c0,20.333-16,33.333-33.333,33.3l-0-0c-0,0-0,0-0,0v0c0,0-0,0-0,0h-241.5c-25-00-35-21-35-34z">
+                                                </path>
+                                            </clippath>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" style="stop-color: #0089c8;" />
+                                                <stop offset="100%" style="stop-color: #46ae46;" />
+                                            </linearGradient>
+                                        </defs>
+                                        <g class="img">
+                                            <image width="100%" height="100%" xlink:href="./images/main/photo_img04.jpg" preserveAspectRatio="xMidYMid slice"></image>
+                                        </g>
+                                        <g class="line">
+                                            <path fill="none" stroke-width="10" d="M5,160c10-205,310-205,310,0v198c0,20.333-16,33.333-33.333,33.3l-0-0c-0,0-0,0-0,0v0c0,0-0,0-0,0h-241.5c-25-00-35-21-35-34z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="photo_sub">솔숲잔디광장 새식구</span>
+                                    <span class="photo_date">2023-04-16</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="photo_control">
+                            <button type="button" class="photo_prev">이전</button>
+                            <button type="button" class="photo_next">다음</button>
+                        </div>
+                        <a href="" class="photo_more"><span>더보기</span></a>
+                    </section>  <!--//photo-->
+                    <section class="review animation_item">
+                        <h3 class="review_title"><span>방문후기</span></h3>
+                        <a href="" class="review_anchor">
+                            <span class="review_img">
+                                <img src="./images/main/review_img01.jpg" alt="" />
+                            </span>
+                            <!--
+                                img 없을때는 위 span.review_img 없애주시고
+                                아래 span.review_cont 에 no_img 클래스 추가해주세요.
+                                예)
+                                <a href="" class="review_anchor">
+                                    <span class="review_cont no_img">
+                                        <span class="review_sub">숲해설과 함께한 자연</span>
+                                        <span class="review_text">
+                                            "${fn:trim(resText)}
+                                        </span>
+                                        <span class="review_date">2023-08-23</span>
+                                    </span>
+                                </a>
+                            -->
+                            <span class="review_cont">
+                                <span class="review_sub">숲해설과 함께한 자연</span>
+                                <span class="review_text">
+                                    저희 가족은 10월 22일 토요일에
+                                    다도체험을 했습니다. 체험후기를
+                                    이제야 올리네요.
+                                    솔향수목원 위치를 숲사랑홍보관으로
+                                    잘못 알고 부랴부랴 서둘러 갔지만
+                                    생각보다 먼 곳에 위치해 먼저 오신
+                                    분들 기다리게 하는 송구스러운 일을
+                                    만들었어요.
+                                    저희 가족은 10월 22일 토요일에
+                                    다도체험을 했습니다. 체험후기를
+                                    이제야 올리네요.
+                                    솔향수목원 위치를 숲사랑홍보관으로
+                                    잘못 알고 부랴부랴 서둘러 갔지만
+                                    생각보다 먼 곳에 위치해 먼저 오신
+                                    분들 기다리게 하는 송구스러운 일을
+                                    만들었어요.
+                                </span>
+                                <span class="review_date">2023-08-23</span>
+                            </span>
+                        </a>
+                    </section>  <!--//review-->
+                </div>  <!--//wrap-->
+            </div>  <!--//rowg4-->
+
+        </main>  <!--//container-->
+
+        <footer id="footer" class="footer">
+            <div class="footer_banner">
+                <div class="wrap">
+                    <div class="banner">
+                        <h2 class="skip">배너모음</h2>
+                        <div class="banner_control">
+                            <button type="button" class="banner_prev">이전배너</button>
+                            <button type="button" class="banner_auto">정지</button>
+                            <button type="button" class="banner_next">다음배너</button>
+                        </div>
+                        <div class="banner_list">
+                            <div class="banner_item">
+                                <a href="https://www.gnanilove.or.kr/www/index.do" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉시동물사랑센터</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="http://www.gnecotour.com" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉생태관광</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.danojefestival.or.kr" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉단오제</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.korea.kr/main.do" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>정책브리핑</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.gwmart.kr/main/index" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강원</span>더몰</a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="http://elearning.provin.gangwon.kr" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>도민사이버배움터</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.gninjae.or.kr" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉미래인재육성재단</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="http://www.gtdc.or.kr" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉관광개발공사</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.safekorea.go.kr" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>국민재난안전포털</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="http://www.gncityfc.com" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉시민축구단</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="http://www.gnvc.or.kr" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉시자원봉사</span>센터</a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.coffeefestival.net" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉커피축제</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://gsipa.or.kr" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉과학산업진흥원</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.gncaf.or.kr" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉문화재단</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://open.gdoc.go.kr/index.do" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>문서</span>24</a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.law.go.kr/" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>국가법령정보센터</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.laiis.go.kr/myMain.do" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>내고장알리미</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="http://www.namk.or.kr" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>전국시장군수구청장협의회</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.gangneung-mall.com/" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>강릉몰</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.gov.kr/portal/main" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>정부24</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.bokjiro.go.kr/ssis-teu/index.do" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>복지로</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.simpan.go.kr/nsph/index.html" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>온라인행정심판</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.mois.go.kr/frt/sub/a03/corruptionDeclareInfo/screen.do" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>공직비리 익명신고</span></a>
+                            </div>
+                            <div class="banner_item">
+                                <a href="https://www.data.go.kr/" target="_blank" rel="noopener noreferrer" title="새창 열기" class="banner_anchor"><span>공공데이터포털</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  <!--//footer_banner-->
+            <div class="wrap">
+                <div class="toTop">
+                    <button type="button">화면 맨위로 이동</button>
+                </div>
+                <div class="link">
+                    <h2 class="skip">바로가기</h2>
+                    <ul class="link_list">
+                        <li class="link_item"><a href="" class="link_anchor">개인정보 처리방침</a></li>
+                        <li class="link_item"><a href="" class="link_anchor">이메일 무단수집 거부</a></li>
+                        <li class="link_item"><a href="" class="link_anchor">저작권 정책</a></li>
+                        <li class="link_item"><a href="" class="link_anchor">뷰어다운로드</a></li>
+                    </ul>
+                </div>  <!--//link-->
+                <div class="site">
+                    <h2 class="skip">관련사이트</h2>
+                    <button type="button" class="site_button" title="목록 열기"><span>관련 사이트</span></button>
+                    <ul class="site_list">
+                        <li class="site_item">
+                            <a href="" class="site_anchor" target="_blank" rel="noopener noreferrer"><span>관련 사이트1</span></a>
+                        </li>
+                        <li class="site_item">
+                            <a href="" class="site_anchor" target="_blank" rel="noopener noreferrer"><span>관련 사이트2</span></a>
+                        </li>
+                        <li class="site_item">
+                            <a href="" class="site_anchor" target="_blank" rel="noopener noreferrer"><span>관련 사이트3</span></a>
+                        </li>
+                        <li class="site_item">
+                            <a href="" class="site_anchor" target="_blank" rel="noopener noreferrer"><span>관련 사이트4</span></a>
+                        </li>
+                        <li class="site_item">
+                            <a href="" class="site_anchor" target="_blank" rel="noopener noreferrer"><span>관련 사이트5</span></a>
+                        </li>
+                        <li class="site_item">
+                            <a href="" class="site_anchor" target="_blank" rel="noopener noreferrer"><span>관련 사이트6</span></a>
+                        </li>
+                    </ul>
+                </div>  <!--//site-->
+                <div class="footer_content">
+                    <div class="info">
+                        <address>
+                            <span class="info_address">[25436] 강원특별자치도 강릉시 사천면 동해대로 3738-17</span><span class="info_tel">대표전화 : 033-660-3140</span><!-- 팩스번호 있을 시 주석 풀고 사용해주세요~ <span class="info_fax"></span>-->
+                        </address>
+                        <p class="info_copyright">Copyrightⓒ Gangneung-si. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>  <!--//footer-->
+    </div>
+</body>

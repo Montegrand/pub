@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes" />
+        <meta name="keywords" content="하남시청, 시청, 하남시" />
+        <meta name="description" content="경기도 하남시청, 정보공개, 민원/신고, 시민소통, 청정하남, 분야별정보, 이용안내 정보 제공" />
+        <link rel="stylesheet" type="text/css" href="../../common_2020/css/font.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="/site/www/css/bicycle.css" /> -->
+        <link rel="stylesheet" type="text/css" href="./css/shelter.css" />
+        <!--[if lt IE 9]><script src="../../common_2020/js/html5.js"></script><![endif]-->
+        <script src="../../common_2020/js/jquery-1.12.4.min.js"></script>
+        <script src="../../common_2020/js/jquery.easing.1.3.js"></script>
+        <title>민방위대피시설 - 하남시청</title>
+    </head>
+
+    <body id="6" class="www">
+        <div id="wrapper">
+            <header id="header">
+                <h1 class="logo">
+                    <button type="button" class="logo_anchor">하남시 Hanam City</button>
+                    <span class="logo_text">민방위대피시설</span>
+                </h1>
+            </header>
+            <div id="container">
+                <div class="clearfix wrap">
+                    <main class="colgroup">
+                        <article>
+                            <!-- 목록보기 -->
+                            <div class="category">
+                                <button type="button" class="category_open"><span class="skip">목록 열기</span></button>
+                                <div class="category_content">
+                                    <button type="button" class="category_close"><span class="skip">닫기</span></button>
+                                    <ul class="category_list">
+                                        <li class="category_item"><input type="checkbox" id="ckb1" class="mapShelterCheckbox" value="1"><label for="ckb1">천현동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb2" class="mapShelterCheckbox" value="2"><label for="ckb2">신장1동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb3" class="mapShelterCheckbox" value="3"><label for="ckb3">신장2동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb4" class="mapShelterCheckbox" value="4"><label for="ckb4">덕풍1동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb5" class="mapShelterCheckbox" value="5"><label for="ckb5">덕풍2동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb6" class="mapShelterCheckbox" value="6"><label for="ckb6">덕풍3동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb7" class="mapShelterCheckbox" value="7"><label for="ckb7">미사1동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb8" class="mapShelterCheckbox" value="8"><label for="ckb8">미사2동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb9" class="mapShelterCheckbox" value="9"><label for="ckb9">미사3동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb10" class="mapShelterCheckbox" value="10"><label for="ckb10">감북동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb11" class="mapShelterCheckbox" value="11"><label for="ckb11">감일동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb12" class="mapShelterCheckbox" value="12"><label for="ckb12">위례동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb13" class="mapShelterCheckbox" value="13"><label for="ckb13">춘궁동</label></li>
+                                        <li class="category_item"><input type="checkbox" id="ckb14" class="mapShelterCheckbox" value="14"><label for="ckb14">초이동</label></li>
+                                    </ul>
+                                    <!-- 대피소현황 -->
+                                    <div class="shelter">
+                                        <div class="shelter_inner">
+                                            <div class="shelter_title">
+                                                <span>대피소현황</span>
+                                            </div>
+                                            <ul class="shelter_list">
+                                            </ul>
+                                        </div>
+                                        <a href="#n" target="_blank" rel="noopener noreferrer" class="shelter_download" title="다운로드"><span>엑셀다운로드</span></a>
+                                    </div>
+                                    <!-- //대피소현황 -->
+                                </div>
+                            </div>
+                            <!-- //목록보기 -->
+                            <div id="map" class="map">
+                                <!-- 지도 컨트롤 -->
+                                <div class="map_control">
+                                    <div class="drag_switch">
+                                        <div class="switch_box">
+                                            <input id="switch" type="checkbox" class="switcher" checked="">
+                                            <label for="switch" id="switcher_label">지도 드래그이동</label>
+                                        </div>
+                                    </div>
+                                    <div class="zoom_box">
+                                        <button type="button" class="zoom_in" onclick="zoomIn()">지도 확대</button>
+                                        <button type="button" class="zoom_out" onclick="zoomOut()">지도 축소</button>
+                                        <button type="button" class="location" onclick="moveToCurrentPosition()">현재위치</button>
+                                    </div>
+                                </div>
+                                <!-- //지도 컨트롤 -->
+                            </div>
+                        </article>
+                    </main>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="footer_info">
+                    <address>[12951] 경기도 하남시 대청로 10(신장동)</address>
+                    <p class="copyright">COPYRIGHT (C) HANAM CITY.<br>ALL RIGHTS RESERVED.</p>
+                </div>
+            </footer>
+        </div>
+        <!-- <script src="/site/www/js/map.js"></script> -->
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9c358194d30b59c4f006ec0f98a6e6e9"></script>
+        <!--<script type="text/javascript" src="/common/js/kakaoMap.js"></script>-->
+        <script type="text/javascript" src="./js/shelterLaneMap.js"></script>
+    </body>
+
+</html>

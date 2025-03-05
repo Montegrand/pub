@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@import url('../../../common_2020/css/default.css');
+@import url('../../../common_2020/css/program.css');
+@import url('../../../common_2020/css/board.css');
+
+/* 초기화 */
+a:link{color:#555;text-decoration:none}
+a:visited{color:#555;text-decoration:none}
+a:hover{color:#555;text-decoration:none}
+a:focus{text-decoration:underline}
+a:active{color:#555;text-decoration:none}
+html,body,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ol,ul,li,blockquote,pre,button,fieldset,form,legend,table,caption,tbody,tfoot,thead,tr,th,td,iframe,article,aside,canvas,details,embed,figure,figcaption,header,footer,menu,nav,section,summary,audio,video{box-sizing:border-box}
+a,em,span{display:inline-block;margin:0;padding:0;box-sizing:border-box}
+video, audio{display:block;width:100%}
+iframe, textarea{width:100%;max-height:100%}
+textarea{max-width:100%}
+mark{background-color:transparent;color:inherit}
+[type='checkbox'], [type='radio'], select{cursor:pointer}
+[disabled], [readonly]{cursor:default}
+button, input, optgroup, select, textarea{border-width:0;font-weight:200}
+input[type=search],input[type=text]{-webkit-appearance:none;-webkit-border-radius:4px}
+select{overflow:visible;background-color:transparent}
+:after,:before{display:none;content:''}
+@media screen and (max-width:768px){
+.skip, caption, legend{overflow:hidden;font-size:0 !important}
+}
+#wrapper{position:relative;width:100%}
+body{overflow-x:hidden;font-family:'NotoKr', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'Gulim', '굴림', sans-serif;font-weight:300;line-height:24px;letter-spacing:-0.025em;word-wrap:break-word;-webkit-text-size-adjust:none}
+
+/* 헤더 */
+#header{position:absolute;top:0;left:0;z-index:10;padding-top:4vh;padding-left:55px;text-align:center}
+#header .logo:before{display:block;position:absolute;top:0;left:13px;width:290px;height:288px;background:url('/site/www/images/bicycle/logo_bg.png') no-repeat}
+#header .logo_anchor{display:block;position:relative;width:157px;height:62px;margin:0 auto;background:url('/site/www/images/bicycle/logo.png') no-repeat;font-size:0;line-height:0;cursor:pointer}
+#header .logo_text{display:inline-block;margin-top:10px;color:#fff;font-family:'DWImpactamin';font-size:22px;font-weight:normal;line-height:24px;letter-spacing:-0.02em}
+@media all and (max-width:1000px){
+#header{overflow:hidden;position:relative;top:0;left:0;height:70px;background-color:#b23945}
+#header .logo:before{top:auto;right:31px;bottom:-55px;left:auto;width:144px;height:196px;background:url('/site/www/images/bicycle/m_logo_bg.png') no-repeat}
+#header .logo_anchor{position:absolute;top:15px;left:20px;z-index:10;width:91px;height:35px;background-size:cover}
+#header .logo_text{position:absolute;top:15px;left:120px;font-size:17px;line-height:19px}
+}
+
+/* 카테고리 목록 */
+.category{float:left;position:relative;width:285px;height:100vh;padding-top:calc(96px + 4vh);padding-bottom:100px;background:url('/site/www/images/bicycle/category_bg.png') #4a506b left bottom no-repeat;background:#b23945}
+.category .category_open,.category .category_close{display:none}
+.category:before{display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(0deg, #6e131c 0%, transparent 100%)}
+.category .category_content{overflow:hidden;position:relative;z-index:10;height:100%}
+.category .category_list{margin:20px 33px;padding:10px 13px 12px;border-radius:2px;background-color:#fff;font-size:0;line-height:0;box-shadow:0 5px 10px rgba(0,0,0,.2)}
+.category .category_item{display:inline-block;position:relative;width:50%;margin-bottom:0;border:none}
+.category .category_item:nth-last-child(n + 3){margin-bottom:1px}
+.category .category_item label{position:relative;width:100%;padding-left:29px;padding-left:44px;box-sizing:border-box;color:#222;font-size:14px;line-height:30px;letter-spacing:-0.02em;text-align:left}
+.category .category_item label:before{display:block;position:absolute;top:6px;left:0;width:20px;height:20px;background:url('/site/www/images/bicycle/category_sprite.png') no-repeat left 37.03% / 100% 505%}
+.category .category_item label:after{display:block;position:absolute;top:7px;left:26px;width:14px;height:17px;background-image:url(/site/www/images/shelter/category_pin.png);background-repeat:no-repeat}
+.category .category_item:nth-child(1) label:after{background-position:0 0}
+.category .category_item:nth-child(2) label:after{background-position:-15px 0}
+.category .category_item:nth-child(3) label:after{background-position:-30px 0}
+.category .category_item:nth-child(4) label:after{background-position:-45px 0}
+.category .category_item:nth-child(5) label:after{background-position:-60px 0}
+.category .category_item:nth-child(6) label:after{background-position:-75px 0}
+.category .category_item:nth-child(7) label:after{background-position:-90px 0}
+.category .category_item:nth-child(8) label:after{background-position:-105px 0}
+.category .category_item:nth-child(9) label:after{background-position:-120px 0}
+.category .category_item:nth-child(10) label:after{background-position:-135px 0}
+.category .category_item:nth-child(11) label:after{background-position:-150px 0}
+.category .category_item:nth-child(12) label:after{background-position:-165px 0}
+.category .category_item:nth-child(13) label:after{background-position:-180px 0}
+.category .category_item:nth-child(14) label:after{background-position:-195px 0}
+.category .category_item input{position:absolute;top:9px;left:3px}
+.category .category_item input:checked + label:before{background-position:left 74.07%}
+
+/* 활성화 */
+@media all and (max-width:1000px){
+.category{float:none;position:static;width:auto;height:auto;padding:0}
+.category .category_open,.category .category_close{display:block;position:absolute;background:url('/site/www/images/bicycle/menu_sprite.png') no-repeat}
+.category .category_open{top:26px;right:20px;z-index:11;width:22px;height:17px;background-size:100% 270.58%}
+.category .category_close{top:25px;right:22px;z-index:10;width:20px;height:19px;background-position:left 100%;background-size:110% 242.1%}
+.category .category_content{display:none;overflow:hidden;position:absolute;top:0;right:-294px;z-index:12;width:222px;height:100%;padding:70px 0 0;transition:right .25s linear}
+.category .category_content:before{display:block;position:absolute;top:70px;right:0;width:222px;height:100%;background-color:#b23945;box-shadow:3px 4px 20px 0 rgba(0, 0, 0, 0.4)}
+.category .category_content:after{display:block;position:absolute;top:0;right:0;width:100%;height:70px;border-radius:10px;background-color:#b23945;transform:skewX(-70deg) translateX(82px) scale(1.1)}
+.category .category_list{overflow-y:scroll;position:relative;z-index:10;max-height:150px;margin:0 10px 0 12px;padding:16px 12px 20px 10px}
+.category .category_item{width:100%;margin-bottom:0;border-top:none;border-right:none;border-bottom:1px dotted rgba(255, 255, 255, 0.3);border-left:none}
+.category .category_item:nth-last-child(n + 2){margin-bottom:1px}
+.category .category_btn{height:44px;padding-left:30px;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.25)}
+.category .category_btn:before{display:none}
+
+/* 활성화 */
+.category .category_content.active{right:0}
+.category .category_item .layer{top:10px;right:calc(100% - 19px);width:100px;padding:15px 10px 15px 15px}
+}
+
+/* 대피소 */
+.category .shelter{overflow:hidden;height:calc(100% - 278px);margin-top:20px;padding:0 33px 0 32px}/*transition-property:opacity,visibility;transition-duration:0.25s;transition-timing-function:ease-in-out;*/
+.category .shelter_inner{position:relative;height:calc(100% - 40px);border-radius:3px;background-color:#fff}
+.category .shelter_title{height:45px;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAABCAYAAAAW/mTzAAAAAXNSR0IArs4c6QAAAB5JREFUGFdj/PLly/+Pn/8z7Nu3j8HJyYmBn5eRAQCQ+Qnd0dQs0gAAAABJRU5ErkJggg==') repeat-x left 100%;color:#a02f3a;font-size:16px;font-weight:600;line-height:41px;letter-spacing:-0.035em;text-align:center}
+.category .shelter_list{overflow-y:scroll;height:calc(100% - 47px)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{border-radius:0;background-color:#c5c9d6;-webkit-border-radius:0}
+::-webkit-scrollbar-thumb{border-radius:0;background:#7a7d96;-webkit-border-radius:0}
+.category .shelter_item{position:relative;padding-left:10px;border-top:1px solid #e0e1e3}
+.category .shelter_item:first-child{border-top:none}
+.category .shelter_button{width:100%;padding-top:8px;padding-bottom:8px;font-size:14px;line-height:20px;text-align:left;word-break:keep-all}
+.category .shelter_sub{display:inline-block;width:60px;color:#363c5a;font-weight:300;vertical-align:top}
+.category .shelter_text{display:inline-block;width:calc(100% - 60px);padding-right:5px;color:#636363;font-size:13px;letter-spacing:-.05em;vertical-align:top}
+.category .linepath{display:none}
+.category .shelter_item.active{background-color:#f4f5f9}
+.category .shelter_download{display:inline-block;position:relative;width:100%;height:34px;margin-top:7px;border-radius:2px;background-color:#232635;text-align:center}
+.category .shelter_download span{position:relative;top:50%;color:#fff;font-size:14px;line-height:normal;letter-spacing:-.05em;vertical-align:top;transform:translateY(-50%)}
+@media all and (min-width:1001px){
+.category .category_content{display:block !important;opacity:1 !important}
+}
+@media all and (max-width:1000px){
+.category .shelter{overflow:hidden;height:calc(100% - 170px);padding:0 10px 0 12px}
+.category .shelter .shelter_inner{height:calc(100% - 40px)}
+.category .shelter_button{font-size:13px}
+.category .shelter_sub{width:50px}
+.category .shelter_text{width:calc(100% - 50px)}
+}
+
+/* 푸터 */
+#footer{position:absolute;bottom:27px;left:0;width:285px}
+#footer .footer_info{color:#fff;letter-spacing:-0.035em;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.25);text-align:center}
+#footer address{margin-bottom:6px;font-size:14px;line-height:25px}
+#footer .copyright{font-size:12px;line-height:14px}
+@media all and (max-width:1000px){
+#footer{position:fixed;bottom:0;z-index:15;width:100%;padding:21px 3% 16px;background-color:#b23945}
+}
+
+/* 지도영역 */
+#map{float:right;position:relative;width:calc(100% - 285px);height:100vh}
+@media all and (max-width:1000px){
+#map{float:none;width:auto;height:calc(100vh - 166px)}
+}
+
+/* 지도 컨트롤 */
+.map_control .drag_switch{position:absolute;top:71px;right:41px;z-index:10;height:50px;padding:13px 15px 12px 19px;border-radius:35px;background-color:#fff;box-shadow:2px 2px 5px 0 rgba(0, 0, 0, 0.2)}
+.map_control .switch_box{position:relative;padding-right:71px}
+.map_control .switcher{position:absolute;top:6px;right:6px}
+.map_control #switcher_label{color:#666;font-size:14px;line-height:25px}
+.map_control #switcher_label:before{display:block;position:absolute;top:0;right:0;width:38px;height:23px;padding:0 10px;border:1px solid #91949e;border-radius:35px;background-color:#e0e1e3;color:#5f6a89;font-size:12px;line-height:22px;text-align:right;transition:0.2s;content:'OFF'}
+.map_control #switcher_label:after{display:block;position:absolute;top:0;right:35px;width:23px;height:23px;border:1px solid #91949e;border-radius:50%;background-color:#fff;transition:0.2s}
+.map_control .switcher:checked + #switcher_label:before{border-color:#111d68;background-color:#111d68;color:#fff;text-align:left;content:'ON'}
+.map_control .switcher:checked + #switcher_label:after{right:0;border-color:#91949e}
+.map_control .zoom_box{position:absolute;top:140px;right:41px;z-index:10;padding-right:5px}
+.map_control .zoom_box button{display:block;position:relative;width:36px;height:36px;margin-bottom:9px;margin-left:auto;border-radius:50%;background-color:#fff;font-size:0;box-shadow:2px 2px 5px 0 rgba(0, 0, 0, 0.2)}
+.map_control .zoom_box button:before{display:block;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;background:url('/site/www/images/bicycle/mapzoom_sprite.png') no-repeat}
+.map_control .zoom_box button.zoom_in:before{width:12px;height:11px;background-position:left 0;background-size:150% 463.63%}
+.map_control .zoom_box button.zoom_out:before{width:12px;height:3px;background-position:left 43.75%;background-size:150% 1700%}
+.map_control .zoom_box button.location:before{left:1px;width:18px;height:17px;background-position:left 100%;background-size:100% 300%}
+@media all and (max-width:1000px){
+.map_control .drag_switch{top:33px;right:20px;width:60px;height:25px;padding:0;background-color:transparent;box-shadow:none}
+.map_control .switch_box{padding-right:0}
+.map_control #switcher_label{display:block;color:transparent;font-size:0}
+.map_control .zoom_box{top:76px;right:20px;padding-right:2px}
+.map_control .zoom_box button{width:30px;height:30px;margin-bottom:6px}
+}
+
+/* 팝업 */
+.overlay{position:absolute;bottom:-22px;left:calc(50% - 126px);z-index:9;width:400px;border-radius:5px;background-color:#fff;box-shadow:4px 3px 10px 0 rgba(0, 0, 0, 0.2)}
+.overlay.n2{top:50%;left:calc(50% + 142px)}
+.overlay:before{display:block;position:absolute;top:calc(100% - 7px);left:50%;z-index:-1;width:14px;height:14px;margin-left:-7px;background-color:#fff;transform:rotate(45deg);box-shadow:4px 3px 10px 0 rgba(0, 0, 0, 0.2)}
+.overlay .overlay_title{padding:13px 32px 11px;border-radius:5px 5px 0 0;color:#fff;font-size:18px;font-weight:500;line-height:26px;text-align:center;word-break:keep-all}
+.overlay .overlay_title.type1{background-color:#d00000}
+.overlay .overlay_title.type2{background-color:#d54600}
+.overlay .overlay_title.type3{background-color:#e09900}
+.overlay .overlay_title.type4{background-color:#18a800}
+.overlay .overlay_title.type5{background-color:#b000d0}
+.overlay .overlay_title.type6{background-color:#0019d5}
+.overlay .overlay_title.type7{background-color:#934200}
+.overlay .overlay_title.type8{background-color:#00a18c}
+.overlay .overlay_title.type9{background-color:#7664cd}
+.overlay .overlay_title.type10{background-color:#008ed0}
+.overlay .overlay_title.type11{background-color:#737d89}
+.overlay .overlay_title.type12{background-color:#ed318e}
+.overlay .overlay_title.type13{background-color:#35394c}
+.overlay .overlay_title.type14{background-color:#6d9724}
+.overlay .overlay_content{position:relative;padding:20px;border-radius:0 0 5px 5px;background-color:#fff}
+.overlay .overlay_inner{padding:12px 15px 12px 30px;background-color:#f4f5f9}
+.overlay .overlay_inner .bu{margin:0}
+.overlay .overlay_inner .dl > li .title{width:98px;color:#363c5a}
+.overlay .overlay_inner .dl > li .text{vertical-align:top}
+.overlay .overlay_inner .bu > li{position:relative;padding-left:18px;font-size:15px}
+.overlay .overlay_inner .bu > li:before{display:block;position:absolute;top:7px;left:0;width:6px;height:6px;border-color:#7a7d96;border-width:3px;border-style:solid;border-radius:50%;content:''}
+.overlay .overlay_btn_wrap{margin-top:20px;font-size:0;text-align:center}
+.overlay .overlay_btn_wrap .btn{width:80px;padding:5px;border-radius:5px;color:#363c5a}
+.overlay .overlay_btn_wrap .btn +.btn{margin-left:10px}
+.overlay .overlay_btn_wrap .btn:hover{border-color:#7a7d96;background-color:#7a7d96;color:#fff;box-shadow:none}
+.overlay .overlay_close{position:absolute;top:13px;right:15px;width:23px;height:23px;background:url('/site/www/images/bicycle/overlay_close.png') no-repeat center center;font-size:0}
+@media all and (max-width:640px){
+.overlay{left:calc(50% - 52px);width:251px}
+.overlay .overlay_title{font-size:16px}
+.overlay .overlay_content{padding:10px}
+.overlay .overlay_inner{padding:12px}
+.overlay .overlay_inner .dl > li{font-size:13px}
+.overlay .overlay_inner .dl > li .title{width:100%}
+}

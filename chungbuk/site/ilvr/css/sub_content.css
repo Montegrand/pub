@@ -1,0 +1,249 @@
+@charset "utf-8";
+/* 홍기현 */
+
+/* 기관장 인사 */
+.cts2141_wrap .office_sttmnt{margin-top:40px;text-align:right;}
+.cts2141_wrap .office_sttmnt em{font-size: 20px;font-weight:700;}
+
+/* 담당자 및 업무_방역과 */
+.cts2145_wrap .table tbody tr td{white-space:nowrap;}
+.cts2145_wrap .table tbody tr td:last-child{white-space:normal;}
+
+/* 담당자 및 업무_축산물검사과 */
+.cts2146_wrap .table tbody tr td{white-space:nowrap;}
+.cts2146_wrap .table tbody tr td:last-child{white-space:normal;}
+
+/* 담당자 및 업무_축산시험장 */
+.cts2147_wrap .table tbody tr td{white-space:nowrap;}
+.cts2147_wrap .table tbody tr td:last-child{white-space:normal;}
+
+/* 담당자 및 업무_중부지소 */
+.cts2148_wrap .table tbody tr td{white-space:nowrap;}
+.cts2148_wrap .table tbody tr td:last-child{white-space:normal;}
+
+/* 담당자 및 업무_남부지소 */
+.cts2149_wrap .table tbody tr td{white-space:nowrap;}
+.cts2149_wrap .table tbody tr td:last-child{white-space:normal;}
+
+/* 담당자 및 업무_북부지소 */
+.cts2150_wrap .table tbody tr td{white-space:nowrap;}
+.cts2150_wrap .table tbody tr td:last-child{white-space:normal;}
+
+/* 담당자 및 업무_음성축산물검사소 */
+.cts2151_wrap .table tbody tr td{white-space:nowrap;}
+.cts2151_wrap .table tbody tr td:last-child{white-space:normal;}
+
+/* 관할구역안내 */
+.cts2152_wrap div.layer > div{visibility:hidden;}
+.cts2152_wrap div.layer .table col{width:50%;}
+
+/* 찾아오시는길 */
+.cts2154_wrap p.blt span.bu_title{color:#06895f}
+
+/* 재난성 가축전염병 방역 */
+.cts2157_wrap table tbody th, .cts2157_wrap table.Disinfection tbody td:nth-child(2){white-space:nowrap;}
+
+/* 돼지 질병 방역_가축질병 모니터링검사 */
+.cts2167_wrap table th, .cts2167_wrap table td{white-space:nowrap;}
+
+/* 조류 질병 방역_뉴캣슬병 근절사업 */
+.cts2170_wrap .step .step_item:before{left:auto;}
+
+/* 조류 질병 방역_마이코플라즈마근절사업 */
+.cts2171_wrap .step .step_item:before{left:auto;}
+
+/* 기타 동물 방역_꿀벌 낭충봉아부패병 */
+.cts2173_wrap .photo_item{width:300px;}
+
+/* 축산물위생검사_도축검사 */
+.cts2181_wrap colgroup col:first-child{width:15%;}
+.cts2181_wrap tbody td div.warning, .cts2181_wrap tbody td ul{display:inline-block;}
+
+/* 축산물위생검사_도축장운영 현황 */
+.cts2182_wrap tbody th, .cts2182_wrap tbody td{white-space:nowrap;}
+.cts2182_wrap tbody td:nth-child(2), .cts2182_wrap tbody td:nth-child(3){white-space:normal;}
+
+/* 축산물위생검사_유방염방제 */
+.cts2187_wrap table colgroup col:first-child{width:98px;}
+.cts2187_wrap table tbody p.blt{text-align:left;}
+.cts2187_wrap .box.type1 .box_wrap > div{margin-top:40px;}
+.cts2187_wrap .box.type1 .box_wrap > div p{text-align:center;}
+.cts2187_wrap .box.type1 .box_wrap > div p:last-child{font-weight:600;}
+
+/* 가축개량_한우개량 */
+.cts2197_wrap .box_img + p{margin-top:30px;}
+
+/* 초지관리 */
+.cts2208_wrap .t_unit{text-align:right;}
+
+/* /홍기현 */
+
+/* sub01_인사말 */
+.cont_box{overflow:hidden;width:100%;min-height:203px;margin-bottom:50px;padding:21px 26px;border:1px solid #d8decd;background:url(./../img/content/sub01/dot_bg.gif) repeat;}
+.cont_box:after{display:block;clear:both;content:'';}
+.cont_box img{float:left;}
+.cont_box p{float:left;padding:33px 0 0 35px;color:#000;}
+.cont_box p span.tit{display:block;margin-top:10px;font-size:22px;}
+.cont_box p strong{display:block;margin-top:10px;font-size:30px;line-height:normal;}
+/* 모바일 */
+@media only screen and (max-width:767px){
+    /* 인사말 */
+    .cont_box{text-align:center;}
+    .cont_box img{float:none;}
+    .cont_box p{float:none;padding:10px 0 0 0;color:#000;}
+    .cont_box p span.tit{display:block;margin-top:5px;font-size:16px;}
+    .cont_box p strong{display:block;margin-top:5px;font-size:18px;line-height:normal;}
+}
+
+
+/* sub01_연혁 및 기능 */
+.history_box:after{display:block;clear:both;content:'';}
+.history_box > div{overflow:hidden;margin-top:20px;padding-bottom:20px;border-bottom:1px solid #e6e6e6;}
+.history_box strong{float:left;width:20%;margin-top:4px;color:#222;font-size:24px;}
+.history_box dl{float:left;width:80%;}
+.history_box dl dt{float:left;width:15%;color:#fc7a70;}
+.history_box dl dd{overflow:hidden;width:85%;color:#000;}
+.sub010201 .pt1{margin-top:40px;font-size:30px;line-height:normal;}
+.sub010201 .arr{display:block;margin:20px 0;font-size:30px;line-height:normal;}
+.sub010201 .pt2 span{display:inline-block;padding:30px;background:#124140;color:#fff;font-size:20px;}
+.sub010201 .pt_box{margin-top:30px;}
+.sub010201 .pt_box:after{display:block;clear:both;content:'';}
+.sub010201 .pt_box > div{float:left;width:50%;min-height:185px;padding:20px;border:1px solid #e6e6e6;}
+.sub010201 .line{height:1px;background:#e5e5e5;}
+/* 태블릿 */
+@media only screen and (max-width:1023px){
+    /* 연혁 및 기능 */
+    .history_box strong{float:none;}
+    .history_box dl{float:none;width:100%;margin-top:10px;}
+}
+/* 모바일 */
+@media only screen and (max-width:767px){
+    /* 연혁 및 기능 */
+    .history_box dl dt{width:35%;}
+    .history_box dl dd{width:65%;}
+    .sub010201 .pt_box > div{float:none;width:100%;min-height:auto;margin-bottom:10px;}
+}
+
+
+/* 공통_하단 공공누리 */
+.cont_copy{margin-top:40px;padding:20px;background:#f1f3ee;text-align:center;}
+.cont_copy a{display:inline-block;line-height:20px;}
+.cont_copy a img{margin-bottom:10px;}
+
+
+/* sub0105_관할구역안내 */
+.map_box{position:relative;}
+.map_box:after{display:block;clear:both;content:'';}
+.map_box img{float:left;width:290px;}
+.map_box .table1{width:100%;border-right:1px solid #ccc;border-left:1px solid #ccc;}
+.map_box .table1 th,
+.map_box .table1 td{padding:10px;border-bottom:1px solid #ccc;border-left:1px solid #ccc;}
+.map_box .table1 thead th:first-child{border-left:0;}
+.map_box .table1 thead th{border-top:1px solid #ccc;border-bottom:2px solid #000;background:#fbfbfb;}
+.map_box .table1 tbody td:first-child{border-left:0;}
+.map_box .layer{float:left;position:relative;width:50%;margin-left:10%;}
+.map_box .layer > div{position:absolute;top:10px;width:100%;}
+/* 모바일 */
+@media only screen and (max-width:767px){
+    .map_box{text-align:center;}
+    .map_box img{float:none;}
+    .map_box .layer{float:none;width:100%;margin-left:0;padding-bottom:100px;}
+    .map_box .layer > div{width:100%;}
+}
+
+/********** 미생물교육신청서 및 관련사이트정보마당 작성 테이블 **********/
+caption{overflow:hidden;height:0px;}
+/* 사파리에서 공백생기므로 font-size:0으로는 안됨 */
+.table_st1{width:100%;border-bottom:1px solid #ccc;word-break:normal;}
+.table_st1 thead th{padding:15px 10px;border-top:1px solid #cdd2d5;border-left:1px solid #cdd2d5;background:#fbfbfb;color:#000;}
+.table_st1 thead th:first-child{border-left:0;}
+.table_st1 tfoot th{padding:15px 10px;border-top:1px solid #ccc;background:#fbfbfb;}
+.table_st1 tfoot td{padding:15px 10px;border-top:1px solid #ccc;border-left:1px solid #cdd2d5;background:#e8e8e2;}
+.table_st1 tbody th{padding:15px 10px;border-top:1px solid #cdd2d5;border-left:1px solid #cdd2d5;background:#f9f9f9;color:#000;font-weight:400;vertical-align:middle;}
+.table_st1 tbody tr th:first-child,
+.table_st1 tbody tr td:first-child{border-left:0;}
+.table_st1 tbody tr:first-child th,
+.table_st1 tbody tr:first-child td{border-top:2px solid #203300;}
+.table_st1 tbody td{padding:15px 10px;border-top:1px solid #cdd2d5;border-left:1px solid #cdd2d5;}
+.table_st1 tbody tr th.bd_left, .table_st1 tbody tr td.bd_left,
+.table_st1 thead tr th.bd_left, .table_st1 thead tr td.bd_left{border-left:1px solid #cdd2d5;}
+.ov_scroll{display:none;}
+/*모바일*/
+@media only screen and (max-width:767px){
+    .table_st1{}
+
+    .ov_scroll{display:block;color:#3587c7;font-size:16px;text-align:center;}
+    .ov_scroll span{padding-left:25px;background:url(./../img/common/scroll.gif) no-repeat}
+    .ov_table{position:relative;overflow-x:scroll;}
+    .ov_table .table_st1{width:700px;}
+}
+/********** 인풋스타일 **********/
+.input_style{height:30px;border:1px solid #cdd2d5;line-height:30px;}
+
+/*도축검사피드백서비스*/
+#feedForm{padding:30px 0;background:#f6f6f6;}
+#feedForm table{margin:0 auto;}
+#feedForm table th{padding:5px 10px 5px 0;}
+#feedForm table td input{width:185px;padding:5px;border:1px solid #ccc;}
+#feedForm fieldset > div{width:246px;margin:0 auto;padding-top:10px;text-align:right;}
+#feedForm fieldset > div > input{padding:5px 20px;border:0;background:#033900;color:#fff;text-align:center;}
+/* 도축검사피드백서비스(2020. 09. 28.) */
+.program2194_wrap table{width:100%;}
+.program2194_wrap table tbody tr th{float:left;width:120px;height:100%;padding:0 10px;background:#f6f6f6;text-align:left;}
+.program2194_wrap table tbody tr td{float:left;width:70%;height:100%;min-height:50px;padding:14px 0 14px 10px;line-height:23px;}
+.program2194_wrap table tbody tr{display:block;float:left;width:50%;height:100%;border-top:1px solid #ccc;border-top:1px solid #ccc;line-height:50px;}
+.program2194_wrap table tbody tr + tr{border-top:0;}
+.program2194_wrap table tbody tr + tr + tr{border-top:1px solid #ccc;}
+.program2194_wrap .t_btn{margin-top:20px;text-align:right;}
+.program2194_wrap .t_btn a{float:right;padding:10px 20px;background:#666;color:#fff;}
+@media only screen and (max-width:767px){
+    .program2194_wrap table tbody .blank{display:none;}
+    .program2194_wrap table tbody tr{width:100%;}
+    .program2194_wrap table tbody tr th{width:100px;font-size:13px;}
+    .program2194_wrap table tbody tr td{width:65%;font-size:13px;}
+    .program2194_wrap table tbody tr + tr{border-top:1px solid #ccc;}
+}
+/* 도축검사피드백관리목록(2020. 09. 28.) */
+.program2194_2_wrap table thead tr th{padding:7px 0;border-bottom:1px solid #124140;background:#f8ffff;}
+.program2194_2_wrap table tbody tr td{padding:5px 7px;border-bottom:1px solid #ccc;}
+.program2194_2_wrap .t_btn{display:inline-block;width:100%;margin-bottom:20px;text-align:right;}
+.program2194_2_wrap .t_btn a{float:right;padding:5px 20px;background:#124140;color:#fff;}
+
+/* 도축검사피드백관리목록 - 엑셀등록(2020. 09. 28.) */
+.program2194_3_wrap table{width:100%;}
+.program2194_3_wrap table tbody tr th{float:left;width:25%;height:50px;padding:0 10px;background:#f6f6f6;line-height:50px;text-align:left;}
+.program2194_3_wrap table tbody tr td{float:left;width:75%;height:50px;padding-left:10px;line-height:50px;text-align:left;}
+.program2194_3_wrap table tbody tr{display:block;float:left;width:50%;height:50px;border-top:1px solid #ccc;border-top:1px solid #ccc;line-height:50px;}
+.program2194_3_wrap table tbody tr + tr{border-top:0;}
+.program2194_3_wrap table tbody tr + tr + tr{border-top:1px solid #ccc;}
+.program2194_3_wrap .t_btn{margin-top:20px;text-align:right;}
+.program2194_3_wrap .t_btn a{float:right;padding:10px 20px;background:#666;color:#fff;}
+.program2194_3_wrap #frm table td input{width:90%;}
+@media only screen and (max-width:767px){
+    .program2194_3_wrap table tbody .blank{display:none;}
+    .program2194_3_wrap table tbody tr{width:100%;}
+    .program2194_3_wrap table tbody tr th{width:100px;font-size:13px;}
+    .program2194_3_wrap table tbody tr td{width:65%;font-size:13px;}
+    .program2194_3_wrap table tbody tr + tr{border-top:1px solid #ccc;}
+}
+
+/* 도축검사피드백관리목록 - 수정클릭(2020. 09. 28.) */
+.program2194_4_wrap table{width:100%;}
+.program2194_4_wrap table tbody tr th{float:left;width:25%;height:50px;padding:0 10px;background:#f6f6f6;line-height:50px;text-align:left;}
+.program2194_4_wrap table tbody tr td{float:left;width:75%;height:50px;padding-left:10px;line-height:50px;text-align:left;}
+.program2194_4_wrap table tbody tr{display:block;float:left;width:50%;height:50px;border-top:1px solid #ccc;border-top:1px solid #ccc;line-height:50px;}
+.program2194_4_wrap table tbody tr + tr{border-top:0;}
+.program2194_4_wrap table tbody tr + tr + tr{border-top:1px solid #ccc;}
+.program2194_4_wrap .t_btn{margin-top:20px;text-align:right;}
+.program2194_4_wrap .t_btn a{float:right;padding:10px 20px;background:#666;color:#fff;}
+.program2194_4_wrap .t_line{border-top:1px solid #124140;}
+.program2194_4_wrap #feedForm table td input{width:90%;}
+
+@media only screen and (max-width:767px){
+    .program2194_4_wrap table tbody .blank{display:none;}
+    .program2194_4_wrap table tbody tr{width:100%;}
+    .program2194_4_wrap table tbody tr th{width:100px;font-size:13px;}
+    .program2194_4_wrap table tbody tr td{width:65%;font-size:13px;}
+    .program2194_4_wrap table tbody tr + tr{border-top:1px solid #ccc;}
+    .program2194_4_wrap .t_line2{border-top:1px solid #ccc;}
+}

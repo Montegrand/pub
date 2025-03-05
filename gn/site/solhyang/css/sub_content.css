@@ -1,0 +1,314 @@
+/* 한싱정보기술(주) - 2020.06. 박남규 */
+
+.cts848_icon{background-image:url(../images/contents/cts848_icon.png);}
+.cts846_icon{background-image:url(../images/contents/cts846_icon.png);}
+.cts844_icon{background-image:url(../images/contents/cts844_icon.png);}
+.cts843_icon{background-image:url(../images/contents/cts843_icon.png);}
+
+/* */
+.greet{position:relative;padding:0 0 0 398px;background:url(../images/contents/greet_bg.jpg) no-repeat left top;}
+.greet .inner_box{padding:65px 65px 80px 65px;background:url(../images/contents/greet_pattern.png) #f5f5f5 no-repeat right 445px;}
+.greet .line{display:block;position:absolute;bottom:15px;right:30px;width:462px;height:9px;background:url(../images/contents/contents_line.png) repeat-x left top;}
+.greet .big_text{color:#111;font-family:NotoKr;font-size:24px;line-height:28px;}
+/* */
+.introduce{}
+.introduce .top{height:210px;padding:30px 0 0 340px;background:url(../images/contents/cts836_img.jpg) no-repeat left top;font-family:NotoKr;}
+.introduce .top .title{color:#111;font-size:30px;font-weight:500;line-height:34px;}
+.introduce .top .title i{display:block;width:70px;height:4px;margin:23px 0;background-color:#d5d5d5;}
+.introduce .top .line{display:block;width:100%;height:9px;margin:55px 0 0 0;background:url(../images/contents/contents_line.png) repeat-x left top;}
+.introduce .bottom_text{margin:30px 0 0 0;padding:95px 70px;background:url(../images/contents/cts836_bg.jpg) no-repeat left top;color:#fff;}
+/* */
+.organ{background:url(../images/contents/org_line.png) no-repeat 50% 342px;}
+.organ ul{width:86%;margin:0 auto;}
+.organ li{display:block;float:left;position:relative;width:196px;height:115px;margin:35px 0 0 0;padding:40px 0 0 0;background-color:#d9d9d9;text-align:center;}
+.organ li.sec{width:320px;height:95px;}
+.organ span,.organ strong{display:block;}
+.organ strong{margin:0 0 15px;font-size:16px;line-height:18px;}
+.organ strong:after{content:"";display:block;width:70%;height:1px;margin:10px auto 0;border-top:1px dashed #fff;}
+.organ span{position:absolute;top:-25px;left:0;right:0;width:70%;margin:0 auto;padding:17px 0;background-color:#807d78;color:#fff;font-size:18px;line-height:20px;}
+.organ p{font-size:13px;line-height:16px;}
+.organ p:before{content:"";display:inline-block;width:4px;height:4px;margin:0 10px 0 0;background-color:#9d9d9d;vertical-align:middle;}
+.organ .circle{float:none;width:148px;height:108px;margin:0 auto 60px;padding:40px 0 0 0;background-color:#926b4a;border-radius:50%;color:#fff;}
+.organ .circle span{position:static;width:100%;margin:0 0 15px;padding:0;background-color:transparent;font-size:22px;line-height:24px;}
+.organ .circle span:after{content:"";display:block;width:30px;height:1px;margin:15px auto 0;background-color:#b49982;}
+.organ .circle strong:after{display:none;}
+.organ .circle:after{content:"";display:block;position:absolute;bottom:-8px;left:0;right:0;z-index:1;width:10px;height:10px;margin:0 auto;background-color:#926b4a;border:3px solid #fff;border-radius:50%;}
+.organ .circle i{display:block;position:absolute;bottom:-35px;left:0;right:0;width:1px;height:35px;margin:0 auto;background-color:#d9d9d9;}
+.organ .sec{float:none;margin:0 auto 50px;}
+.organ .sec span{background-color:#105a35;}
+.organ .four{float:right;}
+.organ .five{margin-left:1%;}
+.organ .six{margin-left:1%;}
+/* */
+.history_top{padding:70px 70px 70px 330px;background:url(../images/contents/history_bg.png) #f5f5f5 no-repeat 58px 50%;}
+.history_list{position:relative;overflow:hidden;margin:40px 0 0 0;border-top:1px solid #508d0b;border-bottom:1px solid #dadada;}
+.history_list i{display:block;position:absolute;top:0;left:299px;width:0;height:905px;border-left:1px dotted #dadada;}
+.history_list > ul{position:relative;margin:40px 50px;}
+.history_list > ul > li{position:relative;margin:0 0 55px;padding:1px 0 0 150px;}
+.history_list .year{display:block;position:absolute;top:0;left:0;width:255px;background:url(../images/contents/history_bul.png) no-repeat right 11px;color:#00878d;font-size:32px;line-height:34px;}
+.history_list .date{display:inline-block;width:130px;margin:0;color:#222;font-size:15px;line-height:17px;}
+.history_list ul ul{padding:1px 0;}
+.history_list li,.history_list p{margin:5px 0 0 0;}
+/* */
+.commentary{margin:30px 0 0 0;padding:40px 40px 40px 345px;background:url(../images/contents/cts846_bg.png) #f5f5f5 no-repeat 40px 50%;}
+/* */
+.facility_list{width:990px;margin:45px 0 0 -45px;}
+.facility_list li{float:left;width:448px;margin:0 0 0 45px;}
+.facility_list .title{margin:0 0 20px;text-align:center;}
+.facility_list .title span{display:inline-block;padding:3px 0 0 32px;background:url(../images/contents/cts844_bul.png) no-repeat left top;}
+/* */
+.arboretum{margin:35px 0 0 0;border:1px solid #e1e1e1;word-break:keep-all;}
+.arboretum .title{position:relative;margin:0 0 15px;padding:0 85px 0 105px;}
+.arboretum .title span{display:block;overflow:hidden;padding:25px 0 20px 15px;border-bottom:1px dashed #cdcdcd;color:#151515;font-family:NotoKr;font-size:26px;line-height:28px;text-overflow:ellipsis;white-space:nowrap;}
+.arboretum .title i{display:block;position:absolute;top:-1px;left:15px;width:76px;height:74px;background:url(../images/contents/arboretum_icon.gif) no-repeat 50%;}
+.arboretum .text{float:left;width:439px;margin:0 30px 0 0;}
+.arboretum .text .bu{margin:0 0 0 50px;}
+.arboretum .text li{display:block;position:relative;overflow:hidden;max-height:66px;margin:4px 0;padding:0 0 0 15px;color:#6d6d6d;font-size:14px;line-height:22px;}
+.arboretum .text li span{display:block;position:absolute;top:0;left:0;width:100px;color:#3b3b3b;}
+.arboretum .slide_image{float:left;width:469px;height:310px;}
+.slide_image{position:relative;margin:0;padding:0;}
+.slide_control{position:absolute;left:0;right:0;bottom:0;width:90px;height:30px;margin:0;padding:0;background:url(../images/contents/img_mask.png) repeat;}
+.slide_control button{display:inline-block;float:left;position:relative;z-index:1;width:30px;height:30px;margin:0;padding:0;background:url(../images/contents/arbore_prev.png) no-repeat 50%;border:none;color:transparent;font-size:0;line-height:0;}
+.slide_control .slide_next{float:right;background-image:url(../images/contents/arbore_next.png);}
+.slide_control .count{position:absolute;top:0;left:0;width:100%;height:30px;color:#fff;line-height:30px;text-align:center;vertical-align:middle;}
+.image_wrap{width:100%;max-width:469px;height:310px;margin:0;overflow:hidden;}
+.image_wrap ul{position:relative;}
+.image_wrap li{float:left;position:relative;width:469px;height:310px;background-color:#333;text-align:center;}
+.image_wrap li img{height:100%;}
+.arboretum_text{padding:50px 45px;background-color:#f8f8f8;border-top:1px solid #e1e1e1;}
+
+
+
+.course{border-bottom:1px dashed #cdcdcd;}
+.course li{position:relative;padding:35px 0 35px 185px;border-top:1px dashed #cdcdcd;}
+.course .title{position:absolute;width:185px;top:0;left:0;bottom:0;}
+.course .title span{display:block;position:absolute;top:35px;left:0;right:0;width:96px;height:73px;margin:0 auto;padding:23px 0 0 0;background-color:#779f22;border-radius:50%;color:#fff;font-size:15px;line-height:17px;text-align:center;}
+.course .title.type2 span{background-color:#20906c;}
+.course .title i{display:block;width:24px;height:27px;margin:0 auto 6px auto;background:url(../images/contents/cnt840_icon.png) no-repeat left top;}
+.course .sub_title{margin:0 0 20px;color:#2c2c2c;font-size:15px;font-weight:500;line-height:17px;}
+/* */
+.cnt1786{padding:40px 35px 30px;background:url(../images/contents/cnt1786_bg.jpg) no-repeat 50% top;color:#fff;text-align:center;}
+.cnt1786 span{display:block;width:304px;height:130px;margin:0 auto 30px;background:url(../images/contents/cnt1786_ti.png) no-repeat 50% top;color:transparent;font-size:1px;line-height:1px;}
+.cnt1786 span:after{content:"";display:block;width:60px;height:2px;margin:130px auto 0;background-color:#fff;}
+.cnt1786 .inner_box{margin:10px 0 0 0;padding:30px;background:rgba(255,255,255,.7);border-radius:10px;color:#000;font-weight:bold;}
+
+
+/* 강릉솔향수목원 - 수목원소개 - 인사말 */
+.cts_835_total{word-break:keep-all;}
+.cts_835_total .greet .photo{display:none;position:absolute;top:0;left:0;width:45%;height:0;padding:30% 0;background-repeat:no-repeat;background-position:center center;background-image:url('../images/contents/greet_bg_m.jpg');background-size:cover;}
+.cts_835_total .greet .photo .title{position:absolute;right:0;bottom:0;width:130px;height:109px;background-color:#108d6a;background-repeat:no-repeat;background-position:center center;background-image:url('../images/contents/greet_title_m.png');color:transparent;font-size:0;}
+
+@media all and (max-width:1200px){
+    .cts_835_total .greet{background-image:none;padding-left:45%;}
+    .cts_835_total .greet .photo{display:block;}
+    .cts_835_total .line{display:none;}
+    .greet .inner_box{padding:30px 6%;}
+}
+
+@media all and (max-width:640px){
+    .cts_835_total .greet{padding-left:0;}
+    .cts_835_total .greet .photo{position:relative;width:auto;}
+    .cts_835_total .greet .photo .title{width:27%;height:0;padding:9% 0;background-size:80% auto;}
+}
+
+/* 강릉솔향수목원 - 수목원소개 - 강릉솔향수목원은 */
+.cts_836_total{word-break:keep-all;}
+
+@media all and (max-width:1200px){
+    .cts_836_total .introduce .top .line{display:none;}
+    .cts_836_total .introduce .bottom_text{background-size:cover;}
+}
+@media all and (max-width:640px){
+    .cts_836_total .introduce .top{height:auto;padding:270px 0 0;background-position:center top;}
+    .cts_836_total .introduce .top p{padding:2% 2%;}
+}
+
+/* 강릉솔향수목원 - 수목원소개 - 수목원형황 */
+
+.cts_837_total{word-break:keep-all;}
+.cts_837_total .history_list br{display:none;}
+
+@media all and (max-width:737px){
+    .cts_837_total .history_top{padding:240px 5% 45px;background-position:center 18%;}
+    .cts_837_total .history_list i{display:none;}
+    .cts_837_total .history_list br{display:block;}
+    .cts_837_total .history_list .year{width:auto;background:none;}
+    .cts_837_total .history_list .date{display:inline-block;}
+}
+@media all and (max-width:480px){
+    .cts_837_total .history_list > ul > li{margin:0;padding:56px 0;}
+}
+
+/* 강릉솔향수목원 - 둘러보기 - 수목원구성(전체) */
+.arboretum .arboretum_summary .slide_image .image_wrap img{position:static;}
+@media all and (max-width:1200px){
+    .arboretum .arboretum_summary .text{float:none;width:auto;margin:0;}
+    .arboretum .arboretum_summary .slide_image{float:none;width:auto;height:auto;max-width:469px;margin:auto;}
+    .arboretum .arboretum_summary .slide_image .slide_control{left:calc(50% - 45px);}
+    .arboretum .arboretum_text{padding:20px 20px;}
+}
+@media all and (max-width:640px){
+    .arboretum .arboretum_summary .cts1057_mini{padding-right:0;}
+    .arboretum .arboretum_summary .cts1057_font{padding-left:0;font-size:22px;}
+    .arboretum .arboretum_summary .text ul{width:100%;margin:0;padding:20px 20px;word-break:keep-all;}
+    .arboretum .arboretum_summary .slide_image .image_wrap{width:auto;max-width:360px;height:auto;margin:auto;}
+    .arboretum .arboretum_summary .slide_image .image_wrap li{width:360px;}
+    .arboretum .arboretum_summary .slide_image .image_wrap img{max-width:100%;}
+}
+
+/* 강릉솔향수목원 - 둘러보기 - 주요시설 , 강릉솔향수목원 - 둘러보기 - 편의시설 */
+
+.cts_843_total, .cts_844_total{word-break:keep-all;}
+
+@media all and (max-width:1200px){
+    .facility_list{width:100%;margin:0;}
+    .facility_list li{width:49%;margin-right:2%;margin-left:0;}
+    .facility_list li:nth-child(2n){margin-right:0;}
+}
+
+@media all and (max-width:1000px){
+    .facility_list{width:100%;}
+    .facility_list .facility_list .title{margin:10px 10px;}
+    .facility_list li{float:none;width:100%;margin-bottom:10px;text-align:center;}
+    .facility_list li img{width:auto;margin:0 auto;}
+}
+
+/* 강릉솔향수목원 - 이용안내 - 관람안내 */
+.cts_846_total{word-break:keep-all;}
+
+@media all and (max-width:1000px){
+    .cts_846_total .commentary{margin-bottom:30px;padding:270px 0 0;background-position:center 14%;}
+    .cts_846_total .commentary .cts_box{padding:2% 2%;}
+    .cts_846_total .commentary .cts_box .title{text-align:center;}
+}
+
+/* 강릉솔향수목원 - 이용안내 - 수목원안내도 */
+.temp_img {text-align:center;}
+.temp_img .img_wrap {position:relative;font-size: 0;line-height: 0;}
+.temp_img img {display:inline-block;max-width:100%;max-height:100%;}
+.temp_img .img_zoom {display:none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 10;}
+.temp_img .img_zoom .cts_btn {display:block;position: absolute;bottom:0;right:0;width: 25px;height: 25px;background-color:rgba(0,0,0,0.5);}
+.temp_img .img_zoom .cts_btn:before{display:inline-block;position: absolute;top: 5px;left: 5px;width:15px;height:15px;background-image: url(../images/common/common_sprite.png);background-repeat: no-repeat;background-size:109px 257px;background-position:left -90px;content:'';}
+
+.cts_840_total{word-break:keep-all;}
+.cts_840_total .map_text .cts_white{color:#fff;text-decoration:unset;}
+.map_image .inner_line{position:relative;border:10px solid #07a0a6;font-size:0;line-height:0;box-sizing:border-box;}
+.map_image .inner_line img{display:inline-block;max-width:100%;max-height:100%;}
+.map_image .img_zoom{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;}
+.map_image .img_zoom .cts_btn{display:block;position: absolute;top:0;right:0;width:25px;height:25px;background-color:rgba(0,0,0,0.5);}
+.map_image .img_zoom .cts_btn:before{display:inline-block;position:absolute;top:5px;left:5px;width:15px;height:15px;background-image: url(../images/common/common_sprite.png);background-repeat: no-repeat;background-size:109px 257px;background-position:left -90px;content:'';}
+
+.map_image a{display:block;position:absolute;width:24px;height:24px;color:transparent;font-size:1px;line-height:1px;}
+.map_image .link1{top:0;right:13px;}
+.map_image .link2{top:10px;right:33px;}
+.map_image .link5{top:37px;right:58px;}
+.map_image .link10{top:78px;left:94px;}
+.map_image .link15{top:214px;left:314px;}
+.map_image .link16{top:232px;left:288px;}
+.map_image .link20{top:226px;left:161px;}
+.map_image .link21{top:247px;left:178px;}
+.map_image .link23{top:280px;left:153px;}
+.map_image .link25{top:263px;left:49px;}
+.map_image .link26{top:282px;left:281px;}
+.map_image .link27{top:311px;left:231px;}
+.map_image .link29{top:364px;left:406px;}
+.map_image .link28{top:384px;left:388px;}/* 철쭉원 일원 */
+.map_image .link19{top:271px;left:342px;}/* 솔숲잔디광장 일원 */
+.map_image .link24{top:302px;left:435px;}/* 숲생태관찰로 */
+.map_image .link13{top:181px;left:351px;}/* 염료식물원 */
+.map_image .link11{top:111px;left:259px;}/* 천년숨결 치유의 길 */
+.map_image .link9{top:41px;left:367px;}/* 하늘정원 */
+.map_image .link12{top:123px;left:365px;}/* 산림욕장 */
+.map_image .link8{top:145px;left:558px;}/* 향기원 */
+.map_image .link7{top:110px;left:653px;}/* 암석원 */
+.map_image .link6{top:56px;left:727px;}/* 약용식물원 */
+.map_image .link3{top:11px;left:826px;}/* 전시온실 */
+.map_image .link30{top:291px;left:520px;}/* 배롱나무 */
+
+.map_text{padding:0 40px 40px 40px;background-color:#07a0a6;}
+.map_text .title{margin:22px 15px 15px;color:#414141;font-size:16px;line-height:18px;}
+.facil_list{margin:0 15px;}
+.facil_list li{float:left;width:25%;margin:3px 0;color:#fff;font-size:14px;letter-spacing:-1px;line-height:18px;vertical-align:middle;}
+.facil_list i{display:inline-block;width:24px;height:24px;margin:0 8px 0 0;background-color:#fff;border-radius:50%;color:#343434;font-size:14px;line-height:22px;text-align:center;vertical-align:middle;}
+@media all and (max-width:1200px){
+    .cts_840_total .map_image .inner_line a{display:none;}
+}
+@media all and (max-width:1000px){
+    .cts_840_total .map_text{padding:10px 40px 20px;}
+    .cts_840_total .map_text .facil_list li{width:50%;}
+}
+@media all and (max-width:640px){
+    .cts_840_total .map_text{padding:10px 20px 10px;}
+    .cts_840_total .map_text .facil_list li{width:100%;margin:10px auto;}
+    .map_image .img_zoom{display:block;}
+    .temp_img .img_zoom{display:block;}
+    .cts_840_total .map_image .inner_line .cts_btn{display:block;}
+}
+
+/* 강릉솔향수목원 - 이용안내 - 숲해설 신청(단체) */
+@media all and (max-width:1200px){
+    .calendar_table tbody td{min-width:0;}
+    .legend_solhyang a{margin:0;padding:0 3px;}
+}
+@media all and (max-width:800px){
+    .calendar_table{display:block;background-color:#fff;}
+    .calendar_table thead{display:none;}
+    .calendar_table tbody{display:block;}
+    .calendar_table tbody tr{display:block;}
+    .calendar_table tbody tr th, .calendar_table tbody tr td{display:block;width:auto;max-width:none;}
+    .calendar_table.forest tbody td{height:auto;}
+    .calendar_table tbody td{position:relative;}
+    .calendar_table tbody td.empty{display:none;}
+    .calendar_table tbody td, .calendar_table tbody td:first-child{width:auto;}
+    .calendar_table tbody td:first-child{max-width:none;min-width:0;padding-top:2px;}
+    .calendar_table tbody td:before{display:block;position:absolute;top:2px;left:10px;width:40px;}
+    .calendar_table tbody td:first-child:before{content:'SUN';}
+    .calendar_table tbody td:nth-child(2):before{content:'MON';}
+    .calendar_table tbody td:nth-child(3):before{content:'TUE';}
+    .calendar_table tbody td:nth-child(4):before{content:'WED';}
+    .calendar_table tbody td:nth-child(5):before{content:'THU';}
+    .calendar_table tbody td:nth-child(6):before{content:'FRI';}
+    .calendar_table tbody td:nth-child(7):before{content:'SAT';}
+    .calendar_table tbody td > div{height:auto;}
+    .calendar_table tbody td > div.long{height:auto;}
+    .calendar_table td span{display:inline-block;position:static;padding-left:50px;}
+    .calendar_table .list_reservation{margin:10px 0 0;}
+}
+@media all and (max-width:640px){
+
+    .solhyang_explan{position:relative;}
+    .calendar_top{height:auto;}
+}
+@media all and (max-width:480px){
+    .calendar_top .top_inner{margin:0 auto;}
+    .calendar_top .explanation{top:0;margin:10px 0;}
+}
+
+/* 강릉솔향수목원 - 이용안내 - 유아 숲체험 - 유아숲체험 프로그램 */
+.cts_3210_total{word-break:keep-all;}
+
+/* 강릉솔향수목원 - 이용안내 - 주변볼거리 */
+cts_847_total{word-break:keep-all;}
+
+.cts_847_total .attraction > li{position:relative;padding:0 0 0 285px;}
+.cts_847_total .attraction .image{position:absolute;top:0;left:0;width:260px;height:225px;border-bottom:1px solid #e1e1e1;text-align:center;}
+.cts_847_total .attraction .text{height:225px;border-bottom:1px dotted #e1e1e1;}
+.cts_847_total .attraction .text li{margin:5px 0;padding:1px 0 1px 35px;background:url('../images/contents/attraction_bul1.png') no-repeat left top;}
+.cts_847_total .attraction .text .map{background-image:url('../images/contents/attraction_bul2.png');}
+.cts_847_total .attraction .text p{margin:15px 0 0 0;}
+.cts_847_total .attraction .text li.tel span:first-child{float:left;width:75px;}
+.cts_847_total .attraction .text li.tel span:last-child{display:inline-block;width:calc(100% - 75px);}
+.cts_847_total .attraction .text li.map span{float:left;width:75px;}
+
+
+@media all and (max-width:1200px){
+    .cts_847_total .attraction > li{margin-bottom:20px;padding:0 0 15px 0;border-bottom:1px solid #e1e1e1;}
+    .cts_847_total .attraction .image{float:left;position:static;width:189px;height:189px;padding-top:30px;border:none;text-align:left;}
+    .cts_847_total .attraction .text{float:right;width:66%;height:auto;border:none;word-break:keep-all;}
+}
+
+@media all and (max-width:800px){
+    .cts_847_total .attraction > li{padding:10px 10px;}
+    .cts_847_total .attraction .image{float:none;width:100%;padding-top:0;text-align:center;}
+    .cts_847_total .attraction .text{float:none;width:100%;padding:10px 5px;}
+}

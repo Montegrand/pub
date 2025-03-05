@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@import url('../../public/css/default.css') /**/;
+@import url('../../public/css/layout.css') /**/;
+@import url('../../public/css/common.css') /**/;
+/*@import url('/site/public/css/main_layout_visual.css')*/ /*비주얼이 헤더까지 덮는 경우 넣어주세요*/
+@import url('./main_layout.css') /**/;

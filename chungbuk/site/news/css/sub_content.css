@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+
+/********** 정렬 **********/
+.ta-l {text-align:left;}
+.ta-c {text-align:center;}
+.ta-r {text-align:right;}
+.vt-t {vertical-align:top;}
+.vt-c {vertical-align:middle;}
+.vt-b {vertical-align:bottom;}
+
+/* 폰트사이즈 */
+.ft20 {font-size:20px;}
+
+
+/* sub01_인사말 */
+.cont_box{overflow:hidden;width:100%;min-height:203px;margin-bottom:50px;padding:21px 26px;border:1px solid #d8decd;background:url(./../img/content/sub01/dot_bg.gif) repeat;}
+.cont_box:after{display:block;clear:both;content:'';}
+.cont_box img{float:left;}
+.cont_box p{float:left;padding:33px 0 0 35px;color:#000;}
+.cont_box p span.tit{display:block;margin-top:10px;font-size:22px;}
+.cont_box p strong{display:block;margin-top:10px;font-size:30px;line-height:normal;}
+@media all and (max-width:767px){
+    .cont_box{text-align:center;}
+    .cont_box img{float:none;}
+    .cont_box p{float:none;padding:10px 0 0 0;color:#000;}
+    .cont_box p span.tit{display:block;margin-top:5px;font-size:16px;}
+    .cont_box p strong{display:block;margin-top:5px;font-size:18px;line-height:normal;}
+}
+
+/* sub01_연혁 및 기능 */
+.history_box:after{display:block;clear:both;content:'';}
+.history_box > div{overflow:hidden;margin-top:20px;padding-bottom:20px;border-bottom:1px solid #e6e6e6;}
+.history_box strong{float:left;width:20%;margin-top:4px;font-size:24px;color:#222;}
+.history_box dl{float:left;width:80%;}
+.history_box dl dt{float:left;width:15%;color:#2bb5b2;}
+.history_box dl dd{overflow:hidden;width:85%;color:#000;}
+.cts1953_wrap .pt1{margin-top:40px;font-size:30px;line-height:normal;}
+.cts1953_wrap .arr{display:block;margin:20px 0;font-size:30px;line-height:normal;}
+.cts1953_wrap .pt2 span{display:inline-block;padding:30px;background:#124140;font-size:20px;color:#fff;}
+.cts1953_wrap .pt_box{margin-top:30px;}
+.cts1953_wrap .pt_box:after{display:block;clear:both;content:'';}
+.cts1953_wrap .pt_box > div{float:left;width:50%;min-height:203px;padding:20px;border:1px solid #e6e6e6;}
+@media only screen and (max-width:1023px){
+    .history_box strong{float:none;}
+    .history_box dl{float:none;width:100%;margin-top:10px;}
+}
+@media all and (max-width:767px){
+    .history_box dl dt{width:35%;}
+    .history_box dl dd{width:65%;}
+    .cts1953_wrap .pt_box > div{float:none;width:100%;min-height:auto;margin-bottom:10px;}
+}
+
+
+/* 공통_하단 공공누리 */
+.cont_copy{margin-top:40px;padding:20px;background:#f1f3ee;text-align:center;}
+.cont_copy a{display:inline-block;line-height:20px;}
+.cont_copy a img{margin-bottom:10px;}
+
+
+/* 버튼정렬 */
+.cts1967_wrap .btn_wrap, .cts1968_wrap .btn_wrap,  .cts1968_wrap .btn_wrap {text-align:center;}

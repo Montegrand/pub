@@ -1,0 +1,173 @@
+{
+    "code": 1,
+    "message": "success",
+    "mapMetaData": {
+        "mapShelter": [
+            {
+                "shelterName": "미사1동 행정복지센터",
+                "shelterCompName": "천현동",
+                "shelterCompNo": "1",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2296082,
+                    "y": 37.5451091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test1",
+                "shelterCompName": "신장1동",
+                "shelterCompNo": "2",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2106082,
+                    "y": 37.5151091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test2",
+                "shelterCompName": "신장2동",
+                "shelterCompNo": "3",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2156082,
+                    "y": 37.5051091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test3",
+                "shelterCompName": "덕풍1동",
+                "shelterCompNo": "4",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2106082,
+                    "y": 37.530091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test4",
+                "shelterCompName": "덕풍2동",
+                "shelterCompNo": "5",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2196082,
+                    "y": 37.5351091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test5",
+                "shelterCompName": "덕풍3동",
+                "shelterCompNo": "6",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2216082,
+                    "y": 37.5301091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test6",
+                "shelterCompName": "미사1동",
+                "shelterCompNo": "7",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2250082,
+                    "y": 37.5358091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test7",
+                "shelterCompName": "미사2동",
+                "shelterCompNo": "8",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2196082,
+                    "y": 37.5351091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test8",
+                "shelterCompName": "미사3동",
+                "shelterCompNo": "9",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2196082,
+                    "y": 37.534091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test9",
+                "shelterCompName": "감북동",
+                "shelterCompNo": "10",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2196082,
+                    "y": 37.532091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test10",
+                "shelterCompName": "감일동",
+                "shelterCompNo": "11",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2196082,
+                    "y": 37.5351091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test11",
+                "shelterCompName": "위례동",
+                "shelterCompNo": "12",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2196082,
+                    "y": 37.5357091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test12",
+                "shelterCompName": "춘궁동",
+                "shelterCompNo": "13",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.219082,
+                    "y": 37.5301091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test13",
+                "shelterCompName": "초이동",
+                "shelterCompNo": "14",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2146082,
+                    "y": 37.5391091
+                }
+            },
+            {
+                "shelterName": "미사1동 행정복지센터test14",
+                "shelterCompName": "초이동",
+                "shelterCompNo": "14",
+                "shelterAddress": "경기 하남시 미사강변남로 29",
+                "shelterLaneTypeName": "행정시설",
+                "shelterCoordinate": {
+                    "x": 127.2196082,
+                    "y": 37.5351091
+                }
+            }
+        ]
+    }
+}

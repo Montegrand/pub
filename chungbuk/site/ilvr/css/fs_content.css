@@ -1,0 +1,650 @@
+@charset "utf-8";
+
+/* 공통_하단 공공누리 */
+.cont_copy {padding:20px;margin-top:40px;background:#f1f3ee;text-align:center;}
+.cont_copy a {display:inline-block;line-height:20px;}
+.cont_copy a img {margin-bottom:10px;}
+
+/* 공통_탭 */
+.tap_btn {margin:0 0 40px -5px;}
+.tap_btn:after {content:"";clear:both;display:block;}
+.tap_btn li {display:table;float:left;padding-left:5px;width:25%;}
+.tap_btn li a {display:table-cell;height:50px;line-height:18px;border-width:1px;border-style:solid;border-color:#1c7775;vertical-align:middle;text-align:center;font-size:16px;color:#000;}
+.tap_btn li a.ft {font-size:12px;}
+.tap_btn li.on a,.tap_btn li:hover a,.tap_btn li:focus a,.tap_btn li:active a {background:#1c7775;border-width:0 0 5px 0;border-style:solid;border-color:#1c7775 #1c7775 #2bb5b2 #1c7775;color:#fff;}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		/* 공통_탭 */
+		.tap_btn li {width:100% !important;margin-bottom:5px;}
+		.tap_btn li a {font-size:14px;}
+	}
+
+.tap_btn2 {width:100%; float:right;margin-top:10px;}
+.tap_btn2 li {width:50%; }
+.tap_btn2 li a {border-color:#ff8c7d;}
+.tap_btn2 li.on a,.tap_btn2 li:hover a,.tap_btn2 li:focus a,.tap_btn2 li:active a {background:#ff8c7d;border-width:0 0 5px 0;border-style:solid;border-color:#ff8c7d #ff8c7d #ff523c #ff8c7d;color:#fff;}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		/* 공통_탭 */
+		.tap_btn2 {width:100%;margin-top:0;}
+		.tap_btn2 li {width:50% !important;margin-bottom:5px;float:left;}
+		.tap_btn2 li a {font-size:14px;}
+	}
+
+.tap_btn5 li {width:25% !important;margin-bottom:5px;}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		/* 공통_탭 */
+		.tap_btn5 {width:100%;margin-top:0;}
+		.tap_btn5 li {width:50% !important;margin-bottom:5px;float:left;}
+		.tap_btn5 li a {font-size:14px;}
+	}
+
+/* 공통_이미지박스 */
+.img_box {padding:30px;margin-top:10px;background:url(./../img/content/sub05/sub050101_bg.jpg) no-repeat center center;background-size:cover;border:1px solid #ddd;text-align:center;}
+.img_box:after {content:"";clear:both;display:block;}
+.img_box > div > b {display:block;margin-top:5px;}
+.img_box.set2 > div {float:left;width:50%;margin:10px 0;}
+.img_box.set2 > div img {width:100%;}
+.img_box.set3 > div {float:left;width:33%;margin:10px 0;}
+.img_box.set3 > div img {width:100%;}
+.img_box.set4 > div {float:left;width:25%;margin:10px 0;}
+.img_box.set4 > div img {width:70%;}
+.img_box.set5 > div {float:left;width:20%;margin:10px 0;}
+.img_box.set5 > div img {width:100%;}
+	/* 태블릿 */
+	@media only screen and (ma		.img_box.set4 > div,
+x-width:1023px){
+		.img_box.set5 > div {width:50%;}
+	}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		.img_box > div > img {width:100%;}
+		.img_box.set2 > div,
+		.img_box.set3 > div,
+		.img_box.set4 > div,
+		.img_box.set5 > div {width:100%;margin:10px 0;}
+	}
+
+/* 공통_텍스트박스 */
+.text_box {margin-top:20px;padding:40px;background:#eee;}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		.text_box {padding:20px;}
+	}
+
+
+/* sub01_인사말 */
+.cont_box {overflow:hidden;width:100%;min-height:203px;padding:21px 26px;margin-bottom:50px;background:url(./../img/content/sub01/dot_bg.gif) repeat;border:1px solid #d8decd;}
+.cont_box:after {content:"";display:block;clear:both;}
+.cont_box img {float:left;}
+.cont_box p {float:left;padding:33px 0 0 35px;color:#000;}
+.cont_box p span.tit {display:block;margin-top:10px;font-size:22px;}
+.cont_box p strong {display:block;line-height:normal;margin-top:10px;font-size:30px;}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		/* 인사말 */
+		.cont_box {text-align:center;}
+		.cont_box img {float:none;}
+		.cont_box p {float:none;padding:10px 0 0 0;color:#000;}
+		.cont_box p span.tit {display:block;margin-top:5px;font-size:16px;}
+		.cont_box p strong {display:block;line-height:normal;margin-top:5px;font-size:18px;}
+	}
+
+
+/* sub01_연혁 및 기능 */
+.history_box:after {content:"";display:block;clear:both;}
+.history_box > div {overflow:hidden;margin-top:20px;padding-bottom:20px;border-bottom:1px solid #e6e6e6;}
+.history_box strong {float:left;width:20%;margin-top:4px;font-size:24px;color:#222;}
+.history_box dl {float:left;width:80%;}
+.history_box dl dt {float:left;width:15%;color:#fc7a70;}
+.history_box dl dd {overflow:hidden;width:85%;color:#000;}
+.sub010201 .pt1 {line-height:normal;margin-top:40px;font-size:30px;}
+.sub010201 .arr {display:block;line-height:normal;margin:20px 0;font-size:30px;}
+.sub010201 .pt2 span {display:inline-block;padding:30px;background:#124140;font-size:20px;color:#fff;}
+.sub010201 .pt_box {margin-top:30px;}
+.sub010201 .pt_box:after {content:"";display:block;clear:both;}
+.sub010201 .pt_box > div {float:left;width:50%;min-height:185px;padding:20px;border:1px solid #e6e6e6;}
+.sub010201 .line {height:1px;background:#e5e5e5;}
+	/* 태블릿 */
+	@media only screen and (max-width:1023px){
+		/* 연혁 및 기능 */
+		.history_box strong {float:none;}
+		.history_box dl {float:none;width:100%;margin-top:10px;}
+	}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		/* 연혁 및 기능 */
+		.history_box dl dt {width:35%;}
+		.history_box dl dd {width:65%;}
+		.sub010201 .pt_box > div {float:none;width:100%;min-height:auto;margin-bottom:10px;}
+	}
+
+
+/* sub01_조직구성 */
+.org_big {display:none;}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		/* sub01_조직구성 */
+		.org_big {display:block;line-height:40px;background:url(./../img/content/sub01/full_icon.png) no-repeat 10px center #242926;background-size:23px auto;color:#fff;}
+		.org_big:hover,.org_big:focus,.org_big:active {color:#fff;}
+	}
+
+
+/* sub0105_관할구역안내 */
+.map_box {position:relative;}
+.map_box:after {content:"";display:block;clear:both;}
+.map_box img {width:290px;float:left;}
+.map_box .table1 {width:100%;border-left:1px solid #ccc;border-right:1px solid #ccc;}
+.map_box .table1 th,
+.map_box .table1 td {padding:10px;border-bottom:1px solid #ccc;border-left:1px solid #ccc;}
+.map_box .table1 thead th:first-child {border-left:0;}
+.map_box .table1 thead th {border-top:1px solid #ccc;border-bottom:2px solid #000;background:#fbfbfb;}
+.map_box .table1 tbody td:first-child {border-left:0;}
+.map_box .layer {position:relative;float:left;width:50%;margin-left:10%;}
+.map_box .layer > div {position:absolute;top:10px;width:100%;}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		.map_box {text-align:center;}
+		.map_box img {float:none;}
+		.map_box .layer {float:none;width:100%;margin-left:0;padding-bottom:100px;}
+		.map_box .layer > div {width:100%;}
+	}
+
+/* 마이코플라즈마근절사업 */
+.arr_list:after {content:"";display:block;clear:both;}
+.arr_list > div {display:table;float:left;width:20%;height:120px;padding-left:24px;background:url(./../img/content/sub01/arr.gif) no-repeat 6px center;text-align:center;}
+.arr_list2 > div {width:33%;}
+.arr_list > div:first-child {padding-left:0;background:none;}
+.arr_list > div > div {display:table-cell;width:100%;background:#ff8c7d;vertical-align:middle;}
+.arr_list .set_all > div {line-height:24px;background:#124140;font-size:16px;font-weight:700;color:#fff;}
+	/* 태블릿 */
+	@media only screen and (max-width:1023px){
+		/* 마이코플라즈마근절사업 */
+		.arr_list > div {float:none;width:100%;height:60px;padding-left:0;margin-bottom:10px;background:none;}
+	}
+
+
+/* 축산물 위생검사(미생물교육신청) */
+.sub030104 a.btn_gray {display:inline-block;line-height:27px;padding:0 20px;font-weight:600;font-size:14px;color:#666;background:#fff;border-top:1px solid #e4e7e9;border-right:1px solid #dfe2e5;border-bottom:1px solid #bbbfc8;border-left:1px solid #dfe2e5}
+.sub030104 .btn_insert {display:inline-block;height:41px;line-height:41px;padding:0 15px;background:#2977c7;border:0;cursor:pointer;color:#fff;}
+.ta-c input {display:inline-block;height:41px;line-height:41px;padding:0 15px;background:#2977c7;border:0;cursor:pointer;color:#fff;}
+
+/* 중부지소 */
+	/* 태블릿 */
+	@media only screen and (max-width:767px){
+		/* 중부지소 */
+		.orgm_img > img {width:100%;}
+	}
+
+/*도축검사피드백서비스*/
+#feedForm {padding:30px 0;background:#f6f6f6;}
+#feedForm table {margin:0 auto;}
+#feedForm table th {padding:5px 10px 5px 0;}
+#feedForm table td input {border:1px solid #ccc;padding:5px;width:185px;}
+#feedForm fieldset > div {text-align:right;padding-top:10px;width:246px;margin:0 auto;}
+#feedForm fieldset > div > input {background:#033900;color:#fff;border:0;padding:5px 20px;text-align:center;}
+/* 도축검사피드백서비스(2020. 09. 28.) */
+.program2194_wrap table {width:100%;}
+.program2194_wrap table tbody tr th {height:100%;text-align:left;width:120px;background:#f6f6f6;padding:0 10px;float:left;}
+.program2194_wrap table tbody tr td {height:100%;line-height:23px;float:left;width:70%;padding:14px 0 14px 10px;min-height:50px;}
+.program2194_wrap table tbody tr {float:left;width:50%;height:100%;line-height:50px;border-top:1px solid #ccc;display:block;border-top:1px solid #ccc;}
+.program2194_wrap table tbody tr + tr {border-top:0;}
+.program2194_wrap table tbody tr + tr + tr {border-top:1px solid #ccc;}
+.program2194_wrap .t_btn {text-align:right;margin-top:20px;}
+.program2194_wrap .t_btn a {background:#666;padding:10px 20px;color:#fff;float:right;}
+@media only screen and (max-width:767px){
+	.program2194_wrap table tbody .blank {display:none;}
+	.program2194_wrap table tbody tr {width:100%;}
+	.program2194_wrap table tbody tr th {width:100px;font-size:13px;}
+	.program2194_wrap table tbody tr td {width:65%;font-size:13px;}
+	.program2194_wrap table tbody tr + tr {border-top:1px solid #ccc;}
+}
+/* 도축검사피드백관리목록(2020. 09. 28.) */
+.program2194_2_wrap table thead tr th {padding:7px 0;background:#f8ffff;border-bottom:1px solid #124140;}
+.program2194_2_wrap table tbody tr td {padding:5px 7px;border-bottom:1px solid #ccc;}
+.program2194_2_wrap .t_btn {text-align:right;margin-bottom:20px;display:inline-block;width:100%;}
+.program2194_2_wrap .t_btn a {background:#124140;padding:5px 20px;color:#fff;float:right;}
+
+/* 도축검사피드백관리목록 - 엑셀등록(2020. 09. 28.) */
+.program2194_3_wrap table {width:100%;}
+.program2194_3_wrap table tbody tr th {height:50px;line-height:50px;text-align:left;float:left;width:25%;background:#f6f6f6;padding:0 10px;}
+.program2194_3_wrap table tbody tr td {height:50px;line-height:50px;float:left;text-align:left;width:75%;padding-left:10px;}
+.program2194_3_wrap table tbody tr {float:left;width:50%;height:50px;line-height:50px;border-top:1px solid #ccc;display:block;border-top:1px solid #ccc;}
+.program2194_3_wrap table tbody tr + tr {border-top:0;}
+.program2194_3_wrap table tbody tr + tr + tr {border-top:1px solid #ccc;}
+.program2194_3_wrap .t_btn {text-align:right;margin-top:20px;}
+.program2194_3_wrap .t_btn a {background:#666;padding:10px 20px;color:#fff;float:right;}
+.program2194_3_wrap #frm table td input {width:90%;}
+@media only screen and (max-width: 767px){
+	.program2194_3_wrap table tbody .blank {display:none;}
+	.program2194_3_wrap table tbody tr {width:100%;}
+	.program2194_3_wrap table tbody tr th {width:100px;font-size:13px;}
+	.program2194_3_wrap table tbody tr td {width:65%;font-size:13px;}
+	.program2194_3_wrap table tbody tr + tr {border-top:1px solid #ccc;}
+}
+
+/* 도축검사피드백관리목록 - 수정클릭(2020. 09. 28.) */
+.program2194_4_wrap table {width:100%;}
+.program2194_4_wrap table tbody tr th {height:50px;line-height:50px;text-align:left;float:left;width:25%;background:#f6f6f6;padding:0 10px;}
+.program2194_4_wrap table tbody tr td {height:50px;line-height:50px;float:left;text-align:left;width:75%;padding-left:10px;}
+.program2194_4_wrap table tbody tr {float:left;width:50%;height:50px;line-height:50px;border-top:1px solid #ccc;display:block;border-top:1px solid #ccc;}
+.program2194_4_wrap table tbody tr + tr {border-top:0;}
+.program2194_4_wrap table tbody tr + tr + tr {border-top:1px solid #ccc;}
+.program2194_4_wrap .t_btn {text-align:right;margin-top:20px;}
+.program2194_4_wrap .t_btn a {background:#666;padding:10px 20px;color:#fff;float:right;}
+.program2194_4_wrap .t_line {border-top:1px solid #124140;}
+.program2194_4_wrap #feedForm table td input {width:90%;}
+
+@media only screen and (max-width: 767px){
+	.program2194_4_wrap table tbody .blank {display:none;}
+	.program2194_4_wrap table tbody tr {width:100%;}
+	.program2194_4_wrap table tbody tr th {width:100px;font-size:13px;}
+	.program2194_4_wrap table tbody tr td {width:65%;font-size:13px;}
+	.program2194_4_wrap table tbody tr + tr {border-top:1px solid #ccc;}
+	.program2194_4_wrap .t_line2 {border-top:1px solid #ccc;}
+}
+
+/* 사이트맵 */
+.sitemap:after {content:"";display:block;clear:both;}
+.sitemap > li {float:left;width:33%;}
+.sitemap > li h4 a {display:block;position:relative;margin:0 10px 0 10px;padding:13px 0 13px 34px;background:#222;font-weight:600;font-size:16px;color:#fff;}
+.sitemap > li h4 a:after {content:"";position:absolute;left:22px;top:19px;width:3px;height:13px;background:#fff;}
+.sitemap > li h4 a br {display:none;}
+.sitemap .sitemap_1dep {min-height:307px;margin:0 10px 20px 10px;border:1px solid #dcdee0;}
+.sitemap .sitemap_1dep > li:first-child a {border-top:0}
+.sitemap .sitemap_1dep > li a {display:block;width:auto;padding:13px 0 13px 15px;margin:0 20px;border-top:1px solid #dcdee0;}
+.sitemap .sitemap_2dep {margin:0 20px;border-top:1px solid #dcdee0;background:#f6f6f6;}
+.sitemap .sitemap_2dep li a {padding:10px 0;border-top:0;}
+.sitemap .sitemap_1dep > li {position:relative;}
+.sitemap .sitemap_1dep > li:before {content:"-";display:block;position:absolute;left:23px;top:13px;}
+	/* 태블릿 */
+	@media only screen and (max-width:1023px){
+		/* 사이트맵 */
+		.sitemap > li {width:50%;}
+	}
+	/* 모바일 */
+	@media only screen and (max-width:767px){
+		/* 사이트맵 */
+		.sitemap > li {width:100%;}
+		.sitemap .sitemap_1dep {min-height:auto;}
+	}
+
+/* 사이트맵 */
+.sitemap:after {content:"";display:block;clear:both}
+.sitemap > li {float:left;width:25%;}
+.sitemap > li h4 a {display:block;position:relative;margin:0 10px 0 10px;padding:13px 0 13px 34px;background:#033900;font-weight:600;font-size:16px;color:#fff}
+.sitemap > li h4 a:after {content:"";position:absolute;left:22px;top:19px;width:3px;height:13px;background:#fff}
+.sitemap > li h4 a br {display:none;}
+.sitemap .sitemap_1dep {min-height:300px;margin:0 10px 20px 10px;border:1px solid #033900;}
+.sitemap .sitemap_1dep > li:first-child a {border-top:0}
+.sitemap .sitemap_1dep > li a {display:block;width:auto;padding:13px 0 13px 15px;margin:0 20px;border-top:1px solid #033900}
+.sitemap .sitemap_2dep {margin:0 20px;border-top:1px solid #dcdee0;background:#f6f6f6}
+.sitemap .sitemap_2dep li a {padding:10px 0;border-top:0;}
+.sitemap .sitemap_1dep > li {position:relative}
+.sitemap .sitemap_1dep > li:before {content:"-";display:block;position:absolute;left:23px;top:13px}
+
+#sitemap .sitemap_box {text-align:center;height:100%;width:100%;display:inline-block;border:1px solid #033900;background:#033900;}
+#sitemap .sitemap_box h2 {background:#033900;color:#fff;padding:15px 0;font-size:18px;width:35%;float:left;}
+#sitemap .sitemap_box ul {width:65%;float:left;text-align:left;background:#fff;}
+#sitemap .sitemap_box ul li {padding:5px 20px;}
+#sitemap .sitemap_box > ul > li > ul {display:none;}
+
+.p-wrap.bbs .p-search .p-dropdown .p-button,
+.p-wrap.bbs .p-search select.p-input,
+.p-wrap.bbs .p-search select.p-upload__file,
+.p-wrap .p-dropdown .bbs .p-search .p-button{width:100%;}
+
+/* 동물위생소 이동승인서 공통 */
+.program{display:block;width:100%;box-sizing:border-box;}
+.program .tith3{display:block;position:relative;margin-top:40px;margin-bottom:20px;font-size:18px;color:#ff8c7d;}
+.program .tith3 em{display:inline-block;padding-top:5px;border-top:2px solid #ff8c7d;}
+.program .tith3:after{content:"";position:absolute;left:0;top:0;width:18px;height:2px;background:#fb6552;}
+.program .clearfix{display:block;position:relative;width:100%;}
+.program .clearfix:after{display:block;clear:both;content:'';}
+.program .p-button{height:35px;padding:0 10px;line-height:35px;}
+.program input[type="radio"]{cursor:pointer;}
+.program input[type="submit"]{cursor:pointer;}
+.program label{cursor:pointer;}
+.program .p-upload .p-input{height:35px;margin:0;padding:0 10px;line-height:30px;}
+.program .p-upload .p-button{margin:0;padding:0 10px;line-height:35px;}
+.program .programtable{border-top:2px solid #172150;}
+.program .programtable tbody tr th,
+.program .programtable tbody tr td{font-size:14px;}
+.program .programtable .temp_textbox{width:100%;font-size:14px;}
+.program .btn{display:inline-block;width:auto;height:35px;padding:0 20px;background-color:#ff8c7d;font-size:16px;color:#fff;line-height:35px;letter-spacing:-0.03em;font-weight:600;vertical-align:top;}
+.program .btn:hover{background-color:#ff8c9f;}
+.program .row{margin:0;}
+
+@media all and (max-width:640px){
+    .program .tith3{margin-top:20px;margin-bottom:10px;}
+}
+
+/* 동물위생소 이동승인서 신청서 등록 / 설계서 1p */
+.program.registration .move_time{display:block;position:relative;width:100%;}
+.program.registration .move_time:after{display:block;clear:both;content:'';}
+.program.registration .move_time .input_box{display:block;position:relative;float:left;width:44%;margin-right:1%;}
+.program.registration .move_time .input_box:after{display:block;clear:both;content:'';}
+.program.registration .move_time .input_box .temp_textbox{display:block;float:left;width:15%;padding:0 1px;text-align:center;}
+.program.registration .move_time .input_box span{display:block;float:left;width:10%;line-height:35px;text-align:center;}
+.program.registration .move_time .deadline{display:block;float:left;width:5%;line-height:35px;}
+.program.registration .clearfix label{display:block;float:left;width:19%;margin-right:1%;line-height:35px;text-align:center;}
+.program.registration .clearfix select.p-input{display:block;float:left;width:19%;min-width:auto;height:35px;margin:0 1% 0 0;padding:0;line-height:35px;box-sizing:border-box;}
+.program.registration .clearfix .temp_textbox{display:block;float:left;width:79%;margin:0 1% 0 0;box-sizing:border-box;}
+.program.registration .clearfix .temp_textbox.type2{width:59%;}
+.program.registration .clearfix .p-button{display:block;float:left;width:20%;margin:2px;box-sizing:border-box;}
+.program.registration .front{display:block;margin-right:0;margin-bottom:10px;}
+.program.registration td .front:last-child{margin-bottom:0;}
+.program.registration .front .clearfix{margin:5px 0;padding-left:10px;}
+.program.registration .front .clearfix .title{display:block;float:left;width:15%;line-height:35px;text-align:center;}
+.program.registration .front .clearfix .temp_textbox{display:block;float:left;width:85%;margin:0;}
+@media all and (max-width:1199px){
+    .program.registration .front .clearfix .title{width:20%;}
+    .program.registration .front .clearfix .temp_textbox{width:80%;}
+}
+@media all and (max-width:800px){
+    .program.registration .move_time .input_box{width:94%;margin-bottom:10px;}
+    .program.registration .move_time .input_box.type2{margin-bottom:0;}
+    .program.registration .move_time .deadline{margin-bottom:10px;}
+    .program.registration .move_time .deadline.type2{margin-bottom:0;}
+    .program.registration .clearfix label{width:29%;margin-right:1%;}
+    .program.registration .clearfix select.p-input{width:29%;margin-right:1%;}
+    .program.registration .clearfix .temp_textbox.type2{width:70%;margin-right:0;}
+    .program.registration .clearfix .p-button{width:100%;margin-top:5px;}
+}
+@media all and (max-width:640px){
+    .program.registration .front .clearfix{padding-left:0;}
+    .program.registration .front .clearfix .title{width:30%;}
+    .program.registration .front .clearfix .temp_textbox{width:70%;}
+}
+
+/* 동물위생소 이동승인서 신청 완료 / 설계서 2p */
+.program.registration.complete .complete_title{display:block;font-size:28px;color:#000;line-height:40px;letter-spacing:-0.03em;font-weight:600;text-align:center;}
+.program.registration.complete .complete_box{display:block;width:100%;margin-top:10px;border:1px solid #d9d9d9;box-sizing:border-box;}
+.program.registration.complete .complete_box .complete_box_wrap{display:block;width:100%;padding:3%;}
+.program.registration.complete .complete_box .complete_box_wrap .complete_desc{display:block;width:100%;}
+.program.registration.complete .complete_box .complete_box_wrap .complete_desc .top_title{display:block;width:100%;font-size:17px;color:#000;line-height:26px;letter-spacing:-0.03em;font-weight:600;text-align:center;}
+.program.registration.complete .complete_box .complete_box_wrap .complete_desc .top_title .point{color:#ff8c7d;}
+.program.registration.complete .complete_box .complete_box_wrap .complete_desc .desc{margin-top:20px;}
+.program.registration.complete .complete_box .complete_box_wrap .complete_desc .desc .list1 li{font-size:0;line-height:0;}
+.program.registration.complete .complete_box .complete_box_wrap .complete_desc .desc .list1 li span{display:inline-block;margin-right:5px;font-size:16px;color:#000;line-height:24px;letter-spacing:-0.03em;vertical-align:top;}
+@media all and (max-width:1000px){
+    .program.registration.complete .complete_box .complete_box_wrap{padding:2%;}
+}
+@media all and (max-width:800px){
+    .program.registration.complete .complete_title{font-size:24px;line-height:34px;}
+    .program.registration.complete .complete_box .complete_box_wrap .complete_desc .top_title{font-size:15px;}
+    .program.registration.complete .complete_box .complete_box_wrap .complete_desc .desc{margin-top:10px;}
+    .program.registration.complete .complete_box .complete_box_wrap .complete_desc .desc .list1 li span{font-size:14px;}
+}
+@media all and (max-width:640px){
+    .program.registration.complete .complete_box .complete_box_wrap .complete_desc .desc .list1 li .title{width:100%;margin-right:0;}
+}
+
+/* 동물위생소 이동승인서 신청 신청 내역 목록 / 설계서 3p */
+.program.registration_list .bbs{margin-bottom:20px;}
+.program.registration_list .boardSearchForm{display:block;padding:0;}
+.program.registration_list .bbs .p-search{margin-bottom:0;}
+.program.registration_list .bbs .p-search .p-input{margin:0;}
+.program.registration_list .bbs .p-search select.p-input{margin:0;}
+.program.registration_list .bbs .p-search .p-form-group{width:100%;margin-right:0;margin-left:0;}
+.program.registration_list .bbs .p-search .p-form-group .front_box{display:block;float:left;width:100%;font-size:0;line-height:0;box-sizing:border-box;}
+.program.registration_list .bbs .p-search .p-form-group .front_box select.p-input{display:block;float:left;width:17%;margin-right:1%;padding:0 16px;background-position:right 6px top 16px;font-size:14px;box-sizing:border-box;}
+.program.registration_list .bbs .p-search .p-form-group .front_box select.p-input.type2{width:18%;margin-right:0;}
+.program.registration_list .bbs .p-search .p-form-group .front_box input.p-input{display:block;float:left;width:45%;margin-right:1%;font-size:14px;box-sizing:border-box;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-form-checkbox{display:block;float:left;width:9%;margin:0 1% 0 0;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-form-checkbox .p-form-checkbox__input{width:auto;top:13px;left:5px;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-form-checkbox .p-form-checkbox__label{display:block;font-size:15px;line-height:42px;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-form-checkbox .p-form-checkbox__label:before{top:10px;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-form-checkbox .p-form-checkbox__label:after{top:15px;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group{display:block;float:left;width:69%;margin-right:1%;box-sizing:border-box;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date{display:block;float:left;width:48%;margin:0;box-sizing:border-box;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input{display:block;width:90%;margin:0;box-sizing:border-box;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split{display:block;float:left;width:10%;height:42px;box-sizing:border-box;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split .p-datepicker__wrap{height:100%;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split .p-date__icon{display:block;width:100%;height:100%;padding:0;box-sizing:border-box;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split .p-date__icon:before{display:inline-block;width:14px;height:16px;background:#f0f0f0 url(/common/images/program/p-icon-view.svg#calendar-alt) no-repeat center center;background-size:18px 18px;vertical-align:middle;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split .p-datepicker-switch{min-height:30px;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split .p-datepicker-footer .today{font-size:13px;line-height:18px;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split .p-datepicker-footer .close{font-size:13px;line-height:18px;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form__split{display:block;float:left;width:4%;padding:0;font-size:14px;line-height:42px;box-sizing:border-box;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-form-group__button{display:block;float:left;width:20%;}
+.program.registration_list .bbs .p-search .p-form-group .front_box .p-form-group__button .p-button{width:100%;margin:0 !important;}
+.program.registration_list .programtable .p-button{margin:0;line-height:35px;}
+@media all and (max-width:800px){
+    .program.registration_list .bbs .p-search .p-form-group .front_box select.p-input{padding:0 6px;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-form-checkbox{width:14%;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group{width:64%;}
+}
+@media all and (max-width:640px){
+    .program.registration_list .bbs .p-search .p-form-group .front_box select.p-input{width:100%;margin:0 0 1%;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box input.p-input{width:69%;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box select.p-input.type2{width:30%;margin-bottom:0;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-form-checkbox{width:19%;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group{width:80%;margin-right:0;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input{width:80%;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split{width:20%;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-form-group__button{width:100%;margin-top:1%;}
+}
+@media all and (max-width:480px){
+    .program.registration_list .bbs .p-search .p-form-group .front_box input.p-input{width:59%;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box select.p-input.type2{width:40%;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-form-checkbox{width:100%;margin-right:0;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-form-checkbox .p-form-checkbox__label{text-align:left;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group{width:100%;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split .p-datepicker{left:calc(50% - 100px) !important;}
+    .program.registration_list .bbs .p-search .p-form-group .front_box .p-date-group .p-form-group.p-date .p-input__split.type2 .p-datepicker{left:auto !important;right:calc(50% + 5px) !important;}
+}
+
+/* 동물위생소 이동승인서 신청내용 수정화면(사유표출) / 설계서 4p */
+.program.registration.change_view .move_time .input_box .temp_textbox{line-height:31px;}
+.program.registration.change_view .clearfix .select_view{display:block;float:left;width:19%;min-width:auto;height:35px;margin:0 1% 0 0;padding:0;line-height:35px;text-align:center;box-sizing:border-box;}
+.program.registration.change_view .clearfix .temp_textbox{width:80%;margin-right:0;line-height:31px;}
+.program.registration.change_view .btn_box{display:block;width:100%;box-sizing:border-box;}
+.program.registration.change_view .btn_box a.p-button{display:block;float:left;width:auto;line-height:35px;box-sizing:border-box;}
+.program.registration.change_view .btn_box input.p-button{display:block;float:right;width:auto;box-sizing:border-box;}
+@media all and (max-width:1000px){
+    .program.registration.change_view .clearfix .temp_textbox{height:auto;padding-top:4px;padding-bottom:4px;line-height:25px;}
+}
+@media all and (max-width:640px){
+    .program.registration.change_view .clearfix .select_view{display:block;float:none;width:100%;margin-right:0;text-align:left;}
+    .program.registration.change_view .clearfix .temp_textbox{display:block;float:none;width:100%;}
+}
+
+/* 동물위생소 이동승인서 신청내용 수정화면 / 설계서 5p */
+.program.registration.change .point_box{display:block;width:100%;border:1px solid #d9d9d9;box-sizing:border-box;}
+.program.registration.change .point_box .point_box_wrap{display:block;width:100%;padding:1%;font-size:20px;color:#000;line-height:30px;letter-spacing:-0.03em;font-weight:600;box-sizing:border-box;text-align:center;}
+.program.registration.change .btn_box a.p-button{display:block;float:left;width:auto;line-height:35px;box-sizing:border-box;}
+.program.registration.change .btn_box input.p-button{display:block;float:right;width:auto;box-sizing:border-box;}
+.program.registration.change .btn_box a.p-button.type2{float:right;margin-left:10px;}
+@media all and (max-width:800px){
+    .program.registration.change .point_box .point_box_wrap{font-size:16px;line-height:24px;}
+}
+@media all and (max-width:480px){
+    .program.registration.change .point_box .point_box_wrap{padding:2%;font-size:15px;}
+}
+
+/* 동물위생소 이동승인서 수정 완료 / 설계서 6p */
+.program.registration.change_complete .complete_title{display:block;font-size:28px;color:#000;line-height:40px;letter-spacing:-0.03em;font-weight:600;text-align:center;}
+.program.registration.change_complete .complete_box{display:block;width:100%;margin-top:10px;border:1px solid #d9d9d9;box-sizing:border-box;}
+.program.registration.change_complete .complete_box .complete_box_wrap{display:block;width:100%;padding:3%;}
+.program.registration.change_complete .complete_box .complete_box_wrap .complete_desc{display:block;width:100%;}
+.program.registration.change_complete .complete_box .complete_box_wrap .complete_desc .top_title{display:block;width:100%;font-size:17px;color:#000;line-height:26px;letter-spacing:-0.03em;font-weight:600;text-align:center;}
+.program.registration.change_complete .complete_box .complete_box_wrap .complete_desc .top_title .point{color:#ff8c7d;}
+.program.registration.change_complete .complete_box .complete_box_wrap .complete_desc .desc{margin-top:20px;}
+.program.registration.change_complete .complete_box .complete_box_wrap .complete_desc .desc .list1 li{font-size:0;line-height:0;}
+.program.registration.change_complete .complete_box .complete_box_wrap .complete_desc .desc .list1 li span{display:inline-block;margin-right:5px;font-size:16px;color:#000;line-height:24px;letter-spacing:-0.03em;vertical-align:top;}
+@media all and (max-width:1000px){
+    .program.registration.change_complete .complete_box .complete_box_wrap{padding:2%;}
+}
+@media all and (max-width:800px){
+    .program.registration.change_complete .complete_title{font-size:24px;line-height:34px;}
+    .program.registration.change_complete .complete_box .complete_box_wrap .complete_desc .top_title{font-size:15px;}
+    .program.registration.change_complete .complete_box .complete_box_wrap .complete_desc .desc{margin-top:10px;}
+    .program.registration.change_complete .complete_box .complete_box_wrap .complete_desc .desc .list1 li span{font-size:14px;}
+}
+@media all and (max-width:640px){
+    .program.registration.change_complete .complete_box .complete_box_wrap .complete_desc .desc .list1 li .title{width:100%;margin-right:0;}
+}
+
+/* 동물위생소 이동승인서 수정 완료 / 설계서 8p */
+.program.registration.detail .text_right a.p-button{line-height:35px;}
+
+.text_center{text-align:center;}
+.margin_t_35{margin-top:35px;}
+/* 버튼 */
+.btn{display:inline-block;position:relative;min-width:100px;margin:10px 0;padding:9px 10px 8px; border:1px solid #bbb;box-sizing:border-box;background-color:#fff;font-size:16px;line-height:26px;color:#444;text-align:center;transition:0.1s;vertical-align:middle;}
+a.btn:hover{text-decoration:none;}
+.btn:hover{border-color:#459173;background-color:#459173;color:#fff;}
+.btn.type2:hover{border-color:#3a495c;background-color:#3a495c;}
+.btn:before{display:block;position:absolute;content:'';}
+.btn.down, .btn.link, .btn.view, .btn.next{min-width:120px;}
+.btn.down:before, .btn.link:before, .btn.view:before, .btn.next:before{top:14px;right:16px;width:16px;height:16px;background-image:url('/site/www/images/template/btn_sprite.png');background-repeat:no-repeat;}
+
+.btn.next{padding-left:18px;padding-right:47px;}
+.btn.next:before{background-position:-48px top;}
+.btn.next:hover:before{background-position:-48px -16px;}
+
+@media only screen and (max-width: 767px){
+	.btn{font-size:14px; line-height:20px;}
+	.btn.down:before, .btn.link:before, .btn.view:before, .btn.next:before{top:12px;}
+}
+
+/* 도축검사 피드백서비스 뷰페이지 */
+.program2194_wrap table tbody tr{display:table; float:none; width:100%;}
+.program2194_wrap table tbody tr th{float:none; width:15%; text-align:center;}
+.program2194_wrap table tbody tr td{float:none; width:35%; vertical-align:top;}
+@media screen and (max-width:640px){
+    .program2194_wrap table.responsive {border-top:#a6a6a6 solid 1px;}
+    .program2194_wrap table.responsive thead {display:none;}
+    .program2194_wrap table.responsive colgroup {display:none;}
+    .program2194_wrap table.responsive tbody tr {position:relative; display:block; border-bottom:1px solid #d9d9d9;}
+    .program2194_wrap table.responsive tbody tr:after {display:block; clear:both; content:"."; visibility:hidden; height:0;}
+    .program2194_wrap table.responsive tbody tr:nth-child(odd) {background:#f8f8f8;}
+    .program2194_wrap table.responsive tbody tr:last-child {border-bottom:none;}
+    .program2194_wrap table.responsive tbody td {display:block; padding:4px 3%; border:none; text-align:left !important; box-sizing:border-box; background-color:transparent;}
+    .program2194_wrap table.responsive tbody th {display:block; padding:4px 3%; text-align:left; vertical-align:middle; background-color:transparent; border:none;  font-weight:600; color:#000;}
+    .program2194_wrap table.responsive tbody tr:first-child td, .program2194_wrap table.responsive tbody tr:first-child th {border-top:none;}
+    .program2194_wrap table.responsive tbody td:before {display:inline; content:attr(data-content)' : ';}/* theadì˜ ë‚´ìš©ì„ tbodyì˜ th, tdì— ê°ê° ì‚½ìž… */
+    .program2194_wrap table.responsive tfoot tr {position:relative; display:block; border-bottom:1px solid #d9d9d9;}
+    .program2194_wrap table.responsive tfoot tr:after {display:block; clear:both; content:"."; visibility:hidden; height:0;}
+    .program2194_wrap table.responsive tfoot tr:nth-child(odd) {background:#f8f8f8;}
+    .program2194_wrap table.responsive tfoot td {display:block; padding:4px 3%; border:none; text-align:left; box-sizing:border-box; background-color:transparent;}
+    .program2194_wrap table.responsive tfoot th {display:block; padding:4px 3%; text-align:left; vertical-align:middle; background-color:transparent; border:none;}
+    .program2194_wrap table.responsive tfoot tr:first-child td, .program2194_wrap table.responsive tfoot tr:first-child th {border-top:none;}
+    .program2194_wrap table.responsive tfoot th:before, .program2194_wrap table.responsive tfoot td:before {display:inline; content:attr(data-content)' : ';}/* theadì˜ ë‚´ìš©ì„ tbodyì˜ th, tdì— ê°ê° ì‚½ìž… */
+
+    .program2194_wrap table.responsive.type2 tbody th:before, .program2194_wrap table.responsive.type2 tbody td:before{display:none;}
+    .program2194_wrap table.responsive.type2 tfoot th:before, .program2194_wrap table.responsive.type2 tfoot td:before{display:none;}
+	.program2194_wrap table tbody tr th{width:auto;}
+	.program2194_wrap table tbody tr td{width:auto;}
+}
+
+/* 동물위생 이동승인신청서 수정페이지 20210421 수정 */
+.program2194_4_wrap #feedForm fieldset > div{width:auto;}
+.program2194_4_wrap table tbody tr{display:table; float:none; width:100%;}
+.program2194_4_wrap table tbody tr th{float:none; width:15%; text-align:center;}
+.program2194_4_wrap table tbody tr td{float:none; width:35%; padding-right:10px; vertical-align:top;}
+.program2194_4_wrap table tbody tr td.n3{width:85%;}
+.program2194_4_wrap table tbody tr.tr_img{height:auto; line-height:unset;}
+.program2194_4_wrap table tbody tr.tr_img th, .program2194_4_wrap table tbody tr.tr_img td{float:none; height:auto; line-height:unset;}
+.program2194_4_wrap table tbody tr.tr_img .p-form-group{margin-top:10px;}
+.program2194_4_wrap table tbody tr.tr_img textarea{width:100%; height:80px; margin-top:10px;}
+.program2194_4_wrap table tbody tr td .box_img{display:inline-block; width:320px; margin:10px auto; text-align:center; vertical-align:top;}
+.program2194_4_wrap table tbody tr td .box_img img{max-width:100%; max-height:100%;}
+.program2194_4_wrap table tbody tr td .p-attach__item a{display:block;}
+.program2194_4_wrap .p-button{margin:0;}
+
+/* 이미지 확대보기 */
+.box_img {text-align:center; line-height:0;}
+.box_img .inner {position:relative; display:inline-block; max-width:100%; line-height:0;}
+.box_img img {max-width:100%;}
+.box_img .img_zoom {display:inline-block; position:absolute; right:0; bottom:0; width:27px; height:27px; z-index:10;}
+.box_img .img_zoom a {display:inline-block; width:27px; height:27px; font-size:0; line-height:0; color:transparent; background:url(/site/www/images/template/img_zoom.png) center center no-repeat #459173;}
+
+@media only screen and (max-width: 767px){
+	.program2194_4_wrap table tbody tr.tr_img th {font-size:13px;}
+	.program2194_4_wrap table tbody tr.tr_img td {font-size:13px;}
+	.program2194_4_wrap table tbody tr td .box_img{display:block;}
+
+    .program2194_4_wrap table.responsive {border-top:#a6a6a6 solid 1px;}
+    .program2194_4_wrap table.responsive thead {display:none;}
+    .program2194_4_wrap table.responsive colgroup {display:none;}
+    .program2194_4_wrap table.responsive tbody tr {position:relative; border-bottom:1px solid #d9d9d9;}
+    .program2194_4_wrap table.responsive tbody tr:after {display:block; clear:both; content:"."; visibility:hidden; height:0;}
+    .program2194_4_wrap table.responsive tbody tr:nth-child(odd) {background:#f8f8f8;}
+    .program2194_4_wrap table.responsive tbody tr:last-child {border-bottom:none;}
+    .program2194_4_wrap table.responsive tbody td {display:block; padding:4px 3%; border:none; text-align:left !important; box-sizing:border-box; background-color:transparent;}
+    .program2194_4_wrap table.responsive tbody th {display:block; padding:4px 3%; text-align:left; vertical-align:middle; background-color:transparent; border:none;  font-weight:600; color:#000;}
+    .program2194_4_wrap table.responsive tbody tr:first-child td, .program2194_4_wrap table.responsive tbody tr:first-child th {border-top:none;}
+    .program2194_4_wrap table.responsive tfoot tr {position:relative; display:block; border-bottom:1px solid #d9d9d9;}
+    .program2194_4_wrap table.responsive tfoot tr:after {display:block; clear:both; content:"."; visibility:hidden; height:0;}
+    .program2194_4_wrap table.responsive tfoot tr:nth-child(odd) {background:#f8f8f8;}
+    .program2194_4_wrap table.responsive tfoot td {display:block; padding:4px 3%; border:none; text-align:left; box-sizing:border-box; background-color:transparent;}
+    .program2194_4_wrap table.responsive tfoot th {display:block; padding:4px 3%; text-align:left; vertical-align:middle; background-color:transparent; border:none;}
+    .program2194_4_wrap table.responsive tfoot tr:first-child td, .program2194_4_wrap table.responsive tfoot tr:first-child th {border-top:none;}
+
+    .program2194_4_wrap table.responsive.type2 tbody th:before, .program2194_4_wrap table.responsive.type2 tbody td:before{display:none;}
+    .program2194_4_wrap table.responsive.type2 tfoot th:before, .program2194_4_wrap table.responsive.type2 tfoot td:before{display:none;}
+	.program2194_4_wrap table tbody tr th{width:auto;}
+	.program2194_4_wrap table tbody tr td{width:auto;}
+
+	.program2194_4_wrap #feedForm table td input{vertical-align:top;}
+	.program2194_4_wrap table tbody tr td{height:auto;}
+	.program2194_4_wrap table tbody tr td.n3{width:auto;}
+}
+
+.program2194_2_wrap .t_btn a{margin-left:10px;}
+
+
+.p-attach__item .box_img{margin:10px auto;}
+.p-attach__item .box_img .inner{width:100%; height:181px; background-color:#000; overflow:hidden; line-height:179px;}
+.p-attach__item .box_img .inner img{vertical-align:middle;}
+
+.btn.small{padding:4px 10px 3px;font-size:15px;}
+.padding_t_50{padding-top:50px;}
+
+/* 동물이동신청내역 */
+.program .programtable .temp_textbox.temp_textbox_inb{display:inline-block; min-width:120px; width:auto;}
+.program .programtable .temp_textbox_inb2{display:inline-block; min-width:300px; width:auto;}
+.program .programtable .address .temp_textbox{margin:2px 0;}
+.program.registration .p-date-group .p-form-group.p-date .p-input__split .p-date__icon:before{display:inline-block;width:14px;height:16px;background:#f0f0f0 url(/common/images/program/p-icon-view.svg#calendar-alt) no-repeat center center;background-size:18px 18px;vertical-align:middle;}
+.program.registration .move_time .out_box{display:table-cell; width:25%;}
+.program.registration .move_time .input_box{display:table; float:none; width:100%; margin-bottom:5px; vertical-align:top;}
+.program.registration .move_time .time_group{display:table-cell; vertical-align:top;}
+.program.registration .move_time .time_box{display:inline-block; vertical-align:top;}
+/* .program.registration .move_time .p-date-group{width:50%;} */
+.program.registration .move_time .time_box .temp_textbox{display:inline-block; float:none; width:100px;}
+.program.registration .move_time .input_box span{float:none;}
+
+/* 동물이동승인신청 리스트 */
+.program.registration_list .p-button{line-height:24px;}
+/* 동물이동신청 상세보기 */
+.registration_box .btn_inner_box .btn{border-color:#459173; background-color:#459173; color:#fff; cursor:pointer;}
+.registration_box .btn_inner_box .btn.cancel{border-color:#ccc; background-color:#ccc; color:#111; cursor:pointer;}
+
+
+/* 동물이동신청 > 목록 */
+.program.registration_list.inner .bbs .p-search .p-form-group .front_box select.p-input{width:49%;}
+.program.registration_list.inner .bbs .p-search .p-form-group .front_box select.p-input.type2{width:49%;}
+.program.registration_list.inner .p-button{line-height:38px;}
+.program.registration_list.inner .p-button.black{line-height:24px;}
+.program.registration_list.inner .btn{display:inline-block;position:relative;min-width:100px;height:auto;margin:10px 0;padding:9px 10px 8px; border:1px solid #459173;box-sizing:border-box;background-color:#459173;font-size:16px;line-height:26px;color:#fff;text-align:center;transition:0.1s;vertical-align:middle; font-weight:400;}
+.program.registration_list.inner a.btn:hover{text-decoration:none;}
+.program.registration_list.inner .btn:hover{border-color:#459173;background-color:#459173;color:#fff;}
+
+/* 동물이동승인신청 상세 */
+.registration_view .btn.cancel{cursor:pointer;}
+.program.registration .stopover_box div{line-height:35px;}
+
+/* 동물이동승인신청 입력 */
+.program.apply_inner .btn{display:inline-block;position:relative;min-width:100px;height:auto;margin:10px 0;padding:9px 10px 8px; border:1px solid #459173;box-sizing:border-box;background-color:#459173;font-size:16px;line-height:26px;color:#fff;text-align:center;transition:0.1s;vertical-align:middle; font-weight:400;}
+.program.apply_inner a.btn:hover{text-decoration:none;}
+.program.apply_inner .btn:hover{border-color:#459173;background-color:#459173;color:#fff;}
+.program.registration .p-button{min-width:85px;}
+
+/* 동물이동신청관리자 */
+.program.registration .btn{display:inline-block;position:relative;min-width:100px;height:auto;margin:10px 0;padding:9px 10px 8px; border:1px solid #bbb;box-sizing:border-box;background-color:#fff;font-size:16px;line-height:26px;color:#444;text-align:center;transition:0.1s;vertical-align:middle; font-weight:400;}
+.program.registration .btn.small{padding:4px 10px 3px;font-size:15px;}
+.program.registration a.btn:hover{text-decoration:none;}
+.program.registration .btn:hover{border-color:#459173;background-color:#459173;color:#fff;}
