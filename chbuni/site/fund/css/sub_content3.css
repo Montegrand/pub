@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+/* cts108 */
+
+
+
+/* cts109 */
+
+.cts109_wrap .col_box.divide3 .col_item{margin-bottom:30px; padding:30px; height: auto;}
+.cts109_wrap .col_box.divide3 .col_item:nth-child(3n){margin-right:0;}
+.cts109_wrap .col_box .col_item .box_title{padding:16px 0 16px 80px; background-color:transparent; font-size:22px;}
+.cts109_wrap .col_box .col_item .box_title:before{display:block; position:absolute; top:43px; left:43px; z-index:1; width:34px; height:34px;}
+.cts109_wrap .col_box .col_item .box_title.icon1:before{background:url(/site/fund/images/contents/cts109_icon1.png)no-repeat;}
+.cts109_wrap .col_box .col_item .box_title.icon2:before{background:url(/site/fund/images/contents/cts109_icon2.png)no-repeat;}
+.cts109_wrap .col_box .col_item .box_title.icon3:before{background:url(/site/fund/images/contents/cts109_icon3.png)no-repeat;}
+.cts109_wrap .col_box .col_item .box_title.icon4:before{background:url(/site/fund/images/contents/cts109_icon4.png)no-repeat;}
+.cts109_wrap .col_box .col_item .box_title.icon5:before{background:url(/site/fund/images/contents/cts109_icon5.png)no-repeat;}
+.cts109_wrap .col_box .col_item .box_title.icon6:before{background:url(/site/fund/images/contents/cts109_icon6.png)no-repeat;}
+.cts109_wrap .col_box .col_item .box_title.icon7:before{background:url(/site/fund/images/contents/cts109_icon7.png)no-repeat;}
+.cts109_wrap .col_box .col_item .box_title.icon8:before{background:url(/site/fund/images/contents/cts109_icon8.png)no-repeat;}
+.cts109_wrap .col_box .col_item .box_title:after{display:block; position:absolute; top:30px; left:30px; width:60px; height:60px; border-radius:5px; background-color:#f9e1e9;}
+.cts109_wrap .col_box .col_item .box_title.n02:after{background-color:#fdf2df;}
+
+.cts109_wrap .col_box .col_item .textbox{padding:0; background-color:transparent;}
+.cts109_wrap .col_box .col_item .textbox .text{padding:22px 0 18px 0; word-break:keep-all;}
+.cts109_wrap .col_box .col_item .textbox .bottom .icon_btn.type2{float:right; padding:10px 0; border:0; background-color:#b62b5c; font-size:16px; min-width: 130px;}
+.cts109_wrap .col_box .col_item .textbox .bottom .icon_btn.type2:hover{background-color: #9c1343;}
+.cts109_wrap .col_box .col_item .textbox .bottom .line5{display:inline-block; width:50%; margin:25px 0; vertical-align:middle;}
+.cts109_wrap .col_box .col_item .textbox .warning.type1{padding:16px 16px 16px 40px; background-color:#ebeef1; color:#222; line-height:26px;}
+.cts109_wrap .col_box .col_item .textbox .warning.type1:before{top:20px; left:15px;}
+
+.cts109_wrap .col_box .col_item .textbox .bottom{display:block;}
+
+.cts109_wrap .col_box .col_item.last{border:0; background:linear-gradient(#6269c7, #8c91d7); color:#fff; }
+.cts109_wrap .col_box .col_item.last .box_title{padding-top:0; padding-left:0; border-bottom:1px solid #999edb; color:#fff; font-size:19px; font-weight:inherit; font-family: inherit;}
+.cts109_wrap .col_box .col_item.last .box_title:before{top: auto; bottom: 20px; left:83%; width:104px; height:92px; background:url(/site/fund/images/contents/cts109_icon9.png) no-repeat; background-size:cover; transform:translateX(-50%);}
+.cts109_wrap .col_box .col_item.last .box_title:after{display:none;}
+.cts109_wrap .col_box .col_item.last .textbox{padding-bottom:40px;}
+
+@media all and (max-width:1600px){
+    .cts109_wrap .col_box.divide3 .col_item{width:calc(50% - 10px); margin-bottom:30px;}
+    .cts109_wrap .col_box.divide3 .col_item:nth-child(3n){margin-right:20px;}
+    .cts109_wrap .col_box.divide3 .col_item:nth-child(2n){margin-right:0;}
+    .cts109_wrap .col_box .col_item .textbox .bottom .icon_btn.type2{font-size:14px;}
+}
+@media all and (max-width:1500px){
+    .cts109_wrap .col_box .col_item .textbox .bottom .line5{display:block; width:100%;}
+}
+@media all and (max-width:1200px){
+    .cts109_wrap .col_box .col_item.last .box_title:before{width:80px; height:71px;}
+}
+@media all and (max-width:1000px){
+    .cts109_wrap .col_box .col_item.last .box_title:before{width:104px; height:92px;}
+}
+@media all and (max-width:800px){
+    .cts109_wrap .col_box.divide3 .col_item{display:block; width:100%; margin-bottom:30px;}
+    .cts109_wrap .col_box .col_item.last .box_title:before{left: 90%;}
+}
+@media all and (max-width:460px){
+    .cts109_wrap .col_box .col_item.last .box_title:before{left: 85%; width:80px; height:71px;}
+}
+
+/* cts119 */
+.cts119_wrap .fund_apply .fund_apply_item{display:inline-block; position:relative; width:calc(33.333% - 17px); margin-right:20px; vertical-align:top;}
+.cts119_wrap .fund_apply .fund_apply_item:last-child{margin-right:0;}
+.cts119_wrap .fund_apply .fund_apply_item h4{margin-top:0; padding-left:32px;}
+.cts119_wrap .fund_apply .fund_apply_item:before{display:block; position:absolute; width:21px; height:25px;}
+.cts119_wrap .fund_apply .fund_apply_item.n01:before{background:url(/site/fund/images/contents/cts119_icon5.png) no-repeat;}
+.cts119_wrap .fund_apply .fund_apply_item.n02:before{background:url(/site/fund/images/contents/cts119_icon6.png) no-repeat;}
+.cts119_wrap .fund_apply .fund_apply_item.n03:before{top:5px; background:url(/site/fund/images/contents/cts119_icon7.png) no-repeat;}
+
+.cts119_wrap .fund_apply .box{height:260px; font-size:16px; text-align:center; line-height:27px;}
+.cts119_wrap .fund_apply .box .warning.type1{display:inline-block; margin-top:6px;}
+.cts119_wrap .fund_apply .box .qr_code{padding-top:20px;}
+.cts119_wrap .fund_apply .box .icon_btn{min-width:182px; margin-top:20px; padding:10px; border:0; background-color:#444; font-size:16px;}
+.cts119_wrap .fund_apply .box .icon_btn > span{font-size:16px;}
+.cts119_wrap .fund_apply .box span{padding-top:20px;}
+.cts119_wrap .fund_apply .box span:last-child{padding-top:0;}
+.cts119_wrap .fund_benefit{border:0; border-radius:0;}
+
+.cts119_wrap .fund_house_tit{position:relative; margin-bottom:20px; padding:26px 20px; text-align:center;}
+.cts119_wrap .fund_house_tit .fund_house_txt{display:inline-block;}
+.cts119_wrap .fund_house_tit .fund_house_txt p{padding-left:40px; font-size:20px; font-weight:500; font-family:"SBAggro", "Malgun Gothic", "맑은 고딕", "Dotum", "돋움", "Gulim", "굴림", sans-serif; line-height:36px;}
+.cts119_wrap .fund_house_tit .fund_house_txt:before{display:block; position:absolute; width:25px; height:35px; background:url(/site/fund/images/contents/cts119_icon1.png) no-repeat;}
+
+.cts119_wrap .fund_house{}
+.cts119_wrap .fund_house .fund_list{}
+.cts119_wrap .fund_house .fund_list .fund_item{display:inline-block; overflow:hidden; position:relative; width:calc(25% - 19px); min-height:430px; margin-right:20px; margin-bottom:40px; border:0; border-radius:10px; vertical-align:top;}
+.cts119_wrap .fund_house .fund_list .fund_item:nth-child(4n){margin-right:0;}
+.cts119_wrap .fund_house .fund_list .fund_item:before{display:block; position:absolute; top:413px; left:12%; z-index:1; width:75%; height:38px; border-radius:90px; background-color:#fff;}
+.cts119_wrap .fund_house .fund_list .fund_item.n01{background:linear-gradient(#fbf4e6, #fceef4);}
+.cts119_wrap .fund_house .fund_list .fund_item.n02{background:linear-gradient(#fbf4e6, #eff0fc);}
+.cts119_wrap .fund_house .fund_list .fund_item.n03{background:linear-gradient(#fbf4e6, #f9edfd);}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box{border:0; text-align:center;}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .crown{position:relative; padding-left:24px; font-size:16px; text-align:center; line-height:34px;}
+.cts119_wrap .fund_house .fund_list .fund_item.n01 .fund_box .crown{color:#b62b5c;}
+.cts119_wrap .fund_house .fund_list .fund_item.n02 .fund_box .crown{color:#6269c7;}
+.cts119_wrap .fund_house .fund_list .fund_item.n03 .fund_box .crown{color:#9935d2;}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .crown:before{display:block; position:absolute; top:11px; left:0; width:18px; height:12px;}
+.cts119_wrap .fund_house .fund_list .fund_item.n01 .fund_box .crown:before{background:url(/site/fund/images/contents/cts119_icon2.png) no-repeat;}
+.cts119_wrap .fund_house .fund_list .fund_item.n02 .fund_box .crown:before{background:url(/site/fund/images/contents/cts119_icon3.png) no-repeat;}
+.cts119_wrap .fund_house .fund_list .fund_item.n03 .fund_box .crown:before{background:url(/site/fund/images/contents/cts119_icon4.png) no-repeat;}
+
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box h4{margin:0; padding:10px 0; font-size:19px; text-align:center; }
+.cts119_wrap .fund_house .fund_list .fund_item.n01 .fund_box h4{border-top: 1px solid #d88fa1;}
+.cts119_wrap .fund_house .fund_list .fund_item.n02 .fund_box h4{border-top: 1px solid #aeaed7;}
+.cts119_wrap .fund_house .fund_list .fund_item.n03 .fund_box h4{border-top: 1px solid #ca94dd;}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .fund_img{}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .fund_img img{border-radius:5px;}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .fund_info{margin-top:16px; padding-left:36px; color:#222; font-size:15px; text-align:left; line-height:24px;}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .fund_info .fund_info_item{position:relative;}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .fund_info .fund_info_item:before{display:block; position:absolute; left:-25px; width:17px; height:18px;}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .fund_info .fund_info_item.n01:before{top:2px; background:url(/site/fund/images/contents/cts119_icon8.png) no-repeat;}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .fund_info .fund_info_item.n02:before{top:4px; background:url(/site/fund/images/contents/cts119_icon9.png) no-repeat;}
+.cts119_wrap .fund_house .fund_list .fund_item .fund_box .fund_info .fund_info_item:last-child{margin-top:6px;}
+
+@media all and (max-width:1600px){
+    .cts119_wrap .fund_apply .box{height:320px; padding:20px;}
+
+    .cts119_wrap .fund_house .fund_list .fund_item{width:calc(33.333% - 17px);}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(3n){margin-right:0;}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(4n){margin-right:20px;}
+    .cts119_wrap .fund_house .fund_list .fund_item:last-child{margin-right:0;}
+}
+@media all and (max-width:1200px){
+    .cts119_wrap .fund_apply .fund_apply_item{width:calc(50% - 13px);}
+    .cts119_wrap .fund_apply .fund_apply_item:nth-child(2){margin-right:0;}
+    .cts119_wrap .fund_apply .fund_apply_item:last-child{margin-top:20px;}
+
+    .cts119_wrap .fund_house .fund_list .fund_item{width:calc(50% - 13px);}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(3n){margin-right:20px;}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(2n){margin-right:0;}
+}
+@media all and (max-width:1000px){
+    .cts119_wrap .fund_apply .fund_apply_item{width:calc(33.333% - 17px);}
+    .cts119_wrap .fund_apply .fund_apply_item:last-child{margin-top:0;}
+    .cts119_wrap .fund_apply .fund_apply_item:nth-child(2){margin-right:20px;}
+
+    .cts119_wrap .fund_house .fund_list .fund_item{width:calc(33.333% - 17px);}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(3n){margin-right:0;}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(4n){margin-right:20px;}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(2){margin-right:20px;}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(10){margin-right:20px;}
+    .cts119_wrap .fund_house .fund_list .fund_item:last-child{margin-right:0;}
+}
+@media all and (max-width:800px){
+    .cts119_wrap .fund_apply .fund_apply_item{width:calc(50% - 13px);}
+    .cts119_wrap .fund_apply .fund_apply_item:nth-child(2){margin-right:0;}
+    .cts119_wrap .fund_apply .fund_apply_item:last-child{margin-top:20px;}
+
+    .cts119_wrap .fund_house .fund_list .fund_item{width:calc(50% - 13px);}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(3n){margin-right:20px;}
+    .cts119_wrap .fund_house .fund_list .fund_item:nth-child(2n){margin-right:0;}
+}
+@media all and (max-width:640px){
+    .cts119_wrap .fund_apply .box{height:auto;}
+    .cts119_wrap .fund_apply .fund_apply_item{display:block; width:100%;}
+    .cts119_wrap .fund_apply .fund_apply_item{margin-top:20px;}
+    .cts119_wrap .fund_apply .fund_apply_item:first-child{margin-top:0;}
+    .cts119_wrap .fund_apply .fund_apply_item:last-child{margin-top:20px;}
+
+    .cts119_wrap .fund_house .fund_list .fund_item{display:block; width:100%;}
+    .cts119_wrap .fund_house_tit .fund_house_txt p{font-size: 18px}
+}
+
+/* cts126 */
+.cts126_wrap .title{padding: 10px 0 10px 82px; font-size: 20px; font-weight: 500; font-family: inherit;}
+.cts126_wrap .title:before{display: block; position: absolute; width: 70px; height: 60px; left: 0; top: 0;}
+.cts126_wrap .title.n01:before{ background: url(/site/fund/images/contents/cts126_icon1.png); background-size: cover;}
+.cts126_wrap .title.n02:before{ background: url(/site/fund/images/contents/cts126_icon2.png); background-size: cover;}
+.cts126_wrap .title.n03:before{ background: url(/site/fund/images/contents/cts126_icon3.png); background-size: cover;}
+
+.cts126_wrap .col_box .col_item .box_title{font-size: 22px; background-color: transparent; padding: 0; text-align: center;}
+.cts126_wrap .col_box .col_item{padding: 30px;}
+.cts126_wrap .col_box .col_item .textbox{padding: 20px; margin-top: 16px; text-align: center; border-radius: 5px;}
+.cts126_wrap .col_box.n01 .col_item .textbox{background-color: #f6eef1;}
+.cts126_wrap .col_box.n02 .col_item .textbox{background-color: #f0f1f8; height: 120px;}
+.cts126_wrap .col_box.n03 .col_item .textbox{background-color: #edf6f4; height: 120px;}
+.cts126_wrap .col_box .col_item .box_btn {text-align: center;}
+.cts126_wrap .col_box .col_item .icon_btn.type2{background-color: #444; margin-top: 20px; line-height: 20px; padding: 10px 36px; border: 0; font-size: 16px;}
+
+.cts126_wrap .col_box .col_item.n01 .textbox .bu li{display: inline-block; padding-left: 0; padding-bottom: 10px; font-weight: 500;}
+.cts126_wrap .col_box .col_item .textbox .bu li:before{display:none}
+.cts126_wrap .col_box.n03 .col_item.n01 .textbox{padding:20px 15px}
+/* .cts126_wrap .col_box .col_item .textbox .bu li:before{width: 22px; height: 22px; left: 0; top: 3px;} */
+/* .cts126_wrap .col_box .col_item .textbox .bu li.n01:before{background: url(/site/fund/images/contents/cts126_icon4.png);} */
+/* .cts126_wrap .col_box .col_item .textbox .bu li.n02:before{background: url(/site/fund/images/contents/cts126_icon5.png);} */
+.cts126_wrap .col_box .col_item .textbox .bu li:after{display: none;}
+.cts126_wrap .col_box .col_item .addr{padding-top: 15px;}
+.cts126_wrap .col_box .col_item .addr p{font-size: 15px;}
+.cts126_wrap .col_box .col_item .addr .red{color: #b62b5c;}
+
+@media all and (max-width:1600px){
+    .cts126_wrap .col_box.n02 .col_item .textbox{height: auto;}
+    .cts126_wrap .col_box.n03 .col_item .textbox{height: auto;}
+}
+@media all and (max-width:1400px){
+    .cts126_wrap .col_box .col_item{padding: 20px;}
+}
+@media all and (max-width:800px){
+    .cts126_wrap .title{padding: 0 0 5px 62px;}
+    .cts126_wrap .title:before{width: 50px; height: 43px;}
+    .cts126_wrap .col_box .col_item.n01 .textbox .bu li{display: block;}
+}
+
+/* cts137 */
+.cts137_wrap .col_box{margin:60px 0;}
+.cts137_wrap .col_box .col_item{width:calc(50% - 30px); height:722px; padding:50px 44px; font-family:'SBAggro';}
+.cts137_wrap .col_box .col_item.n01{margin-right:60px;}
+.cts137_wrap .slick-initialized .slick-slide{width:650px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_img{overflow:hidden; height:440px; border-radius:10px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_img img{width:100%; height:100%; transition:all 1s;}
+.cts137_wrap .col_box .col_item .fund_con .fund_img:hover img{transform:scale(1.05);}
+.cts137_wrap .col_box .col_item .fund_con .fund_title{padding:24px 0; color:#000; font-size:24px; font-weight:500; line-height:34px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_map{padding:34px 20px; border-radius:10px; background-color:#fcf7ee; color:#222; font-size:18px; line-height:30px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_map em{padding-right:14px; color:#b62b5c; font-weight:500;}
+
+.cts137_wrap .img_zoombox{display:block; position:relative; text-align:center;}
+.cts137_wrap .img_mobile{display:block; position:relative;}
+.cts137_wrap .img_mobile img{display:inline-block;}
+.cts137_wrap .img_mobile .zoom{display:block; position:absolute; right:0; bottom:0; width:100%; height:100%;}
+.cts137_wrap .img_mobile .zoom:before{display:none;}
+
+.cts137_wrap .photo{position:relative; width:100%;}
+.cts137_wrap .slick-list{border-radius:10px;}
+.cts137_wrap .photo .photo_control{z-index:1;}
+.cts137_wrap .photo .slick-arrow{position:absolute; top:196px; width:48px; height:48px; border-radius:90px; background-color:rgb(255, 255, 255, 0.8);}
+.cts137_wrap .photo .photo_prev.slick-arrow{left:-24px;}
+.cts137_wrap .photo .photo_prev.slick-arrow:before{display:block; position:absolute; top:21px; left:16px; width:14px; height:8px; background:url(/site/public/images/common/menu_sprite.png) no-repeat 1px -3px; background-size:cover; transform:rotate(90deg);}
+.cts137_wrap .photo .photo_next.slick-arrow{right:-24px;}
+.cts137_wrap .photo .photo_next.slick-arrow:before{display:block; position:absolute; top:21px; right:16px; width:14px; height:8px; background:url(/site/public/images/common/menu_sprite.png) no-repeat 1px -3px; background-size:cover; transform:rotate(270deg);}
+.cts137_wrap .photo .photo_auto.slick-arrow{display:none;}
+
+@media all and (max-width:1600px){
+.cts137_wrap .col_box{margin:30px 0;}
+.cts137_wrap .col_box.divide2 .col_item{width:calc(50% - 15px); height:560px; padding:30px;}
+.cts137_wrap .col_box .col_item.n01{margin-right:30px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_img{height:340px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_title{font-size:20px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_map{padding:20px 10px; font-size:16px;}
+.cts137_wrap .photo .slick-arrow{top:150px;}
+}
+@media all and (max-width:1200px){
+.cts137_wrap .col_box{margin:20px 0;}
+.cts137_wrap .col_box.divide2 .col_item{width:calc(50% - 10px); height:520px; padding:20px;}
+.cts137_wrap .col_box .col_item.n01{margin-right:20px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_img{height:280px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_title{font-size:20px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_map{padding:20px 10px; font-size:16px;}
+.cts137_wrap .photo .slick-arrow{top:120px;}
+}
+@media all and (max-width:800px){
+.cts137_wrap .col_box{margin:0;}
+.cts137_wrap .col_box.divide2 .col_item{height:500px !important;}
+.cts137_wrap .col_box .col_item .fund_con .fund_img{height:250px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_title{padding:14px 0;}
+.cts137_wrap .photo .slick-arrow{top:106px;}
+}
+@media all and (max-width:640px){
+.cts137_wrap .col_box.divide2 .col_item{display:block; width:100%; height:auto !important;}
+.cts137_wrap .col_box .col_item .fund_con .fund_img{height:320px;}
+.cts137_wrap .img_mobile .zoom{background-color:transparent;}
+.cts137_wrap .photo .slick-arrow{top:140px;}
+}
+@media all and (max-width:460px){
+.cts137_wrap .col_box .col_item .fund_con .fund_img{height:250px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_title{font-size:18px;}
+.cts137_wrap .col_box .col_item .fund_con .fund_map{padding:10px; font-size:14px;}
+.cts137_wrap .photo .slick-arrow{top:106px;}
+}
+
+
+/* cts140 */
+.cts140_wrap .box{overflow:hidden; position:relative; padding:370px 20px 113px; border:0; border-radius:0; background:url(/site/fund/images/contents/cts140_img1.png) no-repeat; background-size:cover; text-align:center;}
+.cts140_wrap .box:before{display:block; position:absolute; top:112px; left:30px; width:354px; height:803px; background:url(/site/fund/images/contents/cts140_bg01.png) no-repeat;}
+.cts140_wrap .box:after{display:block; position:absolute; top:0; left:262px; width:272px; height:274px; background:url(/site/fund/images/contents/cts140_bg02.png) no-repeat;}
+.cts140_wrap .box h3{display:inline-block; position:relative; margin:0 0 14px 0; font-size:26px; line-height:45px;}
+.cts140_wrap .box h3:before{display:block; position:absolute; top:-180px; left:-90px; width:339px; height:94px; background:url(/site/fund/images/contents/cts140_txt01.png) no-repeat;}
+.cts140_wrap .box h3:after{display:block; position:absolute; top:-52px; left:-116px; width:390px; height:37px; background:url(/site/fund/images/contents/cts140_img8.png) no-repeat;}
+.cts140_wrap .box .txt1{padding-bottom:140px;}
+.cts140_wrap .box .txt1 em{font-weight:500;}
+.cts140_wrap .box .btn.type2{margin-bottom:13px; font-size:19px;}
+.cts140_wrap .box .btn.type2:before{display:block; position:absolute; top:-125px; left:67px; width:70px; height:100px; background:url(/site/fund/images/contents/cts140_img7.png) no-repeat;}
+
+.cts140_wrap .photo{display:block; position:relative; padding:60px 40px 0; font-size:0; line-height:0;}
+.cts140_wrap .photo .photo_item{display:inline-block; position:relative; width:calc((100% - 220px) / 5); margin-right:55px; text-align:center; vertical-align:top;}
+.cts140_wrap .photo .photo_item:last-child{margin-right:0;}
+.cts140_wrap .photo .photo_item .photo_link{display:block; position:relative; width:100%; height:100%;}
+.cts140_wrap .photo .photo_img{overflow:hidden; position:relative; border-radius:7px; box-shadow:none; transition:all 0.25s ease-in-out;}
+.cts140_wrap .photo .photo_img:before{display:block; position:absolute; right:0; bottom:0; z-index:1; width:40px; height:40px; border-radius:7px 0; background:#fff url(/site/fund/images/contents/cts140_icon01.png) no-repeat center; transition:all 0.25s ease-in-out;}
+.cts140_wrap .photo .photo_img img{position:relative; border-radius:7px 7px 9px 7px;}
+.cts140_wrap .photo .photo_item p{padding-top:18px; font-size:19px; line-height:19px;}
+.cts140_wrap .photo .photo_item em{font-weight:500; font-family:'SBAggro';}
+.cts140_wrap .photo .photo_item .date{font-size:16px;}
+
+/* 호버효과 */
+.cts140_wrap .photo .photo_item:hover .photo_img{box-shadow:12px 9px 30px 0 rgba(0,0,0,0.2);}
+.cts140_wrap .photo .photo_item:hover .photo_img:before{background:#fff url(/site/fund/images/contents/cts140_icon02.png) no-repeat center;}
+
+@media all and (max-width:1600px){
+    .cts140_wrap .box:before{display:none;}
+    .cts140_wrap .box:after{left:20px;}
+
+    .cts140_wrap .photo .photo_item{width:calc((100% - 165px) / 4); margin-bottom:30px;}
+    .cts140_wrap .photo .photo_item:nth-child(4){margin-right:0;}
+}
+@media all and (max-width:1200px){
+    .cts140_wrap .box:after{left:-80px;}
+    .cts140_wrap .photo .photo_item{width:calc((100% - 110px) / 3);}
+    .cts140_wrap .photo .photo_item:nth-child(4){margin-right:55px;}
+    .cts140_wrap .photo .photo_item:nth-child(3){margin-right:0;}
+}
+@media all and (max-width:1000px){
+    .cts140_wrap .box:before{display:block; left:-260px;}
+    .cts140_wrap .box:after{left:0;}
+}
+@media all and (max-width:800px){
+    .cts140_wrap .box:after{left:-90px;}
+    .cts140_wrap .photo{padding:60px 0 0;}
+    .cts140_wrap .photo .photo_item{width:calc((100% - 50px) / 3); margin-right:25px;}
+    .cts140_wrap .photo .photo_item:nth-child(4){margin-right:25px;}
+}
+@media all and (max-width:640px){
+    .cts140_wrap .box h3:before{left:-26px; width:200px; height:55px; background-size:cover;}
+    .cts140_wrap .box h3:after{left:-56px; width:260px; height:25px; background-size:cover;}
+    .cts140_wrap .box:before{display:none;}
+    .cts140_wrap .box:after{display:none;}
+    .cts140_wrap .box .btn.type2{padding:10px; font-size:16px;}
+    .cts140_wrap .photo .photo_item{width:100%}
+    .cts140_wrap .photo .photo_img:before{display:none;}
+}
+
+
+
+
+/* cts145 */
+.cts145_wrap .fund_photo{display: block; position:relative; padding: 50px;}
+.cts145_wrap .fund_photo .photo_list .photo_item{display: inline-block; position:relative; text-align: center;}
+.cts145_wrap .fund_photo.n01 .photo_list .photo_item{width: calc((100% - 113px)/4); margin-right: 33px;}
+.cts145_wrap .fund_photo.n01 .photo_list .photo_item:last-child{margin-right: 0;}
+.cts145_wrap .fund_photo .photo_list .photo_item img{border-radius: 7px;}
+.cts145_wrap .fund_photo.n02 .photo_list .photo_item{width: 100%;}
+.cts145_wrap .fund_photo.n03 .photo_list .photo_item{width: 100%;}
+.cts145_wrap .fund_title{margin: 40px 0 20px; font-size: 30px; line-height: 47px; color: #000; font-family: 'SBAggro'; font-weight: 500;}
+.cts145_wrap .fund_title span{font-size: 18px; color: #444; font-weight: 300; padding: 0 16px;}
+
+@media all and (max-width:1400px){
+    .cts145_wrap .fund_photo{padding: 30px;}
+    .cts145_wrap .fund_photo.n01 .photo_list .photo_item{ width: calc((100% - 74px)/4); margin-right: 20px;}
+}
+@media all and (max-width:800px){
+    .cts145_wrap .fund_photo.n01 .photo_list .photo_item:nth-child(2){margin-right: 0;}
+    .cts145_wrap .fund_photo.n01 .photo_list .photo_item{ width: calc((100% - 45px)/2); margin-right: 20px; padding-bottom: 20px;}
+    .cts145_wrap .fund_photo .line2{display: none;}
+}
+@media all and (max-width:640px){
+    .cts145_wrap .fund_title{font-size: 26px; margin: 40px 0 12px; line-height: 26px;}
+}
+@media all and (max-width:500px){
+    .cts145_wrap .fund_photo.n01 .photo_list .photo_item{ width: 100%; margin-right: 0;}
+}
+
+/* cts806 */
+.cts806_wrap .committee .left_box img{border-radius: 30px 10px;}

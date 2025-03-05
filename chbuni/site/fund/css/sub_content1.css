@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.cts156_wrap .organization .organ_list .organ_depth4 .depth4_1{margin: 0 30px 30px;}
+.cts156_wrap .organization .organ_list .organ_depth1:after {bottom:-200px;height: 200px}
+.cts156_wrap .organization .organ_list .organ_depth2:after{bottom:-200px;height: 200px}
+.cts156_wrap .organization .organ_list .organ_depth4 .organ_depth4_list::before:last-child{display: none;}
+.cts156_wrap .organization .organ_list .organ_depth4 .organ_depth4_list.list_low{margin-left: 280px;}
+.cts156_wrap .organization .organ_list .organ_depth4 .organ_depth4_list.list_low2:before{display: none;}
+.cts127_wrap .step_vertical .step_box .title.no_padding{padding: 0; width: 120px;}
+
+@media screen and (max-width:880px) {
+    .cts156_wrap .organization .organ_list .organ_depth4 .organ_depth4_list.list_low{margin-left: 0;}
+}

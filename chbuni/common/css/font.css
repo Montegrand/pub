@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/* 에스코어드림 */
+/* 필요시 200 > 300으로 대체 사용 */
+@font-face{
+	font-family:'s-coredream';
+	font-weight: 200;
+	src:url("../fonts/S-CoreDream-3Light.woff2") format('woff2'),
+	url("../fonts/S-CoreDream-3Light.woff") format('woff');
+}
+/* 흐림으로 300 > 400으로 대체 사용 */
+@font-face{
+	font-family:'s-coredream';
+	font-weight: 300;
+	src:url("../fonts/S-CoreDream-4Regular.woff2") format('woff2'),
+	url("../fonts/S-CoreDream-4Regular.woff") format('woff');
+}
+@font-face{
+	font-family:'s-coredream';
+	font-weight: 400;
+	src:url("../fonts/S-CoreDream-4Regular.woff2") format('woff2'),
+	url("../fonts/S-CoreDream-4Regular.woff") format('woff');
+}
+@font-face{
+	font-family:'s-coredream';
+	font-weight: 500;
+	src:url("../fonts/S-CoreDream-5.woff2") format('woff2'),
+	url("../fonts/S-CoreDream-5.woff") format('woff');
+}
+@font-face{
+	font-family:'s-coredream';
+	font-weight: 600;
+	src:url("../fonts/S-CoreDream-6Bold.woff2") format('woff2'),
+	url("../fonts/S-CoreDream-6Bold.woff") format('woff');
+}
+@font-face{
+	font-family:'s-coredream';
+	font-weight: 700;
+	src:url("../fonts/S-CoreDream-7ExtraBold.woff2") format('woff2'),
+	url("../fonts/S-CoreDream-7ExtraBold.woff") format('woff');
+}
+
+/* 어그로체 */
+@font-face{
+	font-family:'SBAggro';
+	font-weight: 300;
+	src:url("../fonts/SBAggroL.woff2") format('woff2'),
+	url("../fonts/SBAggroL.woff") format('woff');
+}
+@font-face{
+	font-family:'SBAggro';
+	font-weight: 500;
+	src:url("../fonts/SBAggroM.woff2") format('woff2'),
+	url("../fonts/SBAggroM.woff") format('woff');
+}
+
+/* Montserrat */
+@font-face{
+	font-family: 'Montserrat';
+	font-weight: 400;
+	src: url("../fonts/Montserrat-Regular.woff2") format('woff2'),
+	url("../fonts/Montserrat-Regular.woff") format('woff');
+}
+@font-face{
+	font-family: 'Montserrat';
+	font-weight: 500;
+	src: url("../fonts/Montserrat-Medium.woff2") format('woff2'),
+	url("../fonts/Montserrat-Medium.woff") format('woff');
+}
+@font-face{
+	font-family: 'Montserrat';
+	font-weight: 600;
+	src: url("../fonts/Montserrat-Bold.woff2") format('woff2'),
+	url("../fonts/Montserrat-Bold.woff") format('woff');
+}
+
+/* 충북대70주년체 */
+@font-face{
+	font-family: 'chungbuk';
+	font-weight: 600;
+	src: url("../fonts/chungbuk-Bold.woff2") format('woff2'),
+	url("../fonts/chungbuk-Bold.woff") format('woff');
+}

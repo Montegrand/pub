@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="/common/css/font.css">
+    <link rel="stylesheet" href="/site/fund/css/sub.css">
+    <script src="/common/js/jquery-1.12.4.min.js"></script>
+    <script src="/common/js/plugins.js"></script>
+    <script src="/site/public/js/common.js"></script>
+    <script src="/site/fund/js/common.js"></script>
+    <script src="/site/public/js/sub.js"></script>
+    <script src="/site/fund/js/main.js"></script>
+    <title>@@{siteInfo.siteNm}</title>
+</head>
+
+<body id="fund" class="fund pink">
+    <div id="wrapper">
+        <div class="accessibility">
+            <a href="#contents">본문 바로가기</a>
+        </div>
+
+        <div class="gnb">
+            <div class="link">
+                <ul class="link_list">
+                    <li class="link_item login"><a href="#" class="link_anchor">로그인</a></li>
+                    <!-- <li class="link_item logout"><a href="#" class="link_anchor">로그아웃</a></li> -->
+                    <li class="link_item sitemap"><a href="#" class="link_anchor">사이트맵</a></li>
+                    <li class="link_item home"><a href="#" class="link_anchor">충북대학교</a></li>
+                </ul>
+            </div>
+        </div>
+        <header id="header">
+            <div class="group">
+                <h1 class="logo">
+                    <a href="./index.do" class="logo_anchor"><span class="logo_img">CBNU</span><span>충북대학교 <br />발전기금재단</span></a>
+                </h1>
+                <div class="lnb">
+                    <div class="menu_show">
+                        <button type="button" class="menu_btn">주메뉴 열기</button>
+                    </div>
+                    <nav class="menu after eachdown">
+                        <h2 class="skip">주메뉴</h2>
+                        <div class="menu_header">
+                            <a href="./index.do" class="menu_logo"><img src="/common/images/layout/logo_white.png" alt="로고alt"><span>사이트명</span></a>
+                            <div class="link">
+                                <ul class="link_list">
+                                    <li class="link_item login"><a href="#" class="link_anchor">로그인</a></li>
+                                    <!-- <li class="link_item logout"><a href="#" class="link_anchor">로그아웃</a></li> -->
+                                    <li class="link_item home"><a href="#" class="link_anchor">충북대학교</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="depth depth1"><!-- 차수에 맞는 숫자와 조합하여 클래스를 넣어주세요 (예 : depth#, depth#_#) -->
+                            <ul class="depth_list depth1_list">
+                                <li class="depth_item depth1_item"><!-- 현재 선택된 메뉴(상위 메뉴 포함) .depth_item에 active 추가해주세요 -->
+                                    <a href="#n" target="_self" class="depth_text depth1_text">기금안내</a>
+                                    <div class="depth depth2">
+                                        <ul class="depth_list depth2_list">
+                                            <li class="depth_item depth2_item ">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">2차메뉴</a>
+                                                <div class="depth depth3">
+                                                    <ul class="depth_list depth3_list">
+                                                        <li class="depth_item depth3_item ">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                            <div class="depth depth4">
+                                                                <ul class="depth_list depth4_list">
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text">4차메뉴명(새창)</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth3_text">3차메뉴(새창)</a>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">2차메뉴2차메뉴2차메뉴2차메뉴</a>
+                                                <div class="depth depth3">
+                                                    <ul class="depth_list depth3_list">
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                            <div class="depth depth4">
+                                                                <ul class="depth_list depth4_list">
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text">4차메뉴명(새창)</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth3_text">3차메뉴(새창)</a>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth2_text">2차메뉴(링크)</a>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">2차메뉴</a>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">2차메뉴</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="depth_item depth1_item">
+                                    <a href="#n" target="_self" class="depth_text depth1_text">기부방법</a>
+                                    <div class="depth depth2">
+                                        <ul class="depth_list depth2_list">
+                                            <li class="depth_item depth2_item ">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">참여방법</a>
+                                                <div class="depth depth3">
+                                                    <ul class="depth_list depth3_list">
+                                                        <li class="depth_item depth3_item ">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">1단계 약정하기</a>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">2단계 약정하기</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">온라인 약정</a>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">온라인 기부</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="depth_item depth1_item">
+                                    <a href="#n" target="_self" class="depth_text depth1_text">1차메뉴</a>
+                                </li>
+                                <li class="depth_item depth1_item">
+                                    <a href="#n" target="_self" class="depth_text depth1_text">1차메뉴</a>
+                                </li>
+                                <li class="depth_item depth1_item">
+                                    <a href="#n" target="_self" class="depth_text depth1_text">1차메뉴</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu_hide">
+                            <button type="button" class="menu_btn">주메뉴 닫기</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="inquiry">
+                <p><span>기부문의</span></p>
+                <ul>
+                    <li><span>TEL</span><span>043-261-3273</span></li>
+                    <li><span>FAX</span><span>043-261-3185</span></li>
+                </ul>
+            </div>
+        </header>
+        <div id="container">
+            <div class="clearfix wrap">
+                <main class="colgroup">
+                    <article>
+                        <header class="sub_head">
+                            <div class="sub_head_wrap">
+                                <div class="breadcrumbs">
+                                    <a href="./index.do" class="home">홈</a>
+                                    <ol class="breadcrumbs_list">
+                                        <li class="breadcrumbs_item">
+                                            <button type="button" class="breadcrumbs_select" title="목록열기">1차 선택된 메뉴명 1차 선택된 메뉴명</button>
+                                            <ul>
+                                                <li><a href="#n">1차 메뉴명</a></li>
+                                                <li class="active"><a href="#n">1차 선택된 메뉴명</a></li>
+                                                <li><a href="#n">1차 메뉴명</a></li>
+                                                <li><a href="#n">1차 메뉴명</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="breadcrumbs_item">
+                                            <button type="button" class="breadcrumbs_select" title="목록열기">2차 선택된 메뉴명</button>
+                                            <ul>
+                                                <li><a href="#n">2차 메뉴명</a></li>
+                                                <li class="active"><a href="#n">2차 선택된 메뉴명</a></li>
+                                                <li><a href="#n">2차 메뉴명</a></li>
+                                                <li><a href="#n">2차 메뉴명</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="breadcrumbs_item">
+                                            <button type="button" class="breadcrumbs_select" title="목록열기">3차 선택된 메뉴명</button>
+                                            <ul>
+                                                <li><a href="#n">3차 메뉴명</a></li>
+                                                <li class="active"><a href="#n">3차 선택된 메뉴명</a></li>
+                                                <li><a href="#n">3차 메뉴명</a></li>
+                                                <li><a href="#n">3차 메뉴명</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="breadcrumbs_item">
+                                            <button type="button" class="breadcrumbs_select" title="목록열기">4차 선택된 메뉴명</button>
+                                            <ul>
+                                                <li><a href="#n">4차 메뉴명</a></li>
+                                                <li class="active"><a href="#n">4차 선택된 메뉴명</a></li>
+                                                <li><a href="#n">4차 메뉴명</a></li>
+                                                <li><a href="#n">4차 메뉴명</a></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="addons">
+                                    <ul class="addons_list">
+                                        <li class="addons_item share toggle">
+                                            <button type="button" class="addons_button share_show">공유하기</button>
+                                            <div class="share_panel">
+                                                <ul class="clearfix share_list">
+                                                    <li class="share_item n1">
+                                                        <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">인스타그램</a>
+                                                    </li>
+                                                    <li class="share_item n2">
+                                                        <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">페이스북</a>
+                                                    </li>
+                                                    <li class="share_item n3">
+                                                        <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">유튜브</a>
+                                                    </li>
+                                                    <li class="share_item n4">
+                                                        <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">블로그</a>
+                                                    </li>
+                                                    <li class="share_item n5">
+                                                        <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">카카오채널</a>
+                                                    </li>
+                                                </ul>
+                                                <button type="button" class="share_hide">닫기</button>
+                                            </div>
+                                        </li>
+                                        <li class="addons_item print"><button type="button" onclick="window.print();" class="addons_button">인쇄</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2 class="sub_title">해당메뉴명</h2>
+                        </header>
+                        <div id="contents">
+                            <!-- <div class="cts141_wrap story">
+                                <div class="story_box">
+                                    <div class="story_img">
+                                        <img src="/site/fund/images/contents/cts141_img01.jpg" alt="故 강정 신언임 여사 사진">
+                                    </div>
+                                    <div class="story_con">
+                                        <p class="story_title">故 강정 신언임 여사</p>
+                                        <p class="story_subtitle">기탁내용</p>
+                                        <ul class="bu">
+                                            <li>청주시 남문로 소재 지하 1층, 지상 3층 건물(대지 61.19평/건물 199.58평/ 33억 원 상당)</li>
+                                            <li>현금 10억 3천만원</li>
+                                            <li>북문로1가 소재 1층 건물(토지 68.1m2/건물 59.83m2/ 8억원 상당)</li>
+                                        </ul>
+                                        <p class="story_subtitle">포상 : 국민훈장 동백장(93년)</p>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    故 강정 신언임 여사께서는 일제 강점기인 1932년 청원군 오창면 빈농의 1남 8녀 중 다섯째 딸로 태어나 힘겨운 유년 시절을 보냈습니다. 부친을 졸라 뒤늦게 입학한 주성초등학교를 나이 열여덟에 졸업하고 전매청에서 직장생활을 하다가 스물두 살에 결혼하였으나 아이를 낳지 못한다는 이유만으로 온갖 설움을 받다 젊은 나이에 소박을 맞고 혼자가 되었습니다. 이후 어떻게든 살아야 한다는 일념으로 시장어귀에서 까치담배 장사부터 시작하여 만물상회를 운영하며 억척같이 돈을 모으기 시작했습니다. 지금도 노점상 시절 얻은 동상의 흔적이 남아 있을 만큼 고생을 하면서도 자신을 위해서는 돈 한푼 쓰지 않으며 ‘청주의 구두쇠 할머니’로 소문날 정도로 평생 허리띠를 졸라 매며 재산을 모았습니다.<br><br>
+
+                                    그렇게 평생을 근검절약하여 모은 30억원 상당의 부동산을 1993년 6월 충북대학교에 흔쾌히 기탁하셨습니다. 여사께서 기탁하신 건물은 2008년 33억원에 매각, 발전기금으로 적립되었고 가정형편이 어려운 많은 학생들에게 학업의 길을 이어 갈 수 있도록 지원되고 있습니다. 2011년 9월 개교 60주년을 맞이한 충북대학교에 여사께서는 또 다시 10억 3천여만원을 쾌척하시고, 그 이후 2018년 12월 31일에 자신의 마지막 재산인 북문로 1가 소재 8억 상당의 건물을 기탁하시며 “죽어서도 많은 자식이 공부하는 충북대와 함께하고 싶다”며 큰 베품의 미덕을 실천하셨습니다.<br><br>
+
+                                    여자라는 이유와 가난한 집안형편으로 배우지 못한 향학열과 내 자식을 두지 못한 아쉬움으로 충북대학교 학생 모두를 아들, 딸로 여기며 전 재산을 기부하신 여사께서는 영원히 “장학 할머니”로 남고 싶다면서 충북대학교가 발전하고 학생들이 훌륭한 사회인으로 성장해 가는 모습을 지켜보는 즐거움과 다양한 봉사활동으로 여생을 보내고 계십니다. 이에 학교에서는 2011년 4월 여사의 팔순을 맞이하여 재학생, 졸업생, 교직원 모두가 함께하는 성대한 잔치를 열어 “어머니의 은혜”를 합창하며 그 고귀한 뜻을 기리는 감사의 마음을 전했습니다.
+                                </div>
+                            </div> -->
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="inquiry">
+                <p><span>기부문의</span></p>
+                <ul>
+                    <li><span>TEL</span><span>043-261-3273</span></li>
+                    <li><span>FAX</span><span>043-261-3185</span></li>
+                </ul>
+            </div>
+            <div class="wrap">
+                <div class="footer_link">
+                    <div class="link_site">
+                        <h2 class="skip">관련사이트</h2>
+                        <ul class="site_list">
+                            <li class="site_item toggle">
+                                <button type="button" class="site_show"><span>대학/대학원 홈페이지</span></button>
+                                <div class="site_panel">
+                                    <ul class="site_ul">
+                                        <li class="site_li"><a href="#n" class="site_anchor">무선인터넷</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">안전보건소통함</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">시설보수 One-Stop 서비스</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">교육혁신본부</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">이러닝시스템</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">학칙 및 규정</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">대학알리미</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="site_item toggle">
+                                <button type="button" class="site_show"><span>부서/기관 안내</span></button>
+                                <div class="site_panel">
+                                    <ul class="site_ul">
+                                        <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                        <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_content">
+                    <div class="logo">
+                        <a href="./index.do" class="logo_anchor">충북대학교 <span>사이트명</span></a>
+                    </div>
+                    <div class="info">
+                        <p class="info_repr">대표자 고창섭</p>
+                        <p class="info_repr">315-82-01265</p>
+                        <address class="info_address">(28644) 충청북도 청주시 서원구 충대로 1</address>
+                        <ul class="info_list">
+                            <li class="info_item"><span>TEL</span>${siteInfo.insttTelno}</li>
+                            <li class="info_item"><span>FAX</span>${siteInfo.insttFax}</li>
+                            <li class="info_item"><span>EMAIL</span>${siteInfo.insttEmail}</li>
+                        </ul>
+                        <br />
+                        <div class="link_shortcut">
+                            <h2 class="skip">바로가기</h2>
+                            <ul class="shortcut_list">
+                                <li class="shortcut_item"><a href="#n" class="shortcut_anchor">개인정보처리방침</a></li>
+                                <li class="shortcut_item"><a href="#n" class="shortcut_anchor">이용약관</a></li>
+                            </ul>
+                        </div>
+                        <p class="info_copyright">Copyright 2024 충북대학교발전기금재단. <span>ALL RIGHTS RESERVED.</span></p>
+                    </div>
+                </div>
+                <button type="button" class="up_btn">TOP</button>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

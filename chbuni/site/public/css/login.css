@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.accessibility{overflow:hidden; position:absolute; top:0; left:0; z-index:3000; width:100%}
+.accessibility a{display:block; overflow:hidden; z-index:3000; width:1px; height:1px; margin:0 -1px -1px 0; font-size:0; text-align:center; line-height:0}
+#accessibility a:active,#accessibility a:hover,.accessibility a:focus{width:auto; height:30px; margin:0; padding:8px 0; background-color:#333; color:#fff; font-size:14px; line-height:16px}
+
+body{background-color:#531f31; font-family:"s-coredream","Malgun Gothic","맑은 고딕","Dotum","돋움","Gulim","굴림",sans-serif; text-align:center; letter-spacing:-0.02em;}
+#header{padding-top:45px; padding-bottom:35px;}
+#footer .info{max-width:1180px; margin-right:auto; margin-left:auto; padding:30px 10px; text-align:left;}
+#footer .info_address{display:inline-block; vertical-align:top;}
+#footer .info_address .address_item{display:block; position:relative; padding-left:120px; color:#ccc; font-size:15px; line-height:21px; letter-spacing:-0.04em;}
+#footer .info_address .address_item + .address_item{margin-top:9px;}
+#footer .info_address .address_item .address_name{position:absolute;top:0;left:0;font-weight:600;word-break: keep-all;}
+#footer .info_address .address_item .address_tel{position:relative; margin-left:28px;}
+#footer .info_address .address_item .address_tel:before{display:block; position:absolute; top:0; left:-16px; content:'/'; color:#6c6c6c; font-weight:200;}
+#footer .info_copyright{float:right; color:rgba(204,204,204,.6); font-size:12px; font-weight:300; text-align:right; line-height:22px; letter-spacing:0.06em;}
+
+.notice{margin-bottom:24px; color:#777; font-size:16px; line-height:22px; letter-spacing:-0.02em;}
+.warning{position:relative; padding-left:27px; font-size:16px; line-height:22px; letter-spacing:-0.02em;word-break:keep-all;}
+.warning:before{display:block; position:absolute; top:2px; left:0; width:18px; height:18px; background:url('../images/template/temp_sprite_icon.png') no-repeat;}
+.warning.type1{color:#777;}
+.warning.type1:before{background-position:-1px -1px;}
+
+.login_wrap{padding-left: 10px;padding-right: 10px;}
+.login_wrap .login_box{box-shadow:0 53px 49px 21px rgba(0,0,0,0.1);}
+.login_wrap .login_box .login_tab li button,
+.login_wrap .login_box .login_cont{border-color:transparent !important;}
+@media all and (max-width:1200px){
+    #footer .info_copyright{float:none;margin-top: 20px;text-align:left;}
+    #footer .info_copyright br{display:none;}
+}
+@media (max-width: 1000px){
+    #footer .info{text-align:center;}
+    #footer .info_address .address_item{padding-left:117px;text-align: left;}
+    #footer .info_copyright{font-size:11px;line-height:18px;text-align: center;}
+}
+@media all and (max-width:800px){
+    #footer .info_address .address_item{padding-left:0;font-size: 13px;line-height: 20px;text-align: center;}
+    #footer .info_address .address_item .address_name{position:relative; top:auto; left:auto; margin-right:10px;}
+}
+@media all and (max-width:640px){
+    #footer .info_copyright br{display:block;}
+}

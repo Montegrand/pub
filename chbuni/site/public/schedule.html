@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes" />
+    <meta name="keywords" content="@@{siteInfo.siteKwrd}" />
+    <meta name="description" content="@@{siteInfo.siteDc}" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/font.css" />
+    <link rel="stylesheet" href="./css/sub.css">
+    <script src="../../common/js/jquery-1.12.4.min.js"></script>
+    <script src="../../common/js/plugins.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/sub.js"></script>
+    <script src="./js/program.js"></script>
+    <title>@@{menuInfo.cntntsNm} - @@{siteInfo.siteNm}</title>
+</head>
+<body id="${siteInfo.tmplatId}" class="@@{siteInfo.siteId} page@@{key}">
+<div id="wrapper">
+    <header id="header">
+        <div class="accessibility">
+            <a href="#contents">본문 바로가기</a>
+        </div>
+
+        <div class="gnb">
+            <div class="wrap">
+                <div class="link">
+                    <ul class="link_list">
+                        <li class="link_item login"><a href="#" class="link_anchor">로그인</a></li>
+                        <!-- <li class="link_item logout"><a href="#" class="link_anchor">로그아웃</a></li> -->
+                        <li class="link_item sitemap"><a href="#" class="link_anchor">사이트맵</a></li>
+                        <li class="link_item home"><a href="#" class="link_anchor">충북대학교</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="logo">
+                <div class="wrap">
+                    <a href="./index.do" class="logo_anchor"><img src="../../common/images/layout/logo.png" alt="로고alt"><span>사이트명</span></a>
+                </div>
+            </div>
+            <div class="lnb">
+                <div class="menu_show">
+                    <button type="button" class="menu_btn">주메뉴 열기</button>
+                </div>
+                <nav class="menu after eachdown">
+                    <h2 class="skip">주메뉴</h2>
+                    <div class="menu_header">
+                        <a href="./index.do" class="menu_logo"><img src="../../common/images/layout/logo_white.png" alt="로고alt"><span>사이트명</span></a>
+                        <div class="link">
+                            <ul class="link_list">
+                                <li class="link_item login"><a href="#" class="link_anchor">로그인</a></li>
+                                <!-- <li class="link_item logout"><a href="#" class="link_anchor">로그아웃</a></li> -->
+                                <li class="link_item home"><a href="#" class="link_anchor">충북대학교</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <div class="depth depth1"><!-- 차수에 맞는 숫자와 조합하여 클래스를 넣어주세요 (예 : depth#, depth#_#) -->
+                            <ul class="depth_list depth1_list cut">
+                                <li class="depth_item depth1_item active"><!-- 현재 선택된 메뉴(상위 메뉴 포함) .depth_item에 active 추가해주세요 -->
+                                    <a href="#n" target="_self" class="depth_text depth1_text">1차메뉴</a>
+                                    <div class="depth depth2">
+                                        <ul class="depth_list depth2_list cut">
+                                            <li class="depth_item depth2_item active">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">2차메뉴</a>
+                                                <div class="depth depth3">
+                                                    <ul class="depth_list depth3_list">
+                                                        <li class="depth_item depth3_item active">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                            <div class="depth depth4">
+                                                                <ul class="depth_list depth4_list cut">
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text">4차메뉴명(새창)</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth3_text">3차메뉴(새창)</a>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">2차메뉴</a>
+                                                <div class="depth depth3">
+                                                    <ul class="depth_list depth3_list">
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                            <div class="depth depth4">
+                                                                <ul class="depth_list depth4_list cut">
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth4_text">4차메뉴명(새창)</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                    <li class="depth_item depth4_item">
+                                                                        <a href="#n" target="_self" class="depth_text depth4_text">4차메뉴명</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth3_text">3차메뉴(새창)</a>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                        </li>
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="#n" target="_self" class="depth_text depth3_text">3차메뉴</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="depth_text depth2_text">2차메뉴(링크)</a>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">2차메뉴</a>
+                                            </li>
+                                            <li class="depth_item depth2_item">
+                                                <a href="#n" target="_self" class="depth_text depth2_text">2차메뉴</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="depth_item depth1_item">
+                                    <a href="#n" target="_self" class="depth_text depth1_text">1차메뉴</a>
+                                </li>
+                                <li class="depth_item depth1_item">
+                                    <a href="#n" target="_self" class="depth_text depth1_text">1차메뉴</a>
+                                </li>
+                                <li class="depth_item depth1_item">
+                                    <a href="#n" target="_self" class="depth_text depth1_text">1차메뉴</a>
+                                </li>
+                                <li class="depth_item depth1_item">
+                                    <a href="#n" target="_self" class="depth_text depth1_text">1차메뉴</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu_hide">
+                        <button type="button" class="menu_btn">주메뉴 닫기</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div id="container">
+        <div class="clearfix wrap">
+            <main class="colgroup">
+                <article>
+
+                    <header class="sub_head">
+                        <div class="sub_head_wrap">
+                            <div class="breadcrumbs">
+                                <a href="./index.do" class="home">홈</a>
+                                <ol class="breadcrumbs_list">
+                                    <li class="breadcrumbs_item">
+                                        <button type="button" class="breadcrumbs_select" title="목록열기">1차 선택된 메뉴명 1차 선택된 메뉴명</button>
+                                        <ul>
+                                            <li><a href="#n">1차 메뉴명</a></li>
+                                            <li class="active"><a href="#n">1차 선택된 메뉴명</a></li>
+                                            <li><a href="#n">1차 메뉴명</a></li>
+                                            <li><a href="#n">1차 메뉴명</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="breadcrumbs_item">
+                                        <button type="button" class="breadcrumbs_select" title="목록열기">2차 선택된 메뉴명</button>
+                                        <ul>
+                                            <li><a href="#n">2차 메뉴명</a></li>
+                                            <li class="active"><a href="#n">2차 선택된 메뉴명</a></li>
+                                            <li><a href="#n">2차 메뉴명</a></li>
+                                            <li><a href="#n">2차 메뉴명</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="breadcrumbs_item">
+                                        <button type="button" class="breadcrumbs_select" title="목록열기">3차 선택된 메뉴명</button>
+                                        <ul>
+                                            <li><a href="#n">3차 메뉴명</a></li>
+                                            <li class="active"><a href="#n">3차 선택된 메뉴명</a></li>
+                                            <li><a href="#n">3차 메뉴명</a></li>
+                                            <li><a href="#n">3차 메뉴명</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="breadcrumbs_item">
+                                        <button type="button" class="breadcrumbs_select" title="목록열기">4차 선택된 메뉴명</button>
+                                        <ul>
+                                            <li><a href="#n">4차 메뉴명</a></li>
+                                            <li class="active"><a href="#n">4차 선택된 메뉴명</a></li>
+                                            <li><a href="#n">4차 메뉴명</a></li>
+                                            <li><a href="#n">4차 메뉴명</a></li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+
+                            <div class="addons">
+                                <ul class="addons_list">
+                                    <li class="addons_item share toggle">
+                                        <button type="button" class="addons_button share_show">공유하기</button>
+                                        <div class="share_panel">
+                                            <ul class="clearfix share_list">
+                                                <li class="share_item n1">
+                                                    <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">인스타그램</a>
+                                                </li>
+                                                <li class="share_item n2">
+                                                    <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">페이스북</a>
+                                                </li>
+                                                <li class="share_item n3">
+                                                    <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">유튜브</a>
+                                                </li>
+                                                <li class="share_item n4">
+                                                    <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">블로그</a>
+                                                </li>
+                                                <li class="share_item n5">
+                                                    <a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="share_anchor">카카오채널</a>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="share_hide">닫기</button>
+                                        </div>
+                                    </li>
+                                    <li class="addons_item print"><button type="button" onclick="window.print();" class="addons_button">인쇄</button></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2 class="sub_title">해당메뉴명</h2>
+                    </header>
+
+                    <!-- 학사일정 - 리스트 -->
+
+                    <div class="program schedule list">
+                        <div class="schedule_tab">
+                            <div class="schedule_panel">
+                                <form action="" method="get">
+                                    <fieldset>
+                                        <div class="schedule_years">
+                                            <button type="button" class="years_prev" title="2022년도 이동">2022년</button>
+                                            <span class="years_current">2023 학년도</span>
+                                            <button type="button" class="years_next" title="2024년도 이동">2024년</button>
+                                        </div>
+                                        <div class="schedule_month">
+                                            <button type="button" class="month_select" title="목록열기">월별 일정</button>
+                                            <ul>
+                                                <li><button type="button">전체일정</button></li>
+                                                <li><button type="button">01월</button></li>
+                                                <li><button type="button">02월</button></li>
+                                                <li class="active"><button type="button">03월</button></li>
+                                                <li><button type="button">04월</button></li>
+                                                <li><button type="button">05월</button></li>
+                                                <li><button type="button">06월</button></li>
+                                                <li><button type="button">07월</button></li>
+                                                <li><button type="button">08월</button></li>
+                                                <li><button type="button">09월</button></li>
+                                                <li><button type="button">10월</button></li>
+                                                <li><button type="button">11월</button></li>
+                                                <li><button type="button">12월</button></li>
+                                            </ul>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="schedule_content">
+                                <table class="table">
+                                    <caption>학사일정 - 월, 일(요일), 학사내용 정보제공</caption>
+                                    <colgroup>
+                                        <col />
+                                        <col />
+                                        <col />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>월</th>
+                                            <th>일(요일)</th>
+                                            <th>학사내용</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th rowspan="6">3월</th>
+                                            <td>03.02.(목) [학사]신입생 입학식 및 제1학기 개강</td>
+                                            <td>03.02.(목) [학사]신입생 입학식 및 제1학기 개강</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03.02.(목) ~ 03.08.(수) [학사]휴학신청(2차)</td>
+                                            <td>03.02.(목) ~ 03.08.(수) [학사]휴학신청(2차)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03.02.(목) ~ 03.08.(수) [학사]수강신청 변경(2차)</td>
+                                            <td>03.02.(목) ~ 03.08.(수) [학사]수강신청 변경(2차)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03.02.(목) ~ 03.17.(금) [학사]조기졸업 신청</td>
+                                            <td>03.02.(목) ~ 03.17.(금) [학사]조기졸업 신청</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03.13.(월) ~ 03.14.(화) [학사]수강신청 취소</td>
+                                            <td>03.13.(월) ~ 03.14.(화) [학사]수강신청 취소</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03.27.(월)</td>
+                                            <td>03.27.(월)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>  <!-- //.schedule.list -->
+
+                    <!-- //학사일정 - 리스트 -->
+
+                    <!-- 학사일정 - 달력 -->
+
+                    <script src="./js/callCalendar.js"></script>
+                    <script>
+
+                        // test data
+                        var scheduleData = [
+                                {
+                                    "scdCt" : "학사",
+                                    "scdSub" : "24학년도 제 1학기 수강신청-test",
+                                    "scdStart" : "2024-1-15",
+                                    "scdEnd" : "2024-1-16",
+                                    "schdulCn" : 'test test test test test test test test test test'
+                                },
+                                {
+                                    "scdCt" : "학사",
+                                    "scdSub" : "24학년도 제 1학기 등록금 납부-test",
+                                    "scdStart" : "2024-1-21",
+                                    "scdEnd" : "2024-1-23",
+                                    "schdulCn" : 'test test test test test test test test test test'
+                                },
+                                {
+                                    "scdCt" : "학사",
+                                    "scdSub" : "24학년도 신입생 오리엔테이션-test",
+                                    "scdStart" : "2024-1-19",
+                                    "scdEnd" : "2024-1-23",
+                                    "schdulCn" : 'test test test test test test test test test test'
+                                },
+                                {
+                                    "scdCt" : "학사",
+                                    "scdSub" : "24학년도 제 1학기 수강신청",
+                                    "scdStart" : "2024-2-15",
+                                    "scdEnd" : "2024-2-16",
+                                    "schdulCn" : 'test test test test test test test test test test'
+                                },
+                                {
+                                    "scdCt" : "학사",
+                                    "scdSub" : "24학년도 제 1학기 등록금 납부",
+                                    "scdStart" : "2024-2-21",
+                                    "scdEnd" : "2024-2-23",
+                                    "schdulCn" : 'test test test test test test test test test test'
+                                },
+                                {
+                                    "scdCt" : "학사",
+                                    "scdSub" : "24학년도 신입생 오리엔테이션",
+                                    "scdStart" : "2024-2-19",
+                                    "scdEnd" : "2024-2-23",
+                                    "schdulCn" : 'test test test test test test test test test test'
+                                },
+                                {
+                                    "scdCt" : "대학원",
+                                    "scdSub" : "test-test-test-test-test-",
+                                    "scdStart" : "2024-2-29",
+                                    "scdEnd" : "2024-3-3",
+                                    "schdulCn" : 'test test test test test test test test test test'
+                                }
+                            ];
+
+                        var today = new Date(),
+                            years = today.getFullYear(),
+                            month = today.getMonth(),
+                            todayDate = today.getDate()
+
+                        $(function(){
+                            var $schduleCalendar = $('.program.schedule.calendar'),
+                                $calendar = $schduleCalendar.find('.schedule_calendar'),
+                                $prevYearsBtn = $schduleCalendar.find('.schedule_years .years_prev'),
+                                $nextYearsBtn = $schduleCalendar.find('.schedule_years .years_next'),
+                                $currentYears = $schduleCalendar.find('.schedule_years .years_current'),
+                                $calendarMonthBtns = $schduleCalendar.find('.schedule_month ul button'),
+                                $calInfo = $schduleCalendar.find('.schedule_info');
+
+                            today.setHours(0,0,0,0);
+
+                            $prevYearsBtn.on('click',function(){
+                                years--;
+                                CalCalendar($schduleCalendar,years,month,scheduleData);
+                            });
+                            $nextYearsBtn.on('click',function(){
+                                years++;
+                                CalCalendar($schduleCalendar,years,month,scheduleData);
+                            });
+                            $calendarMonthBtns.on('click',function(){
+                                month = $(this).closest('li').index();
+                                CalCalendar($schduleCalendar,years,month,scheduleData);
+                            });
+
+                            CalCalendar($schduleCalendar, years, month,scheduleData);
+                        });
+                    </script>
+
+                    <div class="program schedule calendar">
+                        <div class="schedule_tab">
+                            <div class="schedule_panel">
+                                <form action="" method="get">
+                                    <fieldset>
+                                        <div class="schedule_years">
+                                            <button type="button" class="years_prev" title="2022년도 이동">2022년</button>
+                                            <span class="years_current">2023 학년도</span>
+                                            <button type="button" class="years_next" title="2024년도 이동">2024년</button>
+                                        </div>
+                                        <div class="schedule_month">
+                                            <button type="button" class="month_select" title="목록열기">월별 일정</button>
+                                            <ul>
+                                                <li><button type="button">01월</button></li>
+                                                <li><button type="button">02월</button></li>
+                                                <li><button type="button">03월</button></li>
+                                                <li><button type="button">04월</button></li>
+                                                <li><button type="button">05월</button></li>
+                                                <li><button type="button">06월</button></li>
+                                                <li><button type="button">07월</button></li>
+                                                <li><button type="button">08월</button></li>
+                                                <li><button type="button">09월</button></li>
+                                                <li><button type="button">10월</button></li>
+                                                <li><button type="button">11월</button></li>
+                                                <li><button type="button">12월</button></li>
+                                            </ul>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="schedule_content">
+                                <div class="schedule_calendar"></div>
+                                <div class="schedule_info"></div>
+                            </div>
+                        </div>
+                        <p class="warning type1"><span class="skip">주의</span>본 학사일정은 학교일정에 따라 변경될 수 있습니다.</p>
+                    </div>  <!-- //.schedule.calendar -->
+
+                    <!-- //학사일정 - 달력 -->
+
+                </article>
+            </main>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="wrap">
+            <div class="banner">
+                <h2 class="banner_title">배너존</h2>
+                <div class="banner_list">
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                    <div class="banner_item"><a href="#n" target="_blank" title="새창" rel="noopener noreferrer" class="banner_anchor">배너모음링크</a></div>
+                </div>
+                <div class="banner_control">
+                    <button type="button" class="banner_prev">이전</button>
+                    <button type="button" class="banner_next">다음</button>
+                    <button type="button" class="banner_auto"></button>
+                </div>
+            </div>
+
+            <div class="footer_link">
+                <div class="link_site">
+                    <h2 class="skip">관련사이트</h2>
+                    <ul class="site_list">
+                        <li class="site_item toggle">
+                            <button type="button" class="site_show"><span>대학/대학원 홈페이지</span></button>
+                            <div class="site_panel">
+                                <ul class="site_ul">
+                                    <li class="site_li"><a href="#n" class="site_anchor">무선인터넷</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">안전보건소통함</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">시설보수 One-Stop 서비스</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">교육혁신본부</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">이러닝시스템</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">학칙 및 규정</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">대학알리미</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="site_item toggle">
+                            <button type="button" class="site_show"><span>부서/기관 안내</span></button>
+                            <div class="site_panel">
+                                <ul class="site_ul">
+                                    <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                    <li class="site_li"><a href="#n" class="site_anchor">사이트링크</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="link_shortcut">
+                    <h2 class="skip">바로가기</h2>
+                    <ul class="shortcut_list">
+                        <li class="shortcut_item"><a href="#n" class="shortcut_anchor">개인정보처리방침</a></li>
+                        <li class="shortcut_item"><a href="#n" class="shortcut_anchor">이용약관</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_content">
+                <div class="logo">
+                    <a href="./index.do" class="logo_anchor">충북대학교 <span>사이트명</span></a>
+                </div>
+                <div class="info">
+                    <address class="info_address">(28644) 충청북도 청주시 서원구 충대로 1, 충북대학교 사이트명</address>
+                    <ul class="info_list">
+                        <li class="info_item"><span>TEL</span>043-261-2990</li>
+                        <li class="info_item"><span>FAX</span>043-275-5820</li>
+                        <li class="info_item"><span>EMAIL</span>tsc@chungbuk.ac.kr</li>
+                    </ul>
+                    <p class="info_copyright">COPYRIGHT 2024 CHUNGBUK NATIONAL UNIVERSITY. <span>ALL RIGHTS RESERVED.</span></p>
+                </div>
+                <!--<div class="wa">
+                    <a href="http://webwatch.or.kr/certification/situation.html" target="_blank" title="새창" rel="noopener noreferrer" class="wa_anchor">
+                        <img src="/common/images/layout/wa_mark.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)">
+                    </a>
+                </div>-->
+            </div>
+
+            <button type="button" class="up_btn">TOP</button>
+        </div>
+        <!--
+        cms 정보 불러오기
+        <div class="footer_info">
+            <address><span class="info_address">@@{siteInfo.insttAdres}</span><span class="info_tel">TEL : @@{siteInfo.insttTelno}</span></address>
+            <p class="info_copyright">@@{siteInfo.siteCpyrht}</p>
+        </div>
+        -->
+    </footer>
+
+</div>
+</body>
+</html>

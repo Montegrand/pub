@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/* 온라인약정 */
+.online_program.type2{}
+.online_program.type2 .p-table caption+tbody tr:first-child td,
+.online_program.type2 .p-table caption+tbody tr:first-child th,
+.online_program.type2 .p-table colgroup+tbody tr:first-child td,
+.online_program.type2 .p-table colgroup+tbody tr:first-child th{border-top-width:1px;}
+.online_program.type2 .bbs_new_skin textarea.p-input{height:115px;}
+.online_program.type2 .p-table td .warning{display:inline-block; margin-left:15px;}
+.online_program.type2 .p-form-checkbox.pay_check .p-form-radio__input{top:0; left:0; width:0; height:0;}
+.online_program.type2 .p-form-checkbox.pay_check input[type="radio"] + label:before,
+.online_program.type2 .p-form-checkbox.pay_check .p-form-radio__label{width:202px; padding:12px 10px 10px; color:#b62b5c; text-align:center;}
+.online_program.type2 .p-form-checkbox.pay_check input[type="radio"] + label:before{width:100%; height:100%; border-radius:7px; border:1px solid #e16591; background-color:transparent;}
+.online_program.type2 .p-form-checkbox.pay_check .p-form-radio__input:checked~.p-form-radio__label:before{border-color:#9c1343;}
+.online_program.type2 .p-form-checkbox.pay_check .p-form-radio__input:checked+.p-form-radio__label{color:#9c1343; font-weight:600;}
+.online_program.type2 .p-table .payment_box{display:none; position:relative; margin-top:23px; margin-bottom:16px; padding:20px 18px; border-radius:10px; border:1px solid #dadce0; background-color:#f6f7f9;}
+.online_program.type2 .p-table .payment_box .payment_wrap .p-input{width:calc((100% - 5px)/2);}
+.online_program.type2 .p-table .pay_box_wrap{}
+.online_program.type2 .p-table .pay_box_wrap .pay_box{display:none; position:relative; margin-top:23px; margin-bottom:16px; padding:20px 18px; border-radius:10px; border:1px solid #dadce0; background-color:#f6f7f9;}
+.online_program.type2 .p-table .pay_box_wrap .pay_box.n3,
+.online_program.type2 .p-table .pay_box_wrap .pay_box.n4{text-align:center;}
+.online_program.type2 .p-table .warning{margin-left:0; color:#666;}
+.online_program.type2 .p-table .em_red{color:#b62b5c!important;}
+.online_program.type2 .p-table .pay_box_wrap .warning:before{background-image:url('/site/public/images/program/warning_icon.png');}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .warning{display:inline-block; margin-top:0; margin-left:0; color:#222;}
+.online_program.type2 .p-table .warning.em_red:before{background-image:url('/site/public/images/program/warning_icon2.png');}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .account_list{margin-top:14px;}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .account_list li{display:inline-block; position:relative; margin-right:35px; padding-left:29px; color:#222; line-height:28px; font-weight:500; vertical-align:top;}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .account_list li:before{display:block; position:absolute; top:3px; left:0; width:22px; height:22px; background-repeat:no-repeat;}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .account_list .n1:before{background-image:url('/site/public/images/program/account_icon1.png');}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .account_list .n2:before{background-image:url('/site/public/images/program/account_icon2.png');}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .pay_input+.pay_input{margin-top:10px;}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .pay_input span{width:115px; height:48px; color:#222; line-height:48px; vertical-align:top;}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .pay_input .p-input{width:calc(100% - 120px); margin:0;}
+.online_program.type2 .p-table .pay_box_wrap .pay_box .pay_input .warning{margin-top:6px; margin-left:120px;}
+.online_program.type2 .p-table .telbox .warning{margin-top:14px;}
+.online_program.type2 .p-table .donate_box_wrap .donate_box{display:none; position:relative; margin-top:17px; margin-bottom:16px;}
+.online_program.type2 .p-table .donate_box_wrap .donate_box p{margin-top:6px ; margin-bottom:4px; color:#222;}
+.online_program.type2 .agreement_list{padding:10px 0; border-top:1px solid #222; border-bottom:1px solid #888;}
+.online_program.type2 .agreement_item{padding:10px 20px; border-bottom:0;}
+.online_program.type2 .agreement_item:last-child{border-bottom:none;}
+.online_program.type2 .agreement_item .agreement_box{display:none; position:relative; margin-top:20px; margin-bottom:10px; padding:20px 30px; border-radius:7px; border:1px solid #dadce0; line-height:28px; word-break:keep-all;}
+.online_program.type2 .agreement_item .agreement_box p{padding-left:18px;}
+@media all and (max-width:1550px){
+    .online_program.type2 .p-form-checkbox.pay_check{margin:5px 0;}
+    .online_program.type2 .p-form-checkbox.pay_check input[type="radio"] + label:before,
+    .online_program.type2 .p-form-checkbox.pay_check .p-form-radio__label{width:150px;}
+}
+@media all and (max-width:1200px){
+    .online_program.type2 .p-table .telbox .col-12{float:none;}
+    .online_program.type2 .p-table td .warning{display:block; margin-top:10px; margin-left:0;}
+}
+@media all and (min-width:1001px){
+    .page130 #container{min-height:3150px;}
+}
+@media all and (max-width:1000px){
+    .bbs.bbs__form.bbs_new_skin .btn_group{padding-bottom:50px;}
+}
+@media all and (min-width:766px){
+    .online_program.type2 .p-table tr:not(:last-child) th{border-bottom:none;}
+    .online_program.type2 .p-table tr:not(:last-child) td{border-bottom:none;}
+}
+@media all and (max-width:765px){
+    .online_program.type2 .p-form-checkbox.pay_check{width:calc((100% - 5px)/2); margin:2px 0;}
+    .online_program.type2 .p-form-checkbox.pay_check input[type="radio"] + label:before,
+    .online_program.type2 .p-form-checkbox.pay_check .p-form-radio__label{width:100%;}
+    .online_program.type2 .p-table .telbox .col-12{width:100%;}
+}
+@media all and (max-width:640px){
+    .online_program.type2 .p-table .payment_box{padding:10px;}
+    .online_program.type2 .p-table .pay_box_wrap .pay_box{margin-top:15px; margin-bottom:0; padding:15px 12px;}
+    .online_program.type2 .p-table .pay_box_wrap .pay_box .account_list{margin-top:10px;}
+    .online_program.type2 .p-table .pay_box_wrap .pay_box .account_list li{margin-right:10px;}
+    .online_program.type2 .p-table .pay_box_wrap .pay_box .pay_input span{width:85px; font-size:14px;}
+    .online_program.type2 .p-table .pay_box_wrap .pay_box .pay_input .p-input{width:calc(100% - 90px);}
+    .online_program.type2 .p-table .pay_box_wrap .pay_box .pay_input .warning{margin-left:90px;}
+    .online_program.type2 .p-table .donate_box_wrap .donate_box{margin-top:10px; margin-bottom:0;}
+    .online_program.type2 .agreement_item{padding:6px 0;}
+    .online_program.type2 .agreement_item .agreement_box{margin-top:10px; padding:15px 20px; font-size:14px; line-height:22px;}
+    .online_program.type2 .agreement_item .agreement_box p{padding-left:16px; font-size:14px; line-height:22px;}
+}
+@media all and (max-width:480px){
+    .online_program.type2 .p-table .payment_box .payment_wrap .p-input{width:100%;}
+}
+/* 추가 수정 퍼블 홍기현 */
+@media all and (min-width:501px){
+.online_program.type2 .p-table .payment_box>select:nth-child(1),
+.online_program.type2 .p-table .payment_box>select:nth-child(2){min-width:0;width:calc(50% - 3px)}
+/* .online_program.type2 .p-table .payment_box>select+.payment_wrap{display:inline-block;width:calc(100% - 450px)} */
+}
+@media all and (min-width:1801px){
+.online_program.type2 .p-table .payment_box>select:nth-child(1),
+.online_program.type2 .p-table .payment_box>select:nth-child(2){min-width:0;width:222px}
+.online_program.type2 .p-table .payment_box>select+.payment_wrap{display:inline-block;width:calc(100% - 453px)}
+}
