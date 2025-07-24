@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>상주시 통합아동돌봄센터</title>
+    <meta content="상주시 통합아동돌봄센터" name="keywords" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="Generator" content="XpressEngine">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link type="text/css" rel="stylesheet" href="css/default.css"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="css/font.css"/>
+    <link type="text/css" rel="stylesheet" href="css/contents.css"/>
+    <link type="text/css" rel="stylesheet" href="css/table.css"/>
+    <link type="text/css" rel="stylesheet" href="css/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.css"/>
+    <link type="text/css" rel="stylesheet" href="css/map.css"/>
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dropselect.js"></script>
+    <script type="text/javascript" src="js/accordion.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="sub">
+<dl class="skipnavi">
+    <dt>메뉴 건너띄기</dt>
+    <dd>
+        <a href="javascript:skipNavi('#gnb')">상단메뉴 바로가기</a>
+        <a href="javascript:skipNavi('#sub_contents')">본문 바로가기</a>
+    </dd>
+</dl>
+<div id="wrap">
+    <!-- S: toparea -->
+    <div class="toparea" id="header">
+        <div class="topmenu d_area">
+            <div class="topbar">
+                <div class="center_box">
+                    <ul>
+                        <li><a href="" target="_blank" title="새창">상주시청</a></li>
+                        <li><a href="" target="_blank" title="새창">관광상주</a></li>
+                        <li><a href="" target="_blank" title="새창">통합예약</a></li>
+                        <li><a href="" target="_blank" title="새창">생활정보</a></li>
+                        <li><a href="" target="_blank" title="새창">상주시의회</a></li>
+                        <li><a href="" target="_blank" title="새창">상주시청소년수련관</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="logo_box">
+                <h1><a href=""><img src="images/map/map_logo.png" alt="상상주도 상주시 통합 아동 돌봄센터"/></a></h1>
+            </div>
+
+            <ul class="facil_cate" id="gnb">
+                <li class="facil_cate_item">
+                    <button type="button" class="facil_cate_btn" data-facil-cate="돌봄시설"><span>돌봄시설</span></button>
+                </li>
+                <li class="facil_cate_item">
+                    <button type="button" class="facil_cate_btn" data-facil-cate="의료시설"><span>의료시설</span></button>
+                </li>
+                <li class="facil_cate_item">
+                    <button type="button" class="facil_cate_btn" data-facil-cate="관광시설"><span>관광시설</span></button>
+                </li>
+                <li class="facil_cate_item">
+                    <button type="button" class="facil_cate_btn" data-facil-cate="체험시설"><span>체험시설</span></button>
+                </li>
+            </ul>
+
+            <div class="facil_search_wrap">
+                <input class="facil_search_query" type="text" placeholder="검색어를 입력하세요" />
+                <button class="facil_search_btn" type="button" onclick="">검색</button>
+            </div>
+        </div>
+    </div>
+    <!-- //E: toparea -->
+
+    <!-- S: midarea -->
+    <div class="clearfix facil">
+        <div class="facil_info">
+            <div class="facil_info_top"></div>
+            <ul class="facil_info_list"></ul>
+            <div class="facil_info_pagenation">
+                <button type="button" class="prev_end">처음</button>
+                <button type="button" class="prev">이전</button>
+                <div class="pagenation_list">
+
+                </div>
+                <button type="button" class="next">다음</button>
+                <button type="button" class="next_end">마지막</button>
+            </div>
+            <button type="button" class="facil_info_toggle">열기</button>
+        </div>
+        <div id="facil_map"></div>
+    </div>
+    <!-- //E: midarea -->
+</div>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/common_ui.js"></script>
+<script type="text/javascript" src="js/slick.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery_ui.js"></script>
+
+<!-- 카카오지도 api 불러오기 -->
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=KAKAO_MAP_KEY&libraries=services"></script>
+
+<!-- 시설 정보 -->
+<script>
+    /**
+     * 데이터예시
+     * const Facildata = {
+     *     "시설명" : {
+     *         "addr" : "카카오맵 검색 가능한 주소",
+     *         "addrDet" : "상세주소",
+     *         "cate" : "시설 카테고리 ex)돌봄시설, 의료시설, 관광시설, 체험시설",
+     *         "tel" : 전화번호,
+     *         "link" : 자세히보기 버튼 클릭시 이동할 url,
+     *     }
+     * }
+    */
+
+    // chatGPT 로 예시 데이터 생성 - 몇몇 검색 안되는 주소 있음
+    const facilData = {
+        "돌봄시설_01": {
+            "addr": "경북 상주시 모서면 80",
+            "addrDet": "3층 239호",
+            "cate": "돌봄시설",
+            "tel": "054-834-6564",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_02": {
+            "addr": "경북 상주시 화남면 61",
+            "addrDet": "2층 155호",
+            "cate": "돌봄시설",
+            "tel": "054-400-7083",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_03": {
+            "addr": "경북 상주시 화서면 48",
+            "addrDet": "3층 145호",
+            "cate": "돌봄시설",
+            "tel": "054-268-3397",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_04": {
+            "addr": "경북 상주시 내서면 26",
+            "addrDet": "3층 147호",
+            "cate": "돌봄시설",
+            "tel": "054-428-3342",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_05": {
+            "addr": "경북 상주시 화서면 132",
+            "addrDet": "1층 196호",
+            "cate": "돌봄시설",
+            "tel": "054-767-7765",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_06": {
+            "addr": "경북 상주시 청리면 1",
+            "addrDet": "1층 295호",
+            "cate": "돌봄시설",
+            "tel": "054-658-5272",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_07": {
+            "addr": "경북 상주시 북문동 133",
+            "addrDet": "2층 299호",
+            "cate": "돌봄시설",
+            "tel": "054-796-7035",
+            "link": ""
+        },
+        "돌봄시설_08": {
+            "addr": "경북 상주시 은척면 127",
+            "addrDet": "2층 245호",
+            "cate": "돌봄시설",
+            "tel": "054-229-7700",
+            "link": ""
+        },
+        "돌봄시설_09": {
+            "addr": "경북 상주시 화남면 77",
+            "addrDet": "1층 213호",
+            "cate": "돌봄시설",
+            "tel": "054-876-3445",
+            "link": ""
+        },
+        "돌봄시설_10": {
+            "addr": "경북 상주시 함창읍 77",
+            "addrDet": "3층 211호",
+            "cate": "돌봄시설",
+            "tel": "054-941-7562",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_11": {
+            "addr": "경북 상주시 청리면 14",
+            "addrDet": "3층 140호",
+            "cate": "돌봄시설",
+            "tel": "054-957-7500",
+            "link": ""
+        },
+        "돌봄시설_12": {
+            "addr": "경북 상주시 이안면 15",
+            "addrDet": "3층 274호",
+            "cate": "돌봄시설",
+            "tel": "054-283-3716",
+            "link": ""
+        },
+        "돌봄시설_13": {
+            "addr": "경북 상주시 공성면 140",
+            "addrDet": "2층 193호",
+            "cate": "돌봄시설",
+            "tel": "054-704-5094",
+            "link": ""
+        },
+        "돌봄시설_14": {
+            "addr": "경북 상주시 이안면 112",
+            "addrDet": "1층 120호",
+            "cate": "돌봄시설",
+            "tel": "054-709-2169",
+            "link": ""
+        },
+        "돌봄시설_15": {
+            "addr": "경북 상주시 은척면 119",
+            "addrDet": "2층 233호",
+            "cate": "돌봄시설",
+            "tel": "054-205-9985",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_16": {
+            "addr": "경북 상주시 공성면 181",
+            "addrDet": "1층 236호",
+            "cate": "돌봄시설",
+            "tel": "054-756-8739",
+            "link": ""
+        },
+        "돌봄시설_17": {
+            "addr": "경북 상주시 청리면 107",
+            "addrDet": "3층 222호",
+            "cate": "돌봄시설",
+            "tel": "054-480-1440",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_18": {
+            "addr": "경북 상주시 사벌국면 188",
+            "addrDet": "2층 119호",
+            "cate": "돌봄시설",
+            "tel": "054-239-8504",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_19": {
+            "addr": "경북 상주시 동성동 165",
+            "addrDet": "2층 297호",
+            "cate": "돌봄시설",
+            "tel": "054-949-1690",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_20": {
+            "addr": "경북 상주시 신흥동 96",
+            "addrDet": "2층 106호",
+            "cate": "돌봄시설",
+            "tel": "054-990-3424",
+            "link": ""
+        },
+        "돌봄시설_21": {
+            "addr": "경북 상주시 화남면 95",
+            "addrDet": "3층 303호",
+            "cate": "돌봄시설",
+            "tel": "054-193-5252",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_22": {
+            "addr": "경북 상주시 모서면 157",
+            "addrDet": "2층 286호",
+            "cate": "돌봄시설",
+            "tel": "054-373-2767",
+            "link": ""
+        },
+        "돌봄시설_23": {
+            "addr": "경북 상주시 화동면 146",
+            "addrDet": "3층 277호",
+            "cate": "돌봄시설",
+            "tel": "054-239-7540",
+            "link": ""
+        },
+        "돌봄시설_24": {
+            "addr": "경북 상주시 북문동 10",
+            "addrDet": "2층 231호",
+            "cate": "돌봄시설",
+            "tel": "054-909-2875",
+            "link": ""
+        },
+        "돌봄시설_25": {
+            "addr": "경북 상주시 청리면 168",
+            "addrDet": "2층 225호",
+            "cate": "돌봄시설",
+            "tel": "054-415-4476",
+            "link": ""
+        },
+        "돌봄시설_26": {
+            "addr": "경북 상주시 청리면 40",
+            "addrDet": "3층 129호",
+            "cate": "돌봄시설",
+            "tel": "054-590-9670",
+            "link": ""
+        },
+        "돌봄시설_27": {
+            "addr": "경북 상주시 이안면 80",
+            "addrDet": "1층 115호",
+            "cate": "돌봄시설",
+            "tel": "054-934-1859",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_28": {
+            "addr": "경북 상주시 화남면 64",
+            "addrDet": "1층 156호",
+            "cate": "돌봄시설",
+            "tel": "054-594-1618",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_29": {
+            "addr": "경북 상주시 은척면 160",
+            "addrDet": "2층 246호",
+            "cate": "돌봄시설",
+            "tel": "054-527-3799",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_30": {
+            "addr": "경북 상주시 외서면 92",
+            "addrDet": "1층 197호",
+            "cate": "돌봄시설",
+            "tel": "054-539-3681",
+            "link": ""
+        },
+        "돌봄시설_31": {
+            "addr": "경북 상주시 모서면 63",
+            "addrDet": "2층 162호",
+            "cate": "돌봄시설",
+            "tel": "054-717-4117",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_32": {
+            "addr": "경북 상주시 외남면 172",
+            "addrDet": "2층 257호",
+            "cate": "돌봄시설",
+            "tel": "054-167-2519",
+            "link": ""
+        },
+        "돌봄시설_33": {
+            "addr": "경북 상주시 모동면 119",
+            "addrDet": "2층 161호",
+            "cate": "돌봄시설",
+            "tel": "054-113-1067",
+            "link": ""
+        },
+        "돌봄시설_34": {
+            "addr": "경북 상주시 화서면 124",
+            "addrDet": "1층 172호",
+            "cate": "돌봄시설",
+            "tel": "054-288-5756",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_35": {
+            "addr": "경북 상주시 이안면 22",
+            "addrDet": "1층 208호",
+            "cate": "돌봄시설",
+            "tel": "054-847-7200",
+            "link": ""
+        },
+        "돌봄시설_36": {
+            "addr": "경북 상주시 동문동 25",
+            "addrDet": "3층 102호",
+            "cate": "돌봄시설",
+            "tel": "054-955-5976",
+            "link": ""
+        },
+        "돌봄시설_37": {
+            "addr": "경북 상주시 화서면 189",
+            "addrDet": "2층 165호",
+            "cate": "돌봄시설",
+            "tel": "054-482-1516",
+            "link": ""
+        },
+        "돌봄시설_38": {
+            "addr": "경북 상주시 이안면 181",
+            "addrDet": "2층 149호",
+            "cate": "돌봄시설",
+            "tel": "054-262-9940",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_39": {
+            "addr": "경북 상주시 모동면 60",
+            "addrDet": "3층 281호",
+            "cate": "돌봄시설",
+            "tel": "054-228-3691",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_40": {
+            "addr": "경북 상주시 외남면 54",
+            "addrDet": "3층 241호",
+            "cate": "돌봄시설",
+            "tel": "054-857-3463",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_41": {
+            "addr": "경북 상주시 낙동면 47",
+            "addrDet": "2층 125호",
+            "cate": "돌봄시설",
+            "tel": "054-440-5367",
+            "link": ""
+        },
+        "돌봄시설_42": {
+            "addr": "경북 상주시 동문동 122",
+            "addrDet": "3층 276호",
+            "cate": "돌봄시설",
+            "tel": "054-372-1266",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_43": {
+            "addr": "경북 상주시 은척면 3",
+            "addrDet": "1층 289호",
+            "cate": "돌봄시설",
+            "tel": "054-544-6068",
+            "link": ""
+        },
+        "돌봄시설_44": {
+            "addr": "경북 상주시 중동면 153",
+            "addrDet": "2층 161호",
+            "cate": "돌봄시설",
+            "tel": "054-806-4181",
+            "link": ""
+        },
+        "돌봄시설_45": {
+            "addr": "경북 상주시 함창읍 26",
+            "addrDet": "3층 132호",
+            "cate": "돌봄시설",
+            "tel": "054-800-6349",
+            "link": ""
+        },
+        "돌봄시설_46": {
+            "addr": "경북 상주시 모동면 52",
+            "addrDet": "2층 225호",
+            "cate": "돌봄시설",
+            "tel": "054-274-1516",
+            "link": ""
+        },
+        "돌봄시설_47": {
+            "addr": "경북 상주시 사벌국면 162",
+            "addrDet": "3층 171호",
+            "cate": "돌봄시설",
+            "tel": "054-798-2379",
+            "link": "https://www.example.com/detail"
+        },
+        "돌봄시설_48": {
+            "addr": "경북 상주시 화동면 144",
+            "addrDet": "3층 271호",
+            "cate": "돌봄시설",
+            "tel": "054-233-3297",
+            "link": ""
+        },
+        "돌봄시설_49": {
+            "addr": "경북 상주시 외남면 182",
+            "addrDet": "3층 104호",
+            "cate": "돌봄시설",
+            "tel": "054-316-8069",
+            "link": ""
+        },
+        "돌봄시설_50": {
+            "addr": "경북 상주시 공성면 12",
+            "addrDet": "2층 190호",
+            "cate": "돌봄시설",
+            "tel": "054-138-2225",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_01": {
+            "addr": "경북 상주시 공검면 140",
+            "addrDet": "3층 238호",
+            "cate": "의료시설",
+            "tel": "054-622-7406",
+            "link": ""
+        },
+        "의료시설_02": {
+            "addr": "경북 상주시 은척면 2",
+            "addrDet": "2층 159호",
+            "cate": "의료시설",
+            "tel": "054-366-4331",
+            "link": ""
+        },
+        "의료시설_03": {
+            "addr": "경북 상주시 이안면 1",
+            "addrDet": "1층 108호",
+            "cate": "의료시설",
+            "tel": "054-183-3303",
+            "link": ""
+        },
+        "의료시설_04": {
+            "addr": "경북 상주시 외남면 147",
+            "addrDet": "1층 295호",
+            "cate": "의료시설",
+            "tel": "054-782-6361",
+            "link": ""
+        },
+        "의료시설_05": {
+            "addr": "경북 상주시 공검면 140",
+            "addrDet": "1층 187호",
+            "cate": "의료시설",
+            "tel": "054-866-5266",
+            "link": ""
+        },
+        "의료시설_06": {
+            "addr": "경북 상주시 이안면 196",
+            "addrDet": "2층 212호",
+            "cate": "의료시설",
+            "tel": "054-225-8161",
+            "link": ""
+        },
+        "의료시설_07": {
+            "addr": "경북 상주시 화서면 104",
+            "addrDet": "1층 245호",
+            "cate": "의료시설",
+            "tel": "054-725-5733",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_08": {
+            "addr": "경북 상주시 신흥동 184",
+            "addrDet": "3층 118호",
+            "cate": "의료시설",
+            "tel": "054-429-5355",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_09": {
+            "addr": "경북 상주시 화서면 49",
+            "addrDet": "1층 198호",
+            "cate": "의료시설",
+            "tel": "054-678-7330",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_10": {
+            "addr": "경북 상주시 화동면 130",
+            "addrDet": "1층 143호",
+            "cate": "의료시설",
+            "tel": "054-390-6673",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_11": {
+            "addr": "경북 상주시 화서면 5",
+            "addrDet": "3층 277호",
+            "cate": "의료시설",
+            "tel": "054-495-9986",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_12": {
+            "addr": "경북 상주시 외서면 43",
+            "addrDet": "2층 160호",
+            "cate": "의료시설",
+            "tel": "054-814-7303",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_13": {
+            "addr": "경북 상주시 내서면 53",
+            "addrDet": "2층 243호",
+            "cate": "의료시설",
+            "tel": "054-178-3231",
+            "link": ""
+        },
+        "의료시설_14": {
+            "addr": "경북 상주시 화서면 189",
+            "addrDet": "2층 239호",
+            "cate": "의료시설",
+            "tel": "054-868-8240",
+            "link": ""
+        },
+        "의료시설_15": {
+            "addr": "경북 상주시 사벌국면 153",
+            "addrDet": "1층 289호",
+            "cate": "의료시설",
+            "tel": "054-810-3893",
+            "link": ""
+        },
+        "의료시설_16": {
+            "addr": "경북 상주시 화서면 150",
+            "addrDet": "1층 167호",
+            "cate": "의료시설",
+            "tel": "054-480-3857",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_17": {
+            "addr": "경북 상주시 화동면 183",
+            "addrDet": "3층 242호",
+            "cate": "의료시설",
+            "tel": "054-806-4196",
+            "link": ""
+        },
+        "의료시설_18": {
+            "addr": "경북 상주시 계림동 147",
+            "addrDet": "2층 302호",
+            "cate": "의료시설",
+            "tel": "054-602-5076",
+            "link": ""
+        },
+        "의료시설_19": {
+            "addr": "경북 상주시 낙동면 182",
+            "addrDet": "2층 125호",
+            "cate": "의료시설",
+            "tel": "054-704-9748",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_20": {
+            "addr": "경북 상주시 은척면 123",
+            "addrDet": "1층 221호",
+            "cate": "의료시설",
+            "tel": "054-780-3939",
+            "link": ""
+        },
+        "의료시설_21": {
+            "addr": "경북 상주시 동문동 27",
+            "addrDet": "2층 110호",
+            "cate": "의료시설",
+            "tel": "054-332-4750",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_22": {
+            "addr": "경북 상주시 외서면 192",
+            "addrDet": "1층 159호",
+            "cate": "의료시설",
+            "tel": "054-553-4351",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_23": {
+            "addr": "경북 상주시 외남면 139",
+            "addrDet": "1층 302호",
+            "cate": "의료시설",
+            "tel": "054-182-2578",
+            "link": ""
+        },
+        "의료시설_24": {
+            "addr": "경북 상주시 동문동 80",
+            "addrDet": "1층 195호",
+            "cate": "의료시설",
+            "tel": "054-227-1000",
+            "link": ""
+        },
+        "의료시설_25": {
+            "addr": "경북 상주시 화동면 177",
+            "addrDet": "3층 154호",
+            "cate": "의료시설",
+            "tel": "054-731-7999",
+            "link": ""
+        },
+        "의료시설_26": {
+            "addr": "경북 상주시 공검면 66",
+            "addrDet": "2층 142호",
+            "cate": "의료시설",
+            "tel": "054-875-2706",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_27": {
+            "addr": "경북 상주시 함창읍 160",
+            "addrDet": "2층 137호",
+            "cate": "의료시설",
+            "tel": "054-496-5630",
+            "link": ""
+        },
+        "의료시설_28": {
+            "addr": "경북 상주시 남원동 41",
+            "addrDet": "1층 232호",
+            "cate": "의료시설",
+            "tel": "054-757-5594",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_29": {
+            "addr": "경북 상주시 청리면 84",
+            "addrDet": "1층 192호",
+            "cate": "의료시설",
+            "tel": "054-477-3331",
+            "link": ""
+        },
+        "의료시설_30": {
+            "addr": "경북 상주시 화북면 145",
+            "addrDet": "3층 229호",
+            "cate": "의료시설",
+            "tel": "054-636-2895",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_31": {
+            "addr": "경북 상주시 외남면 12",
+            "addrDet": "3층 111호",
+            "cate": "의료시설",
+            "tel": "054-688-7515",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_32": {
+            "addr": "경북 상주시 동문동 48",
+            "addrDet": "1층 233호",
+            "cate": "의료시설",
+            "tel": "054-663-7026",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_33": {
+            "addr": "경북 상주시 외남면 2",
+            "addrDet": "1층 111호",
+            "cate": "의료시설",
+            "tel": "054-676-2577",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_34": {
+            "addr": "경북 상주시 모서면 173",
+            "addrDet": "3층 137호",
+            "cate": "의료시설",
+            "tel": "054-953-2182",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_35": {
+            "addr": "경북 상주시 함창읍 120",
+            "addrDet": "1층 126호",
+            "cate": "의료시설",
+            "tel": "054-208-7443",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_36": {
+            "addr": "경북 상주시 사벌국면 135",
+            "addrDet": "1층 222호",
+            "cate": "의료시설",
+            "tel": "054-234-7918",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_37": {
+            "addr": "경북 상주시 공검면 8",
+            "addrDet": "3층 260호",
+            "cate": "의료시설",
+            "tel": "054-377-9179",
+            "link": ""
+        },
+        "의료시설_38": {
+            "addr": "경북 상주시 화북면 165",
+            "addrDet": "3층 230호",
+            "cate": "의료시설",
+            "tel": "054-719-7637",
+            "link": ""
+        },
+        "의료시설_39": {
+            "addr": "경북 상주시 동문동 128",
+            "addrDet": "2층 203호",
+            "cate": "의료시설",
+            "tel": "054-334-7888",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_40": {
+            "addr": "경북 상주시 동성동 124",
+            "addrDet": "2층 241호",
+            "cate": "의료시설",
+            "tel": "054-606-7062",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_41": {
+            "addr": "경북 상주시 동문동 185",
+            "addrDet": "2층 182호",
+            "cate": "의료시설",
+            "tel": "054-614-7044",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_42": {
+            "addr": "경북 상주시 공검면 138",
+            "addrDet": "3층 109호",
+            "cate": "의료시설",
+            "tel": "054-320-8037",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_43": {
+            "addr": "경북 상주시 외남면 106",
+            "addrDet": "1층 169호",
+            "cate": "의료시설",
+            "tel": "054-954-6988",
+            "link": ""
+        },
+        "의료시설_44": {
+            "addr": "경북 상주시 화남면 124",
+            "addrDet": "2층 221호",
+            "cate": "의료시설",
+            "tel": "054-167-9740",
+            "link": ""
+        },
+        "의료시설_45": {
+            "addr": "경북 상주시 은척면 84",
+            "addrDet": "2층 289호",
+            "cate": "의료시설",
+            "tel": "054-196-8858",
+            "link": ""
+        },
+        "의료시설_46": {
+            "addr": "경북 상주시 계림동 140",
+            "addrDet": "2층 273호",
+            "cate": "의료시설",
+            "tel": "054-304-1829",
+            "link": ""
+        },
+        "의료시설_47": {
+            "addr": "경북 상주시 외서면 153",
+            "addrDet": "1층 144호",
+            "cate": "의료시설",
+            "tel": "054-821-5693",
+            "link": "https://www.example.com/detail"
+        },
+        "의료시설_48": {
+            "addr": "경북 상주시 공성면 87",
+            "addrDet": "1층 168호",
+            "cate": "의료시설",
+            "tel": "054-248-5081",
+            "link": ""
+        },
+        "의료시설_49": {
+            "addr": "경북 상주시 사벌국면 66",
+            "addrDet": "2층 163호",
+            "cate": "의료시설",
+            "tel": "054-120-7974",
+            "link": ""
+        },
+        "의료시설_50": {
+            "addr": "경북 상주시 공성면 199",
+            "addrDet": "2층 300호",
+            "cate": "의료시설",
+            "tel": "054-401-4300",
+            "link": ""
+        },
+        "관광시설_01": {
+            "addr": "경북 상주시 외서면 20",
+            "addrDet": "3층 254호",
+            "cate": "관광시설",
+            "tel": "054-442-2146",
+            "link": ""
+        },
+        "관광시설_02": {
+            "addr": "경북 상주시 청리면 37",
+            "addrDet": "1층 163호",
+            "cate": "관광시설",
+            "tel": "054-592-2273",
+            "link": ""
+        },
+        "관광시설_03": {
+            "addr": "경북 상주시 외남면 80",
+            "addrDet": "3층 254호",
+            "cate": "관광시설",
+            "tel": "054-520-1895",
+            "link": ""
+        },
+        "관광시설_04": {
+            "addr": "경북 상주시 사벌국면 194",
+            "addrDet": "2층 287호",
+            "cate": "관광시설",
+            "tel": "054-306-2753",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_05": {
+            "addr": "경북 상주시 동문동 199",
+            "addrDet": "3층 209호",
+            "cate": "관광시설",
+            "tel": "054-800-7760",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_06": {
+            "addr": "경북 상주시 이안면 185",
+            "addrDet": "1층 286호",
+            "cate": "관광시설",
+            "tel": "054-833-3263",
+            "link": ""
+        },
+        "관광시설_07": {
+            "addr": "경북 상주시 화남면 69",
+            "addrDet": "3층 137호",
+            "cate": "관광시설",
+            "tel": "054-447-6353",
+            "link": ""
+        },
+        "관광시설_08": {
+            "addr": "경북 상주시 공성면 103",
+            "addrDet": "3층 213호",
+            "cate": "관광시설",
+            "tel": "054-903-6392",
+            "link": ""
+        },
+        "관광시설_09": {
+            "addr": "경북 상주시 은척면 12",
+            "addrDet": "1층 185호",
+            "cate": "관광시설",
+            "tel": "054-311-9277",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_10": {
+            "addr": "경북 상주시 공검면 41",
+            "addrDet": "3층 247호",
+            "cate": "관광시설",
+            "tel": "054-364-5171",
+            "link": ""
+        },
+        "관광시설_11": {
+            "addr": "경북 상주시 중동면 196",
+            "addrDet": "3층 139호",
+            "cate": "관광시설",
+            "tel": "054-958-1412",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_12": {
+            "addr": "경북 상주시 동문동 12",
+            "addrDet": "1층 274호",
+            "cate": "관광시설",
+            "tel": "054-404-5731",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_13": {
+            "addr": "경북 상주시 낙동면 92",
+            "addrDet": "2층 263호",
+            "cate": "관광시설",
+            "tel": "054-693-3200",
+            "link": ""
+        },
+        "관광시설_14": {
+            "addr": "경북 상주시 공검면 85",
+            "addrDet": "2층 106호",
+            "cate": "관광시설",
+            "tel": "054-562-3718",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_15": {
+            "addr": "경북 상주시 모동면 119",
+            "addrDet": "3층 292호",
+            "cate": "관광시설",
+            "tel": "054-402-9544",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_16": {
+            "addr": "경북 상주시 화서면 174",
+            "addrDet": "2층 249호",
+            "cate": "관광시설",
+            "tel": "054-593-9533",
+            "link": ""
+        },
+        "관광시설_17": {
+            "addr": "경북 상주시 낙동면 175",
+            "addrDet": "3층 251호",
+            "cate": "관광시설",
+            "tel": "054-177-1381",
+            "link": ""
+        },
+        "관광시설_18": {
+            "addr": "경북 상주시 신흥동 70",
+            "addrDet": "2층 122호",
+            "cate": "관광시설",
+            "tel": "054-398-9826",
+            "link": ""
+        },
+        "관광시설_19": {
+            "addr": "경북 상주시 사벌국면 49",
+            "addrDet": "2층 247호",
+            "cate": "관광시설",
+            "tel": "054-592-2670",
+            "link": ""
+        },
+        "관광시설_20": {
+            "addr": "경북 상주시 함창읍 4",
+            "addrDet": "1층 179호",
+            "cate": "관광시설",
+            "tel": "054-802-9757",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_21": {
+            "addr": "경북 상주시 신흥동 158",
+            "addrDet": "3층 193호",
+            "cate": "관광시설",
+            "tel": "054-563-6301",
+            "link": ""
+        },
+        "관광시설_22": {
+            "addr": "경북 상주시 동성동 64",
+            "addrDet": "2층 239호",
+            "cate": "관광시설",
+            "tel": "054-517-9254",
+            "link": ""
+        },
+        "관광시설_23": {
+            "addr": "경북 상주시 동성동 191",
+            "addrDet": "2층 189호",
+            "cate": "관광시설",
+            "tel": "054-648-4209",
+            "link": ""
+        },
+        "관광시설_24": {
+            "addr": "경북 상주시 신흥동 134",
+            "addrDet": "1층 175호",
+            "cate": "관광시설",
+            "tel": "054-639-1371",
+            "link": ""
+        },
+        "관광시설_25": {
+            "addr": "경북 상주시 계림동 58",
+            "addrDet": "2층 184호",
+            "cate": "관광시설",
+            "tel": "054-142-9053",
+            "link": ""
+        },
+        "관광시설_26": {
+            "addr": "경북 상주시 청리면 82",
+            "addrDet": "3층 200호",
+            "cate": "관광시설",
+            "tel": "054-684-4285",
+            "link": ""
+        },
+        "관광시설_27": {
+            "addr": "경북 상주시 화남면 156",
+            "addrDet": "3층 265호",
+            "cate": "관광시설",
+            "tel": "054-669-6957",
+            "link": ""
+        },
+        "관광시설_28": {
+            "addr": "경북 상주시 함창읍 106",
+            "addrDet": "1층 204호",
+            "cate": "관광시설",
+            "tel": "054-625-1702",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_29": {
+            "addr": "경북 상주시 동성동 116",
+            "addrDet": "3층 193호",
+            "cate": "관광시설",
+            "tel": "054-515-1058",
+            "link": ""
+        },
+        "관광시설_30": {
+            "addr": "경북 상주시 공검면 172",
+            "addrDet": "3층 218호",
+            "cate": "관광시설",
+            "tel": "054-727-1898",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_31": {
+            "addr": "경북 상주시 동성동 141",
+            "addrDet": "3층 292호",
+            "cate": "관광시설",
+            "tel": "054-989-1965",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_32": {
+            "addr": "경북 상주시 중동면 9",
+            "addrDet": "2층 125호",
+            "cate": "관광시설",
+            "tel": "054-820-1198",
+            "link": ""
+        },
+        "관광시설_33": {
+            "addr": "경북 상주시 공검면 123",
+            "addrDet": "3층 124호",
+            "cate": "관광시설",
+            "tel": "054-422-3448",
+            "link": ""
+        },
+        "관광시설_34": {
+            "addr": "경북 상주시 북문동 198",
+            "addrDet": "1층 216호",
+            "cate": "관광시설",
+            "tel": "054-484-4657",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_35": {
+            "addr": "경북 상주시 화북면 37",
+            "addrDet": "1층 265호",
+            "cate": "관광시설",
+            "tel": "054-504-2822",
+            "link": ""
+        },
+        "관광시설_36": {
+            "addr": "경북 상주시 모동면 63",
+            "addrDet": "3층 275호",
+            "cate": "관광시설",
+            "tel": "054-514-7788",
+            "link": ""
+        },
+        "관광시설_37": {
+            "addr": "경북 상주시 이안면 88",
+            "addrDet": "1층 255호",
+            "cate": "관광시설",
+            "tel": "054-843-2307",
+            "link": ""
+        },
+        "관광시설_38": {
+            "addr": "경북 상주시 동성동 96",
+            "addrDet": "3층 260호",
+            "cate": "관광시설",
+            "tel": "054-846-5327",
+            "link": ""
+        },
+        "관광시설_39": {
+            "addr": "경북 상주시 화서면 190",
+            "addrDet": "2층 112호",
+            "cate": "관광시설",
+            "tel": "054-572-3788",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_40": {
+            "addr": "경북 상주시 낙동면 100",
+            "addrDet": "1층 125호",
+            "cate": "관광시설",
+            "tel": "054-918-4135",
+            "link": ""
+        },
+        "관광시설_41": {
+            "addr": "경북 상주시 은척면 3",
+            "addrDet": "1층 163호",
+            "cate": "관광시설",
+            "tel": "054-372-2370",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_42": {
+            "addr": "경북 상주시 공성면 55",
+            "addrDet": "2층 130호",
+            "cate": "관광시설",
+            "tel": "054-648-2240",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_43": {
+            "addr": "경북 상주시 모서면 39",
+            "addrDet": "2층 202호",
+            "cate": "관광시설",
+            "tel": "054-959-6283",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_44": {
+            "addr": "경북 상주시 모동면 139",
+            "addrDet": "2층 109호",
+            "cate": "관광시설",
+            "tel": "054-962-8293",
+            "link": ""
+        },
+        "관광시설_45": {
+            "addr": "경북 상주시 사벌국면 169",
+            "addrDet": "2층 245호",
+            "cate": "관광시설",
+            "tel": "054-970-1421",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_46": {
+            "addr": "경북 상주시 공검면 28",
+            "addrDet": "2층 134호",
+            "cate": "관광시설",
+            "tel": "054-947-9954",
+            "link": ""
+        },
+        "관광시설_47": {
+            "addr": "경북 상주시 외남면 162",
+            "addrDet": "1층 248호",
+            "cate": "관광시설",
+            "tel": "054-164-1603",
+            "link": ""
+        },
+        "관광시설_48": {
+            "addr": "경북 상주시 공검면 78",
+            "addrDet": "2층 218호",
+            "cate": "관광시설",
+            "tel": "054-417-6135",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_49": {
+            "addr": "경북 상주시 화북면 49",
+            "addrDet": "2층 230호",
+            "cate": "관광시설",
+            "tel": "054-671-2902",
+            "link": "https://www.example.com/detail"
+        },
+        "관광시설_50": {
+            "addr": "경북 상주시 신흥동 74",
+            "addrDet": "2층 214호",
+            "cate": "관광시설",
+            "tel": "054-585-9091",
+            "link": ""
+        },
+        "체험시설_01": {
+            "addr": "경북 상주시 화동면 77",
+            "addrDet": "1층 212호",
+            "cate": "체험시설",
+            "tel": "054-817-4486",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_02": {
+            "addr": "경북 상주시 동문동 87",
+            "addrDet": "2층 166호",
+            "cate": "체험시설",
+            "tel": "054-752-4317",
+            "link": ""
+        },
+        "체험시설_03": {
+            "addr": "경북 상주시 내서면 149",
+            "addrDet": "1층 138호",
+            "cate": "체험시설",
+            "tel": "054-934-4431",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_04": {
+            "addr": "경북 상주시 낙동면 193",
+            "addrDet": "1층 273호",
+            "cate": "체험시설",
+            "tel": "054-171-9360",
+            "link": ""
+        },
+        "체험시설_05": {
+            "addr": "경북 상주시 중동면 116",
+            "addrDet": "2층 253호",
+            "cate": "체험시설",
+            "tel": "054-653-9678",
+            "link": ""
+        },
+        "체험시설_06": {
+            "addr": "경북 상주시 화남면 113",
+            "addrDet": "1층 282호",
+            "cate": "체험시설",
+            "tel": "054-161-2774",
+            "link": ""
+        },
+        "체험시설_07": {
+            "addr": "경북 상주시 모동면 186",
+            "addrDet": "3층 213호",
+            "cate": "체험시설",
+            "tel": "054-210-2348",
+            "link": ""
+        },
+        "체험시설_08": {
+            "addr": "경북 상주시 모동면 105",
+            "addrDet": "2층 204호",
+            "cate": "체험시설",
+            "tel": "054-568-2311",
+            "link": ""
+        },
+        "체험시설_09": {
+            "addr": "경북 상주시 은척면 115",
+            "addrDet": "2층 171호",
+            "cate": "체험시설",
+            "tel": "054-927-4773",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_10": {
+            "addr": "경북 상주시 화서면 11",
+            "addrDet": "1층 253호",
+            "cate": "체험시설",
+            "tel": "054-435-1548",
+            "link": ""
+        },
+        "체험시설_11": {
+            "addr": "경북 상주시 북문동 176",
+            "addrDet": "3층 127호",
+            "cate": "체험시설",
+            "tel": "054-156-7530",
+            "link": ""
+        },
+        "체험시설_12": {
+            "addr": "경북 상주시 모서면 26",
+            "addrDet": "1층 226호",
+            "cate": "체험시설",
+            "tel": "054-712-1963",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_13": {
+            "addr": "경북 상주시 계림동 3",
+            "addrDet": "1층 289호",
+            "cate": "체험시설",
+            "tel": "054-553-3876",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_14": {
+            "addr": "경북 상주시 낙동면 11",
+            "addrDet": "2층 286호",
+            "cate": "체험시설",
+            "tel": "054-135-5546",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_15": {
+            "addr": "경북 상주시 은척면 129",
+            "addrDet": "2층 157호",
+            "cate": "체험시설",
+            "tel": "054-540-8872",
+            "link": ""
+        },
+        "체험시설_16": {
+            "addr": "경북 상주시 외서면 60",
+            "addrDet": "3층 154호",
+            "cate": "체험시설",
+            "tel": "054-748-8592",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_17": {
+            "addr": "경북 상주시 낙동면 191",
+            "addrDet": "2층 194호",
+            "cate": "체험시설",
+            "tel": "054-296-1020",
+            "link": ""
+        },
+        "체험시설_18": {
+            "addr": "경북 상주시 화서면 85",
+            "addrDet": "2층 115호",
+            "cate": "체험시설",
+            "tel": "054-191-1179",
+            "link": ""
+        },
+        "체험시설_19": {
+            "addr": "경북 상주시 신흥동 8",
+            "addrDet": "3층 142호",
+            "cate": "체험시설",
+            "tel": "054-212-7670",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_20": {
+            "addr": "경북 상주시 화동면 35",
+            "addrDet": "1층 146호",
+            "cate": "체험시설",
+            "tel": "054-266-3402",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_21": {
+            "addr": "경북 상주시 공검면 122",
+            "addrDet": "3층 106호",
+            "cate": "체험시설",
+            "tel": "054-589-9639",
+            "link": ""
+        },
+        "체험시설_22": {
+            "addr": "경북 상주시 계림동 86",
+            "addrDet": "1층 285호",
+            "cate": "체험시설",
+            "tel": "054-764-4333",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_23": {
+            "addr": "경북 상주시 모동면 81",
+            "addrDet": "3층 242호",
+            "cate": "체험시설",
+            "tel": "054-600-7697",
+            "link": ""
+        },
+        "체험시설_24": {
+            "addr": "경북 상주시 모서면 73",
+            "addrDet": "3층 241호",
+            "cate": "체험시설",
+            "tel": "054-835-9202",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_25": {
+            "addr": "경북 상주시 화동면 96",
+            "addrDet": "1층 302호",
+            "cate": "체험시설",
+            "tel": "054-102-4337",
+            "link": ""
+        },
+        "체험시설_26": {
+            "addr": "경북 상주시 동문동 122",
+            "addrDet": "1층 262호",
+            "cate": "체험시설",
+            "tel": "054-656-6522",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_27": {
+            "addr": "경북 상주시 공성면 121",
+            "addrDet": "1층 136호",
+            "cate": "체험시설",
+            "tel": "054-225-1260",
+            "link": ""
+        },
+        "체험시설_28": {
+            "addr": "경북 상주시 중동면 24",
+            "addrDet": "1층 141호",
+            "cate": "체험시설",
+            "tel": "054-211-1493",
+            "link": ""
+        },
+        "체험시설_29": {
+            "addr": "경북 상주시 동문동 152",
+            "addrDet": "1층 196호",
+            "cate": "체험시설",
+            "tel": "054-478-5405",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_30": {
+            "addr": "경북 상주시 사벌국면 122",
+            "addrDet": "1층 273호",
+            "cate": "체험시설",
+            "tel": "054-761-5734",
+            "link": ""
+        },
+        "체험시설_31": {
+            "addr": "경북 상주시 청리면 109",
+            "addrDet": "2층 164호",
+            "cate": "체험시설",
+            "tel": "054-308-2059",
+            "link": ""
+        },
+        "체험시설_32": {
+            "addr": "경북 상주시 사벌국면 69",
+            "addrDet": "1층 238호",
+            "cate": "체험시설",
+            "tel": "054-723-1185",
+            "link": ""
+        },
+        "체험시설_33": {
+            "addr": "경북 상주시 청리면 185",
+            "addrDet": "3층 122호",
+            "cate": "체험시설",
+            "tel": "054-999-4914",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_34": {
+            "addr": "경북 상주시 동성동 186",
+            "addrDet": "3층 192호",
+            "cate": "체험시설",
+            "tel": "054-694-3348",
+            "link": ""
+        },
+        "체험시설_35": {
+            "addr": "경북 상주시 청리면 49",
+            "addrDet": "2층 231호",
+            "cate": "체험시설",
+            "tel": "054-309-1463",
+            "link": ""
+        },
+        "체험시설_36": {
+            "addr": "경북 상주시 화북면 11",
+            "addrDet": "1층 133호",
+            "cate": "체험시설",
+            "tel": "054-819-3395",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_37": {
+            "addr": "경북 상주시 신흥동 94",
+            "addrDet": "2층 127호",
+            "cate": "체험시설",
+            "tel": "054-561-3296",
+            "link": ""
+        },
+        "체험시설_38": {
+            "addr": "경북 상주시 북문동 112",
+            "addrDet": "2층 196호",
+            "cate": "체험시설",
+            "tel": "054-881-8789",
+            "link": ""
+        },
+        "체험시설_39": {
+            "addr": "경북 상주시 공성면 38",
+            "addrDet": "1층 120호",
+            "cate": "체험시설",
+            "tel": "054-668-9803",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_40": {
+            "addr": "경북 상주시 화동면 186",
+            "addrDet": "2층 139호",
+            "cate": "체험시설",
+            "tel": "054-773-6598",
+            "link": ""
+        },
+        "체험시설_41": {
+            "addr": "경북 상주시 외남면 139",
+            "addrDet": "2층 249호",
+            "cate": "체험시설",
+            "tel": "054-818-1950",
+            "link": ""
+        },
+        "체험시설_42": {
+            "addr": "경북 상주시 외서면 12",
+            "addrDet": "2층 104호",
+            "cate": "체험시설",
+            "tel": "054-549-5531",
+            "link": ""
+        },
+        "체험시설_43": {
+            "addr": "경북 상주시 내서면 27",
+            "addrDet": "1층 251호",
+            "cate": "체험시설",
+            "tel": "054-371-3077",
+            "link": ""
+        },
+        "체험시설_44": {
+            "addr": "경북 상주시 청리면 78",
+            "addrDet": "3층 216호",
+            "cate": "체험시설",
+            "tel": "054-491-8904",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_45": {
+            "addr": "경북 상주시 모동면 18",
+            "addrDet": "2층 182호",
+            "cate": "체험시설",
+            "tel": "054-804-1098",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_46": {
+            "addr": "경북 상주시 남원동 106",
+            "addrDet": "2층 215호",
+            "cate": "체험시설",
+            "tel": "054-912-2390",
+            "link": ""
+        },
+        "체험시설_47": {
+            "addr": "경북 상주시 화남면 86",
+            "addrDet": "1층 138호",
+            "cate": "체험시설",
+            "tel": "054-949-7920",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_48": {
+            "addr": "경북 상주시 화서면 196",
+            "addrDet": "2층 117호",
+            "cate": "체험시설",
+            "tel": "054-808-3630",
+            "link": "https://www.example.com/detail"
+        },
+        "체험시설_49": {
+            "addr": "경북 상주시 외남면 132",
+            "addrDet": "2층 132호",
+            "cate": "체험시설",
+            "tel": "054-385-4053",
+            "link": ""
+        },
+        "체험시설_50": {
+            "addr": "경북 상주시 동성동 12",
+            "addrDet": "1층 101호",
+            "cate": "체험시설",
+            "tel": "054-600-6316",
+            "link": "https://www.example.com/detail"
+        }
+        };
+
+</script>
+<script>
+
+    let mapContainer = document.getElementById('facil_map'), // 지도를 표시할 div
+        mapOption = {
+            center: new kakao.maps.LatLng(37.502, 127.026581), // 지도의 중심좌표
+            level: 4 // 지도의 확대 레벨
+        };
+
+    let map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    let geocoder = new kakao.maps.services.Geocoder();  // 주소-좌표 변환 객체를 생성합니다
+
+    // add marker
+    let markers = {};
+
+    let activeMarkers = [];
+
+    let selectMarker = null;
+
+    let MARKER_WIDTH = 40, // 기본, 클릭 마커의 너비
+        MARKER_HEIGHT = 58, // 기본, 클릭 마커의 높이
+        // OFFSET_X = 12, // 기본, 클릭 마커의 기준 X좌표
+        // OFFSET_Y = MARKER_HEIGHT, // 기본, 클릭 마커의 기준 Y좌표
+        // OVER_MARKER_WIDTH = 40, // 오버 마커의 너비
+        // OVER_MARKER_HEIGHT = 42, // 오버 마커의 높이
+        // OVER_OFFSET_X = 13, // 오버 마커의 기준 X좌표
+        // OVER_OFFSET_Y = OVER_MARKER_HEIGHT, // 오버 마커의 기준 Y좌표
+        // SPRITE_WIDTH = 126, // 스프라이트 이미지 너비
+        // SPRITE_HEIGHT = 146, // 스프라이트 이미지 높이
+        // SPRITE_GAP = 10; // 스프라이트 이미지에서 마커간 간격
+        SPRITE_MARKER_URL = 'images/map/marker_img.png'; // 스프라이트 마커 이미지 URL
+
+    let markerSize = new kakao.maps.Size(MARKER_WIDTH, MARKER_HEIGHT); // 기본, 클릭 마커의 크기
+        // markerOffset = new kakao.maps.Point(OFFSET_X, OFFSET_Y), // 기본, 클릭 마커의 기준좌표
+        // overMarkerSize = new kakao.maps.Size(OVER_MARKER_WIDTH, OVER_MARKER_HEIGHT), // 오버 마커의 크기
+        // overMarkerOffset = new kakao.maps.Point(OVER_OFFSET_X, OVER_OFFSET_Y), // 오버 마커의 기준 좌표
+        // spriteImageSize = new kakao.maps.Size(SPRITE_WIDTH, SPRITE_HEIGHT); // 스프라이트 이미지의 크기
+
+    let markerImage = new kakao.maps.MarkerImage(
+        SPRITE_MARKER_URL, // 스프라이트 마커 이미지 URL
+        markerSize, // 마커의 크기
+    );
+
+    const $facil = $('.facil'),
+        $facilCateBtn = $('.facil_cate_btn'),
+        $searchWrap = $('.facil_search_wrap'),
+        $searchQuery = $searchWrap.find('input'),
+        $searchBtn = $searchWrap.find('button'),
+        $facilInfo = $facil.find('.facil_info'),
+        $facilInfoList = $facilInfo.find('.facil_info_list'),
+        $facilTogg = $facilInfo.find('.facil_info_toggle');
+
+    let searchWord = '';
+    let activeInfo = [];
+    let activeCate = '';
+
+    const $loadingIco = $('<i>',{class:'loading_ico',text:'로딩중입니다.'});
+
+    const LoadMarkers = ()=>{
+        const promises = [];
+
+        $(mapContainer).prepend($loadingIco).addClass('loading');
+
+        let cur = 0;
+
+        for(const name in facilData){
+            const facil = facilData[name];
+
+            const p = new Promise((resolve)=>{
+                // 주소로 좌표를 검색합니다
+                geocoder.addressSearch(facil.addr, function(result, status) {
+
+                    // 정상적으로 검색이 완료됐으면
+                    if (status === kakao.maps.services.Status.OK) {
+
+                        let coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+                        // 결과값으로 받은 위치를 마커로 표시합니다
+                        var marker = new kakao.maps.Marker({
+                            map: map,
+                            position: coords,
+                            image: markerImage,
+                        });
+
+                        markers[name] = marker;
+                        marker.setMap(null);
+
+                        const content = `
+                        <div class="facil_overlay">
+                            <span class="facil_name">${name}</span>
+                            <div class="facil_cont">
+                                <span class="facil_addr"><span>${facil.addr} ${facil.addrDet?facil.addrDet:''}</span></span>
+                                ${facil.tel?`<span class="facil_tel"><span>${facil.tel}</span></span>`:''}
+                            </div>
+                            <a class="facil_link" href="${facil.link ? facil.link : 'javascript:void(0);'}" ${facil.link ? 'title="새창" target="_blank" rel="noopener noreferrer"' : 'onclick="alert(\'링크없음\')"'}><span>자세히보기</span></a>
+                            <button type="button" class="overlay_close">닫기</button>
+                        </div>`;
+
+                        const overlay = new kakao.maps.CustomOverlay({
+                            content: content,
+                            map: map,
+                            position: marker.getPosition(),
+                        });
+
+                        marker.overlay = overlay;
+                        overlay.setMap(null);
+                    }else{
+                        // console.log(facil.addr);
+                    };
+                    resolve();
+                    const dataLen = Object.keys(facilData).length;
+                    cur++;
+                    $loadingIco[0].style.setProperty('--cur',((cur/dataLen)*100)+'%');
+                });
+            });
+            promises.push(p);
+        };
+
+        return Promise.all(promises);
+    };
+
+    LoadMarkers().then(()=>{
+        mapContainer.classList.remove('loading');
+        $loadingIco.css({opacity:'0'});
+        setTimeout(()=>{
+            $loadingIco.remove();
+        },300);
+
+        ToggInfo();
+
+        $facilTogg.on('click',function(){
+            ToggInfo();
+        });
+
+        $facilCateBtn.on('click',function(){
+            if($(this).is('.active')) return;
+
+            const cate = $(this).data('facil-cate');
+
+            $facilCateBtn.removeClass('active');
+
+            $(this).addClass('active');
+
+            activeCate = cate;
+
+            ActiveFacil(activeCate);
+        }).first().addClass('active');
+
+        activeCate = '돌봄시설';
+        ActiveFacil('돌봄시설');
+
+        $searchBtn.on('click',function(){
+            let query = $(this).prev()[0].value;
+            ActiveFacil(activeCate, query);
+        });
+
+        $searchQuery.on('keyup',function(e){
+            if(e.which == 13) $(this).next().trigger('click');
+        }).on('input',function(){
+            $('.facil_search_query').val($(this).val());
+        });
+
+        $searchWrap.clone(true).addClass('mb').insertAfter($facilInfoTop);
+    });
+
+    const ActiveFacil = (cate, searchWord='')=>{
+        activeMarkers = [];
+        activeInfo = [];
+        CloseOverlay(selectMarker)
+
+        keyword = searchWord.toLowerCase();
+
+        $pageList.html('').attr('data-page-index',1);
+
+        let bounds = new kakao.maps.LatLngBounds();  // 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
+
+        let index = 1;
+
+        for(const name in facilData){
+            const facil = facilData[name];
+
+            const marker = markers[name];
+
+            if(!marker) continue;
+
+            marker.setMap(null);
+
+            if(facil.cate !== cate) continue;
+
+            const match = [name, facil.addr, facil.addrDet].some(val=>(val||'').toLowerCase().includes(keyword));
+            if(!match) continue;
+
+            const idx = index++;
+
+            const $facilInfoItem = $('<li>', {
+            class: 'facil_info_item',
+            html: `
+                <button type="button" class="facil_info_btn">
+                    <span class="facil_info_name"><em>${idx}</em><span>${name}</span></span>
+                        <span class="facil_info_cont">
+                            <span class="facil_info_addr"><span>${facil.addr} ${facil.addrDet ? facil.addrDet:''}</span></span>
+                            ${facil.tel ? `<span class="facil_info_tel"><span>${facil.tel}</span></span>`:''}
+                        </span>
+                </button>
+                <a class="facil_info_link" href="${facil.link ? facil.link:'javascript:void(0);'}" ${facil.link ? 'title="새창" target="_blank" rel="noopener noreferrer"':'onclick="alert(\'링크없음\')"'}>자세히보기</a>`
+            });
+
+            if(keyword){
+                let searchReg = new RegExp(keyword, 'gi');
+                $facilInfoItem.html($facilInfoItem.html().replace(searchReg,(match)=>{
+                    return `<strong>${match}</strong>`
+                }));
+                const searchOverlay = marker.overlay.getContent().replace(searchReg,(match)=>{
+                    return `<strong>${match}</strong>`
+                });
+                marker.overlay.setContent(searchOverlay);
+            };
+
+            marker.setMap(map);
+            activeMarkers.push(markers[name]);
+            activeInfo.push($facilInfoItem);
+            $facilInfoItem[0].marker = marker;
+            marker.$item = $facilInfoItem;
+            bounds.extend(marker.getPosition());
+            marker.allBounds = bounds;
+
+            // infobtn, marker click event
+            kakao.maps.event.addListener(marker,'click',function(){
+                CloseOverlay(selectMarker);
+                selectMarker = marker;
+                marker.setMap(null);
+                marker.overlay.setMap(map);
+                map.setCenter(marker.getPosition());
+                map.setLevel(3);
+
+                const $overlay = $(mapContainer).find('.facil_overlay');
+                $overlay.css({
+                    top: `-${$overlay.innerHeight() + window.innerWidth>640?28:16}px`,
+                    left: `-${$overlay.innerWidth()/2}px`,
+                });
+
+                document.querySelector('.overlay_close').addEventListener('click',function(){
+                    CloseOverlay(selectMarker);
+                });
+
+                PageMove(Math.ceil((idx/itemLen)));
+
+                const $item = marker.$item;
+                const $list = $item.parent();
+                $item.addClass('active').siblings().removeClass('active');
+                $list[0].scroll({
+                    left: 0,
+                    top: ($list.scrollTop()+$item.position().top),
+                    behavior: "smooth",
+                });
+            });
+        };
+
+        PageMove(1);
+
+        if(activeMarkers.length){
+            map.setBounds(bounds);
+        }else{
+            window.alert('검색결과가 없습니다');
+            $('.facil_search_query').val('');
+            ActiveFacil(activeCate);
+        };
+    };
+
+    const CloseOverlay = (marker)=>{
+        if(marker){
+            marker.overlay.setMap(null);
+            marker.setMap(map);
+            marker.$item.removeClass('active');
+            map.setBounds(marker.allBounds);
+        };
+    };
+
+    const ToggInfo = ()=>{
+        if($facilInfo.is('.active')){
+            $facilInfo.removeClass('active');
+            $facilTogg.text('열기');
+        }else{
+            $facilInfo.addClass('active');
+            $facilTogg.text('닫기');
+        }
+    }
+
+    const $facilInfoTop = $facilInfo.find('.facil_info_top'),
+        $pagenation = $facilInfo.find('.facil_info_pagenation'),
+        $pageStart = $pagenation.find('.prev_end'),
+        $pagePrev = $pagenation.find('.prev'),
+        $pageNext = $pagenation.find('.next'),
+        $pageEnd = $pagenation.find('.next_end'),
+        $pageGrpBtns = $pageStart.add($pagePrev).add($pageNext).add($pageEnd),
+        $pageList = $pagenation.find('.pagenation_list');
+
+    const pageLen = 3;  //페이지네이션에 한번에 표출될 메뉴 개수
+    const itemLen = 5;  //목록 리스트에 한번에 표출될 시설정보 개수
+
+    const RenderPageBtns = (curGrp, curPage)=>{
+        const total = activeInfo.length;
+        const totalPage = Math.ceil(total/itemLen);
+        const totalGrp = Math.ceil(totalPage/pageLen);
+
+        $facilInfoList.attr('data-grp-idx',curGrp);
+        $pageList.html('');
+
+        const startPage = (curGrp-1)*pageLen;
+        const endPage = Math.min(startPage+pageLen, totalPage);
+
+        for(let page=startPage;page<endPage; page++){
+            let $page = $('<button>',{
+                class: 'page-btn',
+                'data-page': page+1,
+                text: page+1,
+            });
+            $page.on('click',function(){PageMove(page+1)});
+            if(curPage == page+1) $page.addClass('active').off('click');
+            $pageList.append($page);
+        };
+
+        $pageStart.off('click').on('click',function(){PageMove(1);});
+        $pagePrev.off('click').on('click',function(){PageMove(((curGrp - 1)*pageLen));});
+        $pageNext.off('click').on('click',function(){PageMove((curGrp*pageLen)+1);});
+        $pageEnd.off('click').on('click',function(){PageMove(totalPage);});
+
+        if(curGrp == 1){
+            $pageStart.css('visibility','hidden');
+            $pagePrev.css('visibility','hidden');
+        }else{
+            $pageStart.removeAttr('style');
+            $pagePrev.removeAttr('style');
+        };
+
+        if(curGrp == totalGrp){
+            $pageNext.css('visibility','hidden');
+            $pageEnd.css('visibility','hidden');
+        }else{
+            $pageNext.removeAttr('style');
+            $pageEnd.removeAttr('style');
+        };
+
+        $facilInfoTop.html(`
+            <span>전체 <em>${total}</em>건</span> (${curPage} / 전체 ${totalPage}페이지)
+        `);
+    };
+
+    const PageMove = (page)=>{
+        $facilInfoList.html('');
+        activeInfo.forEach(($info,idx)=>{
+            if((page*itemLen)<=idx) return;
+            if(idx< ((page-1)*itemLen)) return;
+
+            const marker = $info[0].marker;
+            const $btn = $info.find('.facil_info_btn');
+            $btn.on('click',function(){
+                kakao.maps.event.trigger(marker, 'click');
+            });
+            $facilInfoList.append($info);
+        });
+
+        const curGrp = Math.ceil(page/pageLen);
+        RenderPageBtns(curGrp, page);
+    };
+</script>
+</body>
+</html>

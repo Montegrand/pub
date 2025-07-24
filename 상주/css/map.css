@@ -1,0 +1,155 @@
+@charset "utf-8";
+#wrap{display:flex;flex-direction:column;width:100vw;height:100vh;}
+#wrap #header{flex:0 0 auto;}
+
+/* top */
+
+/* top - topmenu */
+.toparea .topmenu{position:relative;background-color:#f4f5f6;}
+.toparea .topmenu .topbar{width:100%;padding:0 30px;}
+
+/* top - logo */
+.logo_box{width:100%;padding:0 30px;}
+.logo_box h1{margin-top:20px;}
+
+/* top - facil_cate */
+.toparea .topmenu .facil_cate{display:flex;width:100%;padding:0 30px 0 320px;background-color:#303b4f;}
+.toparea .topmenu .facil_cate .facil_cate_btn{display:inline-flex;justify-content:center;align-items:center;height:84px;padding:20px;color:#fff;font-family:'Pretendard';font-size:20px;font-weight:300;line-height:normal;letter-spacing:0;}
+.toparea .topmenu .facil_cate .facil_cate_btn.active{background-color:#202633;}
+.toparea .topmenu .facil_cate .facil_cate_btn:before{display:block;width:24px;height:24px;margin-right:10px;background-repeat:no-repeat;background-position:center;background-size:auto;content:'';}
+.toparea .topmenu .facil_cate .facil_cate_btn[data-facil-cate="돌봄시설"]:before{background-image:url(../images/map/cate_ico1.png);}
+.toparea .topmenu .facil_cate .facil_cate_btn[data-facil-cate="의료시설"]:before{background-image:url(../images/map/cate_ico2.png);}
+.toparea .topmenu .facil_cate .facil_cate_btn[data-facil-cate="관광시설"]:before{background-image:url(../images/map/cate_ico3.png);}
+.toparea .topmenu .facil_cate .facil_cate_btn[data-facil-cate="체험시설"]:before{background-image:url(../images/map/cate_ico4.png);}
+.toparea .topmenu .facil_cate .facil_cate_btn span{}
+
+/* search */
+.facil_search_wrap{display:block;position:absolute;right:30px;bottom:22px;width:312px;height:40px;}
+.facil_search_wrap.mb{display:none;}
+.facil_search_wrap .facil_search_query{display:block;width:100%;height:100%;padding:0 40px 0 20px;border-radius:20px;color:#222;font-family:'Pretendard';font-size:16px;font-weight:300;line-height:normal;letter-spacing:-.025em;}
+.facil_search_wrap .facil_search_query::placeholder{color:#8a949e;}
+.facil_search_wrap .facil_search_btn{display:block;position:absolute;top:0;right:4px;height:40px;border-radius:50%;background:url(../images/map/search_ico.png) center/auto no-repeat;font-size:0;aspect-ratio:1/1;}
+
+/* facil */
+.facil{display:flex;position:relative;flex:1 1 auto;font-family:'Pretendard';}
+
+/* facil - facil_info */
+.facil .facil_info{display:flex;position:absolute;top:0;left:-320px;z-index:50;flex-direction:column;width:320px;height:100%;background-color:#303b4f;transition:left .3s linear;}
+.facil .facil_info.active{left:0;}
+.facil .facil_info_top{display:flex;flex:0 0 auto;align-items:center;height:60px;padding:0 30px;background-color:#fff;color:#464c53;font-size:16px;font-weight:300;line-height:normal;letter-spacing:-.025em;}
+.facil .facil_info_top span{color:#464c53;font-weight:600;}
+.facil .facil_info_top span em{color:#0480a9;font-style:normal;}
+.facil .facil_info_list{overflow-x:hidden;overflow-y:auto;position:relative;flex:1 1 auto;border-top:1px solid #cdd1d5;border-bottom:1px solid #cdd1d5;background-color:#fff;}
+.facil .facil_info_list::-webkit-scrollbar{width:5px;}
+.facil .facil_info_list::-webkit-scrollbar-track{background-color:#e6e8ea;}
+.facil .facil_info_list::-webkit-scrollbar-thumb{background-color:#b1b8be;}
+.facil .facil_info_item{position:relative;}
+.facil .facil_info_item:not(:last-child){border-bottom:1px solid #cdd1d5;}
+.facil .facil_info_btn{display:flex;position:relative;flex-direction:column;width:100%;padding:32px 30px 23px;border-top:1px solid transparent;border-bottom:1px solid transparent;text-align:left;gap:16px;}
+.facil .facil_info_name{display:flex;}
+.facil .facil_info_name em{display:inline-flex;flex:0 0 auto;justify-content:center;align-items:center;width:26px;height:26px;margin-right:10px;border-radius:50%;background-color:#00c6da;color:#303b4f;font-size:16px;font-weight:600;font-style:normal;line-height:normal;letter-spacing:-.025em;}
+.facil .facil_info_name span{margin-top:2px;font-size:20px;font-weight:600;line-height:22px;}
+.facil .facil_info_cont{display:flex;flex-direction:column;margin-left:3px;font-size:16px;gap:5px;}
+.facil .facil_info_addr,.facil .facil_info_tel{display:flex;align-items:flex-start;}
+.facil .facil_info_addr span,.facil .facil_info_tel span{color:#464c53;font-weight:300;line-height:24px;letter-spacing:-.025em;}
+.facil .facil_info_addr:before,.facil .facil_info_tel:before{display:block;flex:0 0 auto;width:20px;height:20px;margin-right:6px;margin-bottom:2px;background-repeat:no-repeat;background-position:center;background-size:auto;}
+.facil .facil_info_addr:before{background-image:url(../images/map/addr_ico.png);}
+.facil .facil_info_tel:before{background-image:url(../images/map/tel_ico.png);}
+.facil .facil_info_addr{min-height:48px;}
+.facil .facil_info_tel{padding-right:32px;}
+.facil .facil_info_link{position:absolute;right:30px;bottom:23px;width:28px;height:28px;border-radius:50%;background:url(../images/map/arr_ico1.png) center/auto no-repeat, #e6e8ea;font-size:0;}
+.facil .facil_info_btn strong{background-color:#0480a9;color:#fff;}
+.facil .facil_info_item.active .facil_info_btn{border-color:#cdd1d5;background-color:#e6e8ea;}
+.facil .facil_info_item.active .facil_info_btn .facil_info_name span{text-decoration:underline;}
+.facil .facil_info_item.active .facil_info_link{background-color:#cdd1d5;}
+.facil .facil_info_toggle{display:block;position:absolute;top:calc(50% - 30px);left:100%;width:30px;height:60px;border:1px solid #d2d2d2;border-radius:0 12px 12px 0;border-left:none;background-color:#fff;font-size:0;}
+.facil .facil_info_toggle:before{display:block;width:100%;height:100%;background-image:url(../images/map/togg_ico.png);background-repeat:no-repeat;background-position:center;background-size:auto;content:'';}
+.facil .facil_info .facil_info_toggle:before{transform:rotate(180deg);}
+.facil .facil_info.active .facil_info_toggle:before{transform:rotate(0);}
+.facil .facil_info_pagenation{display:flex;flex:0 0 auto;justify-content:center;align-items:center;height:58px;background-color:#fff;}
+.facil .facil_info_pagenation .prev_end,.facil .facil_info_pagenation .prev,.facil .facil_info_pagenation .next,.facil .facil_info_pagenation .next_end{flex:0 0 auto;width:30px;height:30px;margin:0 4px;background-repeat:no-repeat;background-position:center;background-size:auto;font-size:0;}
+.facil .facil_info_pagenation .prev_end{background-image:url(../images/map/page_arr2.png);transform:rotate(180deg);}
+.facil .facil_info_pagenation .prev{background-image:url(../images/map/page_arr1.png);transform:rotate(180deg);}
+.facil .facil_info_pagenation .next{background-image:url(../images/map/page_arr1.png);}
+.facil .facil_info_pagenation .next_end{background-image:url(../images/map/page_arr2.png);}
+.facil .pagenation_list{display:flex;flex-direction:row;justify-content:flex-start;align-items:center;width:111px;margin:0 12px;}
+.facil .page-btn{flex:0 0 auto;width:27px;height:27px;margin:0 5px;color:#464c53;font-size:18px;font-weight:300;line-height:normal;letter-spacing:-.025em;}
+.facil .page-btn.active{color:#0097a6;font-weight:600;}
+
+/* 지도 */
+#facil_map{position:relative;z-index:30;flex:1 1 auto;}
+#facil_map .facil_overlay{display:flex;position:absolute;flex-direction:column;align-items:stretch;min-width:320px;max-width:600px;padding:18px 0 0;border:2px solid #303b4f;border-radius:10px;background-color:#fff;text-align:left;gap:16px;}
+#facil_map .facil_overlay:before{display:block;position:absolute;top:100%;left:calc(50% - 12px);z-index:1;border-top:25px solid #f4f5f6;border-right:12px solid transparent;border-left:12px solid transparent;}
+#facil_map .facil_overlay:after{display:block;position:absolute;top:100%;left:calc(50% - 14px);z-index:0;width:0;border-top:28px solid #303b4f;border-right:14px solid transparent;border-left:14px solid transparent;}
+#facil_map .facil_overlay .facil_name{margin:0 60px 0 30px;color:#222;font-size:20px;font-weight:600;line-height:24px;letter-spacing:-.025em;}
+.facil .facil_overlay .facil_cont{display:flex;flex-direction:column;margin:0 26px;font-size:16px;gap:5px;}
+.facil .facil_overlay .facil_addr,.facil .facil_overlay .facil_tel{display:flex;align-items:flex-start;}
+.facil .facil_overlay .facil_addr span,.facil .facil_overlay .facil_tel span{color:#222;font-weight:300;line-height:24px;letter-spacing:-.025em;}
+.facil .facil_overlay .facil_addr:before,.facil .facil_overlay .facil_tel:before{display:block;flex:0 0 auto;width:20px;height:20px;margin-right:6px;margin-bottom:2px;background-repeat:no-repeat;background-position:center;background-size:auto;}
+.facil .facil_overlay .facil_addr:before{background-image:url(../images/map/addr_ico.png);}
+.facil .facil_overlay .facil_tel:before{background-image:url(../images/map/tel_ico.png);}
+#facil_map .facil_overlay .facil_link{display:flex;justify-content:center;align-items:center;height:38px;border-radius:0 0 9px 9px;background-color:#f4f5f6;}
+#facil_map .facil_overlay .overlay_close{position:absolute;top:20px;right:20px;width:18px;height:18px;background:url(../images/map/close_ico.png) center/contain no-repeat;font-size:0;}
+
+/* 지도 시설 정보 로딩중 */
+#facil_map.loading{}
+#facil_map:before{display:block;visibility:hidden;position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;width:auto;height:auto;background-color:rgba(0,0,0,.6);transition:.25s linear;content:'';opacity:0;}
+#facil_map .loading_ico{display:block;position:absolute;top:0;right:0;bottom:0;left:0;z-index:5;width:200px;height:26px;margin:auto;padding-top:60px;box-sizing:content-box;color:#fff;font-size:20px;font-weight:600;text-align:center;}
+#facil_map .loading_ico:before{display:block;position:absolute;top:24px;left:0;width:100%;height:6px;border-radius:3px;background-color:#fff;}
+#facil_map .loading_ico:after{display:block;position:absolute;top:24px;left:0;width:var(--cur);height:6px;border-radius:3px;background-color:#00c6da;}
+#facil_map.loading:before{visibility:visible;z-index:5;opacity:1;}
+@media all and (min-width:1001px){
+.facil .facil_info_item:hover .facil_info_btn{border-color:#cdd1d5;background-color:#e6e8ea;}
+.facil .facil_info_item:hover .facil_info_btn .facil_info_name span{text-decoration:underline;}
+.facil .facil_info_item:hover .facil_info_link{background-color:#cdd1d5;}
+}
+@media all and (max-width:1240px){
+.facil_search_wrap{display:none;position:relative;top:auto;right:auto;bottom:auto;left:auto;width:auto;margin:16px;}
+.facil_search_wrap.mb{display:block;flex:0 0 auto;}
+}
+@media all and (max-width:1000px){
+.toparea .topmenu{background-color:#303b4f;}
+.toparea .topmenu .topbar{display:none;}
+.toparea .topmenu h1{position:static;width:auto;margin:0;padding-top:4px;padding-bottom:8px;text-align:center;}
+.logo_box h1 a{display:inline;position:static;}
+.toparea .topmenu h1 img{height:28px;}
+.toparea .topmenu .facil_cate{padding:0;}
+.toparea .topmenu .facil_cate .facil_cate_item{flex:1 1 auto;}
+.toparea .topmenu .facil_cate .facil_cate_btn{width:100%;height:60px;}
+}
+@media all and (max-width:640px){
+.toparea .topmenu .facil_cate .facil_cate_btn{height:40px;padding:0 8px;font-size:16px;}
+.toparea .topmenu .facil_cate .facil_cate_btn:before{width:16px;height:16px;background-size:contain;}
+.facil .facil_info{left:-270px;width:270px;}
+.facil .facil_info_top{height:36px;font-size:14px;}
+.facil_search_wrap{height:30px;margin:8px;}
+.facil_search_wrap .facil_search_query{padding:0 36px 0 12px;font-size:14px;}
+.facil_search_wrap .facil_search_btn{width:30px;height:30px;background-size:16px auto;}
+.facil .facil_info_btn{padding:16px 8px;gap:12px;}
+.facil .facil_info_name em{width:20px;height:20px;padding-top:1px;font-size:12px;}
+.facil .facil_info_name span{margin-top:1px;font-size:16px;line-height:normal;}
+.facil .facil_info_addr:before, .facil .facil_info_tel:before{width:12px;height:12px;background-size:10px auto;}
+.facil .facil_info_addr span, .facil .facil_info_tel span{font-size:13px;line-height:normal;}
+.facil .facil_info_addr{min-height:30px;}
+.facil .facil_info_tel{padding-right:28px;}
+.facil .facil_info_link{right:8px;bottom:8px;width:24px;height:24px;background-size:auto 11px;}
+.facil .facil_info_pagenation .prev_end, .facil .facil_info_pagenation .prev, .facil .facil_info_pagenation .next, .facil .facil_info_pagenation .next_end{width:24px;height:24px;background-size:auto 10px;}
+.facil .pagenation_list{width:96px;margin:0 5px;}
+.facil .page-btn{width:24px;height:24px;margin:0 4px;font-size:14px;}
+#facil_map .facil_overlay{padding:16px 0 0;border-width:1px;gap:12px;}
+#facil_map .facil_overlay:before{left:calc(50% - 9px);border-width:15px 9px 0 9px;}
+#facil_map .facil_overlay:after{left:calc(50% - 10px);border-width:16px 10px 0 10px;}
+#facil_map .facil_overlay .facil_name{margin:0 50px 0 20px;}
+#facil_map .facil_overlay .facil_name span{margin-top:1px;font-size:16px;line-height:normal;}
+#facil_map .facil_overlay .facil_cont{margin:0 16px;}
+#facil_map .facil_overlay .facil_addr:before, #facil_map .facil_overlay .facil_tel:before{width:12px;height:12px;background-size:10px auto;}
+#facil_map .facil_overlay .facil_addr span, #facil_map .facil_overlay .facil_tel span{font-size:13px;line-height:normal;}
+#facil_map .facil_overlay .facil_addr{min-height:30px;}
+#facil_map .facil_overlay .facil_tel{padding-right:28px;}
+#facil_map .facil_overlay .facil_link{height:30px;}
+#facil_map .facil_overlay .overlay_close{top:16px;right:16px;}
+}
+@media all and (max-width:480px){
+.toparea .topmenu .facil_cate{flex-wrap:wrap;}
+.toparea .topmenu .facil_cate .facil_cate_item{width:50%;}
+}
