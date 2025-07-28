@@ -105,7 +105,7 @@
 <script type="text/javascript" src="js/jquery_ui.js"></script>
 
 <!-- 카카오지도 api 불러오기 -->
-<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=KAKAOMAP_API_KEY&libraries=services"></script>
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=9c358194d30b59c4f006ec0f98a6e6e9&libraries=services"></script>
 
 <!-- 시설 정보 -->
 <script>
@@ -1548,6 +1548,8 @@
 
     let MARKER_WIDTH = 40, // 기본, 클릭 마커의 너비
         MARKER_HEIGHT = 58, // 기본, 클릭 마커의 높이
+        MARKER_MB_WIDTH = 20, // 기본, 클릭 마커의 너비
+        MARKER_MB_HEIGHT = 29, // 기본, 클릭 마커의 높이
         // OFFSET_X = 12, // 기본, 클릭 마커의 기준 X좌표
         // OFFSET_Y = MARKER_HEIGHT, // 기본, 클릭 마커의 기준 Y좌표
         // OVER_MARKER_WIDTH = 40, // 오버 마커의 너비
@@ -1560,6 +1562,7 @@
         SPRITE_MARKER_URL = 'images/map/marker_img.png'; // 스프라이트 마커 이미지 URL
 
     let markerSize = new kakao.maps.Size(MARKER_WIDTH, MARKER_HEIGHT); // 기본, 클릭 마커의 크기
+    let mbMarkerSize = new kakao.maps.Size(MARKER_MB_WIDTH, MARKER_MB_HEIGHT); // 기본, 클릭 마커의 크기
         // markerOffset = new kakao.maps.Point(OFFSET_X, OFFSET_Y), // 기본, 클릭 마커의 기준좌표
         // overMarkerSize = new kakao.maps.Size(OVER_MARKER_WIDTH, OVER_MARKER_HEIGHT), // 오버 마커의 크기
         // overMarkerOffset = new kakao.maps.Point(OVER_OFFSET_X, OVER_OFFSET_Y), // 오버 마커의 기준 좌표
@@ -1568,6 +1571,11 @@
     let markerImage = new kakao.maps.MarkerImage(
         SPRITE_MARKER_URL, // 스프라이트 마커 이미지 URL
         markerSize, // 마커의 크기
+    );
+
+    let mbMarkerImage = new kakao.maps.MarkerImage(
+        SPRITE_MARKER_URL, // 스프라이트 마커 이미지 URL
+        mbMarkerSize, // 마커의 크기
     );
 
     const $facil = $('.facil'),
@@ -1615,7 +1623,7 @@
                         marker.setMap(null);
 
                         const content = `
-                        <div class="facil_overlay">
+                        <div class="facil_overlay" style="opacity:0;">
                             <span class="facil_name">${name}</span>
                             <div class="facil_cont">
                                 <span class="facil_addr"><span>${facil.addr} ${facil.addrDet?facil.addrDet:''}</span></span>
@@ -1634,7 +1642,6 @@
                         marker.overlay = overlay;
                         overlay.setMap(null);
                     }else{
-                        // console.log(facil.addr);
                     };
                     resolve();
                     const dataLen = Object.keys(facilData).length;
@@ -1672,7 +1679,7 @@
 
             activeCate = cate;
 
-            ActiveFacil(activeCate);
+            ActiveFacil(activeCate, searchWord);
         }).first().addClass('active');
 
         activeCate = '돌봄시설';
@@ -1687,6 +1694,7 @@
             if(e.which == 13) $(this).next().trigger('click');
         }).on('input',function(){
             $('.facil_search_query').val($(this).val());
+            searchWord = $(this).val();
         });
 
         $searchWrap.clone(true).addClass('mb').insertAfter($facilInfoTop);
@@ -1745,7 +1753,7 @@
                 marker.overlay.setContent(searchOverlay);
             };
 
-            marker.setMap(map);
+            SetMarker(marker);
             activeMarkers.push(markers[name]);
             activeInfo.push($facilInfoItem);
             $facilInfoItem[0].marker = marker;
@@ -1754,23 +1762,15 @@
             marker.allBounds = bounds;
 
             // infobtn, marker click event
-            kakao.maps.event.addListener(marker,'click',function(){
+            if(marker.clickEvt) kakao.maps.event.removeListener(marker,'click',marker.clickEvt);
+            marker.clickEvt = ()=>{
                 CloseOverlay(selectMarker);
                 selectMarker = marker;
                 marker.setMap(null);
+                if(!searchWord) marker.overlay.setContent(marker.overlay.getContent().replace(/<strong>/g,'').replace(/<\/strong>/g,''));
                 marker.overlay.setMap(map);
-                map.setCenter(marker.getPosition());
-                map.setLevel(3);
 
-                const $overlay = $(mapContainer).find('.facil_overlay');
-                $overlay.css({
-                    top: `-${$overlay.innerHeight() + window.innerWidth>640?28:16}px`,
-                    left: `-${$overlay.innerWidth()/2}px`,
-                });
-
-                document.querySelector('.overlay_close').addEventListener('click',function(){
-                    CloseOverlay(selectMarker);
-                });
+                setOverlay(marker);
 
                 PageMove(Math.ceil((idx/itemLen)));
 
@@ -1782,7 +1782,11 @@
                     top: ($list.scrollTop()+$item.position().top),
                     behavior: "smooth",
                 });
-            });
+
+                map.setLevel(3);
+                map.setCenter(marker.getPosition());
+            };
+            kakao.maps.event.addListener(marker, 'click', marker.clickEvt);
         };
 
         PageMove(1);
@@ -1792,16 +1796,52 @@
         }else{
             window.alert('검색결과가 없습니다');
             $('.facil_search_query').val('');
-            ActiveFacil(activeCate);
+            searchWord = '';
+            ActiveFacil(activeCate, searchWord);
         };
+    };
+
+    $(window).on('resize', function(){
+        for(const name in activeMarkers){
+            const marker = activeMarkers[name];
+            const resMarkerImage = window.innerWidth>640?markerImage:mbMarkerImage;
+            if(marker.getImage() == resMarkerImage) continue;
+            marker.setImage(resMarkerImage);
+
+            if(selectMarker && selectMarker == marker) continue
+            marker.setMap(map);
+        };
+    });
+
+    const setOverlay = (marker)=>{
+        const $overlay = $(mapContainer).find('.facil_overlay');
+        if(!$overlay.length) return setTimeout(function(){
+            setOverlay(marker);
+        },50);
+        $overlay.css({
+            top: `-${$overlay.innerHeight() + (window.innerWidth>640?28:16)}px`,
+            left: `-${$overlay.innerWidth()/2}px`,
+            opacity: 1,
+        });
+
+        document.querySelector('.overlay_close').addEventListener('click',function(){
+            CloseOverlay(selectMarker);
+        });
+    };
+
+    const SetMarker = (marker)=>{
+        const resMarkerImage = window.innerWidth>640?markerImage:mbMarkerImage;
+        marker.setImage(resMarkerImage);
+        marker.setMap(map);
     };
 
     const CloseOverlay = (marker)=>{
         if(marker){
             marker.overlay.setMap(null);
-            marker.setMap(map);
+            SetMarker(marker);
             marker.$item.removeClass('active');
-            map.setBounds(marker.allBounds);
+            // 좌표, 레벨 유지
+            // map.setBounds(marker.allBounds);
         };
     };
 
@@ -1885,6 +1925,8 @@
             const $btn = $info.find('.facil_info_btn');
             $btn.on('click',function(){
                 kakao.maps.event.trigger(marker, 'click');
+                if(window.innerWidth>640) return;
+                if($facilInfo.is('.active')) ToggInfo();
             });
             $facilInfoList.append($info);
         });
