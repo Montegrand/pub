@@ -1603,55 +1603,57 @@
         for(const name in facilData){
             const facil = facilData[name];
 
-            const p = new Promise((resolve)=>{
+            const p = new Promise(async (resolve)=>{
                 // 주소로 좌표를 검색합니다
-                setTimeout(() => {
 
-                    geocoder.addressSearch(facil.addr, function(result, status) {
+                await geocoder.addressSearch(facil.addr, function(result, status) {
 
-                        // 정상적으로 검색이 완료됐으면
-                        if (status === kakao.maps.services.Status.OK) {
+                    // 정상적으로 검색이 완료됐으면
+                    if (status === kakao.maps.services.Status.OK) {
 
-                            let coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                        let coords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
-                            // 결과값으로 받은 위치를 마커로 표시합니다
-                            var marker = new kakao.maps.Marker({
-                                map: map,
-                                position: coords,
-                                image: markerImage,
-                            });
+                        // 결과값으로 받은 위치를 마커로 표시합니다
+                        var marker = new kakao.maps.Marker({
+                            map: map,
+                            position: coords,
+                            image: markerImage,
+                        });
 
-                            markers[name] = marker;
-                            marker.setMap(null);
+                        markers[name] = marker;
+                        marker.setMap(null);
 
-                            const content = `
-                            <div class="facil_overlay" style="opacity:0;">
-                                <span class="facil_name">${name}</span>
-                                <div class="facil_cont">
-                                    <span class="facil_addr"><span>${facil.addr} ${facil.addrDet?facil.addrDet:''}</span></span>
-                                    ${facil.tel?`<span class="facil_tel"><span>${facil.tel}</span></span>`:''}
-                                </div>
-                                <a class="facil_link" href="${facil.link ? facil.link : 'javascript:void(0);'}" ${facil.link ? 'title="새창" target="_blank" rel="noopener noreferrer"' : 'onclick="alert(\'링크없음\')"'}><span>자세히보기</span></a>
-                                <button type="button" class="overlay_close">닫기</button>
-                            </div>`;
+                        const content = `
+                        <div class="facil_overlay" style="opacity:0;">
+                            <span class="facil_name">${name}</span>
+                            <div class="facil_cont">
+                                <span class="facil_addr"><span>${facil.addr} ${facil.addrDet?facil.addrDet:''}</span></span>
+                                ${facil.tel?`<span class="facil_tel"><span>${facil.tel}</span></span>`:''}
+                            </div>
+                            <a class="facil_link" href="${facil.link ? facil.link : 'javascript:void(0);'}" ${facil.link ? 'title="새창" target="_blank" rel="noopener noreferrer"' : 'onclick="alert(\'링크없음\')"'}><span>자세히보기</span></a>
+                            <button type="button" class="overlay_close">닫기</button>
+                        </div>`;
 
-                            const overlay = new kakao.maps.CustomOverlay({
-                                content: content,
-                                map: map,
-                                position: marker.getPosition(),
-                            });
+                        const overlay = new kakao.maps.CustomOverlay({
+                            content: content,
+                            map: map,
+                            position: marker.getPosition(),
+                        });
 
-                            marker.overlay = overlay;
-                            overlay.setMap(null);
-                        }else{
-                            console.log('주소 검색 실패:', facil.addr, status);
-                        };
+                        marker.overlay = overlay;
+                        overlay.setMap(null);
                         resolve();
-                        const dataLen = Object.keys(facilData).length;
-                        cur++;
-                        $loadingIco[0].style.setProperty('--cur',((cur/dataLen)*100)+'%');
-                    });
-                }, 1000*cur);
+                    }else if(status === kakao.maps.services.Status.ZERO_RESULT){
+                        console.log('주소 검색 실패:', facil.addr, status);
+                        resolve();
+                    }else{
+                        console.error('주소 검색 에러:', facil.addr, status);
+                        resolve();
+                    }
+                    const dataLen = Object.keys(facilData).length;
+                    cur++;
+                    $loadingIco[0].style.setProperty('--cur',((cur/dataLen)*100)+'%');
+                });
             });
             promises.push(p);
         };
